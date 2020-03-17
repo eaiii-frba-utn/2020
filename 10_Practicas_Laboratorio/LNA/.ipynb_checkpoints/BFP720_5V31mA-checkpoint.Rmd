@@ -1,0 +1,199 @@
+---
+jupyter:
+  jupytext:
+    text_representation:
+      extension: .Rmd
+      format_name: rmarkdown
+      format_version: '1.1'
+      jupytext_version: 1.1.1
+  kernelspec:
+    display_name: Python 3
+    language: python
+    name: python3
+---
+
+```{python}
+import math
+import cmath 
+import numpy as np
+import matplotlib.pyplot as plt
+from skrf import Network, Frequency
+
+
+from IPython.display import Image  
+# %matplotlib inline
+params = {'legend.fontsize': 24,
+          'figure.figsize': (10, 10),
+         'axes.labelsize': 24,
+         'axes.titlesize': 24,
+         'xtick.labelsize':24,
+         'ytick.labelsize':24}
+plt.rcParams.update(params)
+
+
+
+```
+
+```{python}
+def Linvill(yt):
+    y11 = yt[0,0]
+    y12 = yt[0,1]
+    y21 = yt[1,0]
+    y22 = yt[1,1]
+    C = (abs(y12*y21))/(2*y11.real*y22.real-(y12*y21).real)
+    print('###############  LINVILL   #####################')
+    print( 'coeficiente de linvill C= {:4.2F}' .format(C))
+    if C < 1:
+        print( 'Es incondicionalmente estable')
+    else :
+        print( 'Es potencialmente inestable')
+    return C
+
+def Stern(yg, yl, yt):
+    y11 = yt[0,0]
+    y12 = yt[0,1]
+    y21 = yt[1,0]
+    y22 = yt[1,1]
+    K = (2*(y11.real+yg.real)*(y22.real+yl.real)) / (abs(y12*y21)+(y12*y21).real)
+    print('###############  STERN   #####################')
+    print( 'coeficiente de stern K= {:4.2F}' .format(K))
+    if K > 1:
+        print( 'Estable')
+    else :
+        print( 'Inestable')
+      
+    yin  = y11 - (y21*y12)/(y22+yl)
+    yout = y22 - (y21*y12)/(y11+yg)
+    print( 'yin  = {0.real:4.3F} {0.imag:4.2E}' .format(yin) )
+    print( 'rin  = {0.real:4.3F} ' .format(1/yin.real) )
+    
+    print( 'yout = {0.real:4.3F} {0.imag:4.2E}' .format(yout) )
+    print( 'rout = {0.real:4.3F} ' .format(1/yout.real) )
+    
+    
+    Gg = yin.real/(yg+yin).real
+    G  = abs(y21)**2 *yl.real /(yin).real  /(y22+yl).real**2
+    Gt = 4* abs(y21)**2 *yl.real *yg.real /abs((y11+yg)*(y22+yl)-y21*y12)**2
+    
+    print( 'Gg= {0.real:4.2F} ' .format((Gg)))
+    print( 'G = {0.real:4.2F} ' .format((G )))
+    print( 'Gt= {0.real:4.2F} ' .format((Gt)))
+
+
+
+
+
+def neutraliza(yt,wo,n = 1):
+    Cn = -yt[0,1].imag/wo*n
+    y11 =  wo*Cn*1j
+    y12 =  wo*Cn*1j/n
+    y21 =  wo*Cn*1j/n
+    y22 =  wo*Cn*1j/n**2
+    yn  = np.matrix([[y11, y12],[ y21, y22]])
+    # cuadripolo resultante
+    ytn  = yt + yn
+    print('cap=',Cn, 'n=', n)
+    return (ytn,Cn)
+
+
+def realimenta(yt,wo,yf):
+    y11 =   yf
+    y12 =  -yf
+    y21 =  -yf
+    y22 =   yf  
+    yn  = np.matrix([[y11, y12],[ y21, y22]])
+    # cuadripolo resultante
+    ytn  = yt + yn
+    return (ytn)
+
+def printS(S1):
+    s11 =   S1[0,0]
+    s12 =   S1[0,1]
+    s21 =   S1[1,0]
+    s22 =   S1[1,1]
+    print( 's11= {:4.3f}  {:4.2f}' .format(abs(s11),np.angle(s11)*180/np.pi ))
+    print( 's12= {:4.3f}  {:4.2f}' .format(abs(s12),np.angle(s12)*180/np.pi ))
+    print( 's21= {:4.3f}  {:4.2f}' .format(abs(s21),np.angle(s21)*180/np.pi ))
+    print( 's22= {:4.3f}  {:4.2f}' .format(abs(s22),np.angle(s22)*180/np.pi ))
+
+def printY(Y1):
+    y11 =   Y1[0,0]
+    y12 =   Y1[0,1]
+    y21 =   Y1[1,0]
+    y22 =   Y1[1,1]
+    print( 'y11= {0.real:4.2E}  {0.imag:4.2E}j' .format(y11) )
+    print( 'y12= {0.real:4.2E}  {0.imag:4.2E}j' .format(y12) )
+    print( 'y21= {0.real:4.2E}  {0.imag:4.2E}j' .format(y21) )
+    print( 'y22= {0.real:4.2E}  {0.imag:4.2E}j' .format(y22) )
+    print(' ')
+
+    print( 'r11= {0.real:4.2F}' .format(1/y11.real) )
+    print( 'c11= {0.real:4.2E}' .format(y11.imag/wo) )
+
+
+    print( 'gm = {0.real:4.2F}' .format(abs(y21)) )
+    print( 'gr = {0.real:4.4F}' .format(abs(y12)) )
+
+    print( 'r22= {0.real:4.2F}' .format(1/y22.real) )
+    print( 'c22= {0.real:4.2E}' .format(y22.imag/wo) )
+
+   
+```
+
+```{python}
+MCH4015 = Network('SPICE/5V10mA.s2p')
+
+freq = Frequency(10,200,11,'mhz')
+
+```
+
+```{python}
+fo = 100e6
+wo = 2*np.pi*fo
+
+print('Parametros S 100MHz (5V10mA):')
+
+printS(MCH4015['100mhz'].s[0])
+print(' ')
+
+print('Parametros Y 100MHz (5V10mA):')
+Y100 = MCH4015['100mhz'].y[0]
+
+printY(Y100)
+```
+
+```{python}
+Linvill(Y100)
+
+```
+
+```{python}
+ytn  =  realimenta(Y100,wo,1/1.2e3 )
+
+printY(ytn)
+
+Linvill(ytn)
+
+```
+
+```{python}
+
+
+yg = (1/49 ) - 1.35E-02j
+
+print(1/(1.35E-02*wo) )
+
+yl= (1/100 ) - 6.38E-03j
+print(1/(6.38E-03*wo) )
+
+
+Stern(yg, yl, ytn)
+```
+
+```{python}
+
+```
+
+```{python}
+
+```

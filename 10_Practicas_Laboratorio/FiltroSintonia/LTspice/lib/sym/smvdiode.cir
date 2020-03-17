@@ -1,0 +1,10 @@
+* C:\Program Files\LTC\LTspiceXVII\lib\sym\MyComponents\smvdiode.asc
+.subckt SMVDIODE 11 22
+Ls 11 1 {Ls}
+Cp 22 1 {Cp}
+R 2 1 {R}
+D1 2 22 smv
+.model D D
+.lib C:\users\aalmela\Mis Documentos\LTspiceXVII\lib\cmp\standard.dio
+.model smv D(Is=0.01p Rs=0 Cjo={Cjo} M={M} Vj={Vj} Vpk=18 Ibv=1e-3 mfg=Sky type=varactor)
+.end SMVDIODE

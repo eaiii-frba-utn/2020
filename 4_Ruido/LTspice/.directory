@@ -1,0 +1,6 @@
+[Dolphin]
+SortRole=type
+Timestamp=2019,10,12,0,24,33
+Version=4
+ViewMode=1
+VisibleRoles=Details_text,Details_size,Details_modificationtime,Details_type,CustomizedDetails

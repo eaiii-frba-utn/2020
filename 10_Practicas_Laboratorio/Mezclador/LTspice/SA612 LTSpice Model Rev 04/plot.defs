@@ -1,0 +1,15 @@
+* File: C:\Program Files\LTC\SwCADIII\plot.defs
+*
+* Define parameters and functions that you which to be able to use in 
+* data plots in this file with .param and .func statements.
+
+*Calculate the resistive part of the series-form impedance
+.func Rs(x,y) = Re(x/y)
+*Calculate the reactive part of the series-form impedance
+.func Xs(x,y) = Im(x/y)
+*Calculate the series-form 'Q'
+.func Qs(a,b) = (a/b)
+*Calculate the resistive part of the parallel-form impedance
+.func Rp(x,y) = (pow((Xs(x,y)/Rs(x,y)),2)+1) * Rs(x,y)
+*Calculate the reactive part of the parallel-form impedance
+.func Xp(x,y) = Rp(x,y)/Qs(Xs(x,y),Rs(x,y))
