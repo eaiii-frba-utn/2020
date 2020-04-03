@@ -8,6 +8,14 @@ Escritos en lenguaje Python3.
 
 [Ver notebooks online (usando mybinder)](https://mybinder.org/v2/gh/eaiii-frba-utn/2020/master)
 
+## Accesos directos
+
+[1.Introduccion](https://mybinder.org/v2/gh/eaiii-frba-utn/2020/master?filepath=.%2F1_Introduccion)
+
+[1.1.SistemasdeRadio](https://mybinder.org/v2/gh/eaiii-frba-utn/2020/master?filepath=.%2F1_Introduccion%2F1_Sistemas_de_Radio%2F])
+
+
+
 
 Contacto:
 
