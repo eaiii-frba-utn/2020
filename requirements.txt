@@ -2,3 +2,5 @@ matplotlib
 scipy 
 scikit-rf
 nbsphinx
+sphinx_copybutton
+
