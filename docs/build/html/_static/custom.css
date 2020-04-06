@@ -1,0 +1,7 @@
+img[alt$=quinientos] {
+    width: 500px;
+}
+
+img[alt$=cuatrocientos] {
+    width: 400px;
+}

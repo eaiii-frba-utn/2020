@@ -1,0 +1,655 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="es" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="es" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>&lt;no title&gt; &mdash; documentación de EAIII2020 - </title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../../" src="../../../../_static/documentation_options.js"></script>
+        <script src="../../../../_static/jquery.js"></script>
+        <script src="../../../../_static/underscore.js"></script>
+        <script src="../../../../_static/doctools.js"></script>
+        <script src="../../../../_static/language_data.js"></script>
+        <script src="../../../../_static/clipboard.min.js"></script>
+        <script src="../../../../_static/copybutton.js"></script>
+        <script src="../../../../_static/translations.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
+    
+    <script type="text/javascript" src="../../../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../_static/copybutton.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../_static/gallery.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Índice" href="../../../../genindex.html" />
+    <link rel="search" title="Búsqueda" href="../../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../../index.html" class="icon icon-home"> EAIII2020
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Introduccion</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../introduccion/sistemas.html">Sistemas de radio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../introduccion/sistemas.html#Receptores-de-radiofrecuencia">Receptores de radiofrecuencia</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../introduccion/sistemas.html#Receptor-Homodino">Receptor Homodino</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../introduccion/sistemas.html#Receptor-Heterodino">Receptor Heterodino</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">EAIII2020</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../../index.html">Docs</a> &raquo;</li>
+        
+      <li>&lt;no title&gt;</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../../_sources/adaptacion/2_Redes_de_adaptacion/5_Ejercicios/PrimeraEntrega/Ejercicio3.ipynb.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  
+<style>
+/* CSS for nbsphinx extension */
+
+/* remove conflicting styling from Sphinx themes */
+div.nbinput.container,
+div.nbinput.container div.prompt,
+div.nbinput.container div.input_area,
+div.nbinput.container div[class*=highlight],
+div.nbinput.container div[class*=highlight] pre,
+div.nboutput.container,
+div.nboutput.container div.prompt,
+div.nboutput.container div.output_area,
+div.nboutput.container div[class*=highlight],
+div.nboutput.container div[class*=highlight] pre {
+    background: none;
+    border: none;
+    padding: 0 0;
+    margin: 0;
+    box-shadow: none;
+}
+
+/* avoid gaps between output lines */
+div.nboutput.container div[class*=highlight] pre {
+    line-height: normal;
+}
+
+/* input/output containers */
+div.nbinput.container,
+div.nboutput.container {
+    display: -webkit-flex;
+    display: flex;
+    align-items: flex-start;
+    margin: 0;
+    width: 100%;
+}
+@media (max-width: 540px) {
+    div.nbinput.container,
+    div.nboutput.container {
+        flex-direction: column;
+    }
+}
+
+/* input container */
+div.nbinput.container {
+    padding-top: 5px;
+}
+
+/* last container */
+div.nblast.container {
+    padding-bottom: 5px;
+}
+
+/* input prompt */
+div.nbinput.container div.prompt pre {
+    color: #307FC1;
+}
+
+/* output prompt */
+div.nboutput.container div.prompt pre {
+    color: #BF5B3D;
+}
+
+/* all prompts */
+div.nbinput.container div.prompt,
+div.nboutput.container div.prompt {
+    min-width: 5ex;
+    padding-top: 0.3rem;
+    padding-right: 0.3rem;
+    text-align: right;
+    flex: 0;
+}
+@media (max-width: 540px) {
+    div.nbinput.container div.prompt,
+    div.nboutput.container div.prompt {
+        text-align: left;
+        padding: 0.4em;
+    }
+    div.nboutput.container div.prompt.empty {
+        padding: 0;
+    }
+}
+
+/* disable scrollbars on prompts */
+div.nbinput.container div.prompt pre,
+div.nboutput.container div.prompt pre {
+    overflow: hidden;
+}
+
+/* input/output area */
+div.nbinput.container div.input_area,
+div.nboutput.container div.output_area {
+    -webkit-flex: 1;
+    flex: 1;
+    overflow: auto;
+}
+@media (max-width: 540px) {
+    div.nbinput.container div.input_area,
+    div.nboutput.container div.output_area {
+        width: 100%;
+    }
+}
+
+/* input area */
+div.nbinput.container div.input_area {
+    border: 1px solid #e0e0e0;
+    border-radius: 2px;
+    background: #f5f5f5;
+}
+
+/* override MathJax center alignment in output cells */
+div.nboutput.container div[class*=MathJax] {
+    text-align: left !important;
+}
+
+/* override sphinx.ext.imgmath center alignment in output cells */
+div.nboutput.container div.math p {
+    text-align: left;
+}
+
+/* standard error */
+div.nboutput.container div.output_area.stderr {
+    background: #fdd;
+}
+
+/* ANSI colors */
+.ansi-black-fg { color: #3E424D; }
+.ansi-black-bg { background-color: #3E424D; }
+.ansi-black-intense-fg { color: #282C36; }
+.ansi-black-intense-bg { background-color: #282C36; }
+.ansi-red-fg { color: #E75C58; }
+.ansi-red-bg { background-color: #E75C58; }
+.ansi-red-intense-fg { color: #B22B31; }
+.ansi-red-intense-bg { background-color: #B22B31; }
+.ansi-green-fg { color: #00A250; }
+.ansi-green-bg { background-color: #00A250; }
+.ansi-green-intense-fg { color: #007427; }
+.ansi-green-intense-bg { background-color: #007427; }
+.ansi-yellow-fg { color: #DDB62B; }
+.ansi-yellow-bg { background-color: #DDB62B; }
+.ansi-yellow-intense-fg { color: #B27D12; }
+.ansi-yellow-intense-bg { background-color: #B27D12; }
+.ansi-blue-fg { color: #208FFB; }
+.ansi-blue-bg { background-color: #208FFB; }
+.ansi-blue-intense-fg { color: #0065CA; }
+.ansi-blue-intense-bg { background-color: #0065CA; }
+.ansi-magenta-fg { color: #D160C4; }
+.ansi-magenta-bg { background-color: #D160C4; }
+.ansi-magenta-intense-fg { color: #A03196; }
+.ansi-magenta-intense-bg { background-color: #A03196; }
+.ansi-cyan-fg { color: #60C6C8; }
+.ansi-cyan-bg { background-color: #60C6C8; }
+.ansi-cyan-intense-fg { color: #258F8F; }
+.ansi-cyan-intense-bg { background-color: #258F8F; }
+.ansi-white-fg { color: #C5C1B4; }
+.ansi-white-bg { background-color: #C5C1B4; }
+.ansi-white-intense-fg { color: #A1A6B2; }
+.ansi-white-intense-bg { background-color: #A1A6B2; }
+
+.ansi-default-inverse-fg { color: #FFFFFF; }
+.ansi-default-inverse-bg { background-color: #000000; }
+
+.ansi-bold { font-weight: bold; }
+.ansi-underline { text-decoration: underline; }
+
+
+div.nbinput.container div.input_area div[class*=highlight] > pre,
+div.nboutput.container div.output_area div[class*=highlight] > pre,
+div.nboutput.container div.output_area div[class*=highlight].math,
+div.nboutput.container div.output_area.rendered_html,
+div.nboutput.container div.output_area > div.output_javascript,
+div.nboutput.container div.output_area:not(.rendered_html) > img{
+    padding: 0.3rem;
+}
+
+/* fix copybtn overflow problem in chromium (needed for 'sphinx_copybutton') */
+div.nbinput.container div.input_area > div[class^='highlight'],
+div.nboutput.container div.output_area > div[class^='highlight']{
+    overflow-y: hidden;
+}
+
+/* hide copybtn icon on prompts (needed for 'sphinx_copybutton') */
+.prompt a.copybtn {
+    display: none;
+}
+
+/* Some additional styling taken form the Jupyter notebook CSS */
+div.rendered_html table {
+  border: none;
+  border-collapse: collapse;
+  border-spacing: 0;
+  color: black;
+  font-size: 12px;
+  table-layout: fixed;
+}
+div.rendered_html thead {
+  border-bottom: 1px solid black;
+  vertical-align: bottom;
+}
+div.rendered_html tr,
+div.rendered_html th,
+div.rendered_html td {
+  text-align: right;
+  vertical-align: middle;
+  padding: 0.5em 0.5em;
+  line-height: normal;
+  white-space: normal;
+  max-width: none;
+  border: none;
+}
+div.rendered_html th {
+  font-weight: bold;
+}
+div.rendered_html tbody tr:nth-child(odd) {
+  background: #f5f5f5;
+}
+div.rendered_html tbody tr:hover {
+  background: rgba(66, 165, 245, 0.2);
+}
+
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast.container,
+.nboutput.nblast.container {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast.container + .nbinput.container {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
+</style>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+
+
+<span></span><span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span> <span class="s2">&quot;fig/eje3.png&quot;</span><span class="p">,</span><span class="n">width</span><span class="o">=</span><span class="mi">350</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<a class="reference internal image-reference" href="../../../../_images/adaptacion_2_Redes_de_adaptacion_5_Ejercicios_PrimeraEntrega_Ejercicio3_0_0.png"><img alt="../../../../_images/adaptacion_2_Redes_de_adaptacion_5_Ejercicios_PrimeraEntrega_Ejercicio3_0_0.png" src="../../../../_images/adaptacion_2_Redes_de_adaptacion_5_Ejercicios_PrimeraEntrega_Ejercicio3_0_0.png" style="width: 350px;" /></a>
+</div>
+</div>
+<p>El siguiente circuito corresponde a un adaptador de impedancias realizado con un auto-trasformador, cuyo <span class="math notranslate nohighlight">\(Q_{oL} = \infty\)</span> , y un capacitor de $ C_1$ conectado en paralelo con el primario, cuyas pérdidas <span class="math notranslate nohighlight">\(Q_{oC} = 100\)</span> .</p>
+<p>La impedancia interna de la fuente es de</p>
+<div class="math notranslate nohighlight">
+\[z_g= (74-j7) \Omega\]</div>
+<p>a <span class="math notranslate nohighlight">\(100MHz\)</span> y la corriente que entrega es <span class="math notranslate nohighlight">\(i_{g} = 1 uA\)</span> a <span class="math notranslate nohighlight">\(100MHz\)</span>.</p>
+<p>La resistencia de carga es de <span class="math notranslate nohighlight">\(R_L = 1500 \Omega\)</span>.</p>
+<p>Nota: en SPICE la sentencia ``k1 L1 L2 1’’ indica que el transformador tiene <span class="math notranslate nohighlight">\(K = 1\)</span> (acople máximo).</p>
+<p>Calcular para máxima transferencia de energía a <span class="math notranslate nohighlight">\(Q\)</span> constante.</p>
+<ol class="arabic simple">
+<li><p>Para <span class="math notranslate nohighlight">\(Q_c= 20\)</span> a <span class="math notranslate nohighlight">\(100MHz\)</span>: <span class="math notranslate nohighlight">\(C\)</span>,<span class="math notranslate nohighlight">\(L_1\)</span>, <span class="math notranslate nohighlight">\(L_{1a}\)</span>, <span class="math notranslate nohighlight">\(Ls\)</span> y la relación de vueltas del transformador.</p></li>
+<li><p>Tensión en el primario y secundario y potencia sobre <span class="math notranslate nohighlight">\(R_L\)</span>.</p></li>
+</ol>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="k">import</span> <span class="n">Image</span>
+<span class="c1"># Datos</span>
+<span class="n">Qc</span> <span class="o">=</span> <span class="mi">20</span>
+<span class="n">Qo</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="n">zg</span> <span class="o">=</span> <span class="mi">74</span><span class="o">-</span><span class="mi">7</span><span class="n">j</span>
+<span class="n">ig</span>  <span class="o">=</span> <span class="mf">1e-6</span> <span class="c1"># A pico</span>
+<span class="n">fo</span>  <span class="o">=</span>  <span class="mf">100e6</span>
+<span class="n">RL</span>  <span class="o">=</span> <span class="mi">1500</span>
+
+<span class="n">wo</span> <span class="o">=</span> <span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">*</span><span class="n">fo</span>
+
+<span class="c1"># Calculo la impedancia de la fuente para el modelo paralelo</span>
+<span class="n">rg</span> <span class="o">=</span> <span class="mi">1</span><span class="o">/</span><span class="p">((</span><span class="mi">1</span><span class="o">/</span><span class="n">zg</span><span class="p">)</span><span class="o">.</span><span class="n">real</span> <span class="p">)</span>
+<span class="n">cg</span>  <span class="o">=</span> <span class="p">(</span> <span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="n">zg</span><span class="p">)</span><span class="o">.</span><span class="n">imag</span> <span class="p">)</span><span class="o">/</span><span class="n">wo</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;rg =  </span><span class="si">{:1.1f}</span><span class="s1"> ohms&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">rg</span><span class="p">)</span> <span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;cg =  </span><span class="si">{:1.3e}</span><span class="s1"> F&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">cg</span><span class="p">)</span> <span class="p">)</span>
+
+<span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span> <span class="s2">&quot;fig/eje3a.png&quot;</span><span class="p">,</span><span class="n">width</span><span class="o">=</span><span class="mi">350</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+rg =  74.7 ohms
+cg =  2.016e-12 F
+</pre></div></div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<a class="reference internal image-reference" href="../../../../_images/adaptacion_2_Redes_de_adaptacion_5_Ejercicios_PrimeraEntrega_Ejercicio3_2_1.png"><img alt="../../../../_images/adaptacion_2_Redes_de_adaptacion_5_Ejercicios_PrimeraEntrega_Ejercicio3_2_1.png" src="../../../../_images/adaptacion_2_Redes_de_adaptacion_5_Ejercicios_PrimeraEntrega_Ejercicio3_2_1.png" style="width: 350px;" /></a>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># a)</span>
+
+
+<span class="c1"># El autotransformador refleja en el primario rg como RL ya que se calcula para MTEQcte.</span>
+<span class="n">rgp</span>  <span class="o">=</span> <span class="n">RL</span>
+
+<span class="c1"># El autotransformador refleja en el secundario RL como rg ya que se calcula para MTEQcte.</span>
+<span class="n">RLs</span>  <span class="o">=</span> <span class="n">rg</span>
+
+<span class="c1"># Relación de espiras N = (N1 + N2)/ N1 (pri/sec)</span>
+<span class="n">N</span>  <span class="o">=</span> <span class="p">(</span><span class="n">RL</span><span class="o">/</span><span class="n">RLs</span><span class="p">)</span><span class="o">**</span><span class="mf">0.5</span>
+
+
+<span class="c1"># El calculo de L se hace en el primario (podria hacerse en el secundario también):</span>
+<span class="n">Rext</span>  <span class="o">=</span> <span class="n">rgp</span> <span class="o">*</span> <span class="n">RL</span> <span class="o">/</span> <span class="p">(</span><span class="n">rgp</span> <span class="o">+</span> <span class="n">RL</span> <span class="p">)</span>
+
+
+<span class="c1"># L en el primario</span>
+<span class="n">L</span> <span class="o">=</span>  <span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="n">Qc</span> <span class="o">-</span> <span class="mi">1</span><span class="o">/</span><span class="n">Qo</span><span class="p">)</span>  <span class="o">*</span> <span class="n">Rext</span> <span class="o">/</span> <span class="n">wo</span>
+
+
+<span class="c1"># Calculo de L1 y L2</span>
+<span class="c1"># N = (N1 + N2)/ N1 = (L/L1)**(1/2) (**(1/2) es la raiz )</span>
+<span class="c1"># N**2 = L/L1</span>
+<span class="c1"># L1 es la inductancia del secundario</span>
+<span class="n">L1</span>  <span class="o">=</span> <span class="n">L</span> <span class="o">/</span> <span class="n">N</span><span class="o">**</span><span class="mi">2</span>
+
+
+<span class="c1"># N = (N1 + N2)/ N1 = (L/L1)**(1/2) (**(1/2) es la raiz )</span>
+<span class="c1"># N = (1 +  N2/N1)</span>
+<span class="c1"># N = (1 +  N21)</span>
+<span class="n">N21</span> <span class="o">=</span> <span class="n">N</span> <span class="o">-</span> <span class="mi">1</span>
+
+<span class="c1"># (L/L2) = [(N1 + N2)/ N2]**2</span>
+<span class="c1"># (L/L2) = [(N1/N2 + 1)]**2</span>
+<span class="c1"># (L/L2) = [(N12 + 1)]**2</span>
+<span class="c1">#  N12 = 1/N21</span>
+<span class="n">N12</span> <span class="o">=</span> <span class="mi">1</span><span class="o">/</span><span class="n">N21</span>
+
+<span class="c1"># L2 = L/ [(N12 + 1)]**2</span>
+<span class="n">L2</span> <span class="o">=</span> <span class="n">L</span> <span class="o">/</span> <span class="p">(</span> <span class="n">N12</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span>
+
+<span class="c1"># La capacidad que resuena con L</span>
+<span class="n">Ct</span>  <span class="o">=</span>  <span class="mi">1</span><span class="o">/</span> <span class="p">(</span><span class="n">L</span> <span class="o">*</span> <span class="p">(</span><span class="n">wo</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="c1"># La capacidad de la fuente en el primario del autotrafo</span>
+<span class="n">cgp</span> <span class="o">=</span> <span class="p">(</span><span class="n">cg</span><span class="o">/</span><span class="n">N</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="c1"># C1 entonces</span>
+<span class="n">C1</span>  <span class="o">=</span> <span class="n">Ct</span> <span class="o">-</span> <span class="n">cgp</span>
+
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;a1) L1  = </span><span class="si">{:2.2e}</span><span class="s1"> Hy&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">L1</span><span class="p">)</span> <span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;a2) L2  = </span><span class="si">{:2.2e}</span><span class="s1"> Hy&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">L2</span><span class="p">)</span> <span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;a3) C1  = </span><span class="si">{:2.3e}</span><span class="s1"> F&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">C1</span><span class="p">)</span> <span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;a4) N   = </span><span class="si">{:2.2f}</span><span class="s1"> &#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">N</span><span class="p">)</span> <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+a1) L1  = 2.38e-09 Hy
+a2) L2  = 2.88e-08 Hy
+a3) C1  = 5.295e-11 F
+a4) N   = 4.48
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1">#b)</span>
+<span class="c1"># resistencia total que ve la fuente</span>
+<span class="n">rt</span>  <span class="o">=</span> <span class="n">Qc</span><span class="o">*</span><span class="n">wo</span><span class="o">*</span><span class="n">L1</span>
+
+<span class="c1"># tensión en el secundario</span>
+<span class="n">vs</span> <span class="o">=</span> <span class="n">ig</span> <span class="o">*</span> <span class="n">rt</span> <span class="c1"># V pico</span>
+
+<span class="c1"># Tensión en el primario</span>
+<span class="n">vp</span> <span class="o">=</span> <span class="n">vs</span> <span class="o">*</span> <span class="n">N</span>
+
+<span class="c1"># Potencia en RL</span>
+<span class="n">PRL</span> <span class="o">=</span> <span class="n">vp</span><span class="o">**</span><span class="mi">2</span><span class="o">/</span><span class="n">RL</span><span class="o">/</span><span class="mi">2</span> <span class="c1"># W (Eficaz)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;b1) vs = </span><span class="si">{:2.2e}</span><span class="s1"> V (pico)&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">vs</span><span class="p">)</span> <span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;b2) vp = </span><span class="si">{:2.2e}</span><span class="s1"> V (pico)&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">vp</span><span class="p">)</span> <span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;b3) PRL= </span><span class="si">{:2.2e}</span><span class="s1"> W (eficaz)&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">PRL</span><span class="p">)</span> <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+b1) vs = 2.99e-05 V (pico)
+b2) vp = 1.34e-04 V (pico)
+b3) PRL= 5.97e-12 W (eficaz)
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span> <span class="s2">&quot;fig/eje3sim.png&quot;</span><span class="p">,</span><span class="n">width</span><span class="o">=</span><span class="mi">750</span><span class="p">)</span>
+
+<span class="c1">## Revisar que las perdidas de los componentes sea despresiables!</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<a class="reference internal image-reference" href="../../../../_images/adaptacion_2_Redes_de_adaptacion_5_Ejercicios_PrimeraEntrega_Ejercicio3_5_0.png"><img alt="../../../../_images/adaptacion_2_Redes_de_adaptacion_5_Ejercicios_PrimeraEntrega_Ejercicio3_5_0.png" src="../../../../_images/adaptacion_2_Redes_de_adaptacion_5_Ejercicios_PrimeraEntrega_Ejercicio3_5_0.png" style="width: 750px;" /></a>
+</div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>
+</pre></div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright Almela, UTN-FRBA
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

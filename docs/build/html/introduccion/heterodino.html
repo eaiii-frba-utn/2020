@@ -1,0 +1,600 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="es" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="es" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Receptor Heterodino &mdash; documentación de EAIII2020 - </title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script src="../_static/clipboard.min.js"></script>
+        <script src="../_static/copybutton.js"></script>
+        <script src="../_static/translations.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/gallery.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Índice" href="../genindex.html" />
+    <link rel="search" title="Búsqueda" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> EAIII2020
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Introduccion</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="sistemas.html">Sistemas de radio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sistemas.html#Receptores-de-radiofrecuencia">Receptores de radiofrecuencia</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sistemas.html#Receptor-Homodino">Receptor Homodino</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sistemas.html#Receptor-Heterodino">Receptor Heterodino</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">EAIII2020</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Receptor Heterodino</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/introduccion/heterodino.ipynb.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  
+<style>
+/* CSS for nbsphinx extension */
+
+/* remove conflicting styling from Sphinx themes */
+div.nbinput.container,
+div.nbinput.container div.prompt,
+div.nbinput.container div.input_area,
+div.nbinput.container div[class*=highlight],
+div.nbinput.container div[class*=highlight] pre,
+div.nboutput.container,
+div.nboutput.container div.prompt,
+div.nboutput.container div.output_area,
+div.nboutput.container div[class*=highlight],
+div.nboutput.container div[class*=highlight] pre {
+    background: none;
+    border: none;
+    padding: 0 0;
+    margin: 0;
+    box-shadow: none;
+}
+
+/* avoid gaps between output lines */
+div.nboutput.container div[class*=highlight] pre {
+    line-height: normal;
+}
+
+/* input/output containers */
+div.nbinput.container,
+div.nboutput.container {
+    display: -webkit-flex;
+    display: flex;
+    align-items: flex-start;
+    margin: 0;
+    width: 100%;
+}
+@media (max-width: 540px) {
+    div.nbinput.container,
+    div.nboutput.container {
+        flex-direction: column;
+    }
+}
+
+/* input container */
+div.nbinput.container {
+    padding-top: 5px;
+}
+
+/* last container */
+div.nblast.container {
+    padding-bottom: 5px;
+}
+
+/* input prompt */
+div.nbinput.container div.prompt pre {
+    color: #307FC1;
+}
+
+/* output prompt */
+div.nboutput.container div.prompt pre {
+    color: #BF5B3D;
+}
+
+/* all prompts */
+div.nbinput.container div.prompt,
+div.nboutput.container div.prompt {
+    min-width: 5ex;
+    padding-top: 0.3rem;
+    padding-right: 0.3rem;
+    text-align: right;
+    flex: 0;
+}
+@media (max-width: 540px) {
+    div.nbinput.container div.prompt,
+    div.nboutput.container div.prompt {
+        text-align: left;
+        padding: 0.4em;
+    }
+    div.nboutput.container div.prompt.empty {
+        padding: 0;
+    }
+}
+
+/* disable scrollbars on prompts */
+div.nbinput.container div.prompt pre,
+div.nboutput.container div.prompt pre {
+    overflow: hidden;
+}
+
+/* input/output area */
+div.nbinput.container div.input_area,
+div.nboutput.container div.output_area {
+    -webkit-flex: 1;
+    flex: 1;
+    overflow: auto;
+}
+@media (max-width: 540px) {
+    div.nbinput.container div.input_area,
+    div.nboutput.container div.output_area {
+        width: 100%;
+    }
+}
+
+/* input area */
+div.nbinput.container div.input_area {
+    border: 1px solid #e0e0e0;
+    border-radius: 2px;
+    background: #f5f5f5;
+}
+
+/* override MathJax center alignment in output cells */
+div.nboutput.container div[class*=MathJax] {
+    text-align: left !important;
+}
+
+/* override sphinx.ext.imgmath center alignment in output cells */
+div.nboutput.container div.math p {
+    text-align: left;
+}
+
+/* standard error */
+div.nboutput.container div.output_area.stderr {
+    background: #fdd;
+}
+
+/* ANSI colors */
+.ansi-black-fg { color: #3E424D; }
+.ansi-black-bg { background-color: #3E424D; }
+.ansi-black-intense-fg { color: #282C36; }
+.ansi-black-intense-bg { background-color: #282C36; }
+.ansi-red-fg { color: #E75C58; }
+.ansi-red-bg { background-color: #E75C58; }
+.ansi-red-intense-fg { color: #B22B31; }
+.ansi-red-intense-bg { background-color: #B22B31; }
+.ansi-green-fg { color: #00A250; }
+.ansi-green-bg { background-color: #00A250; }
+.ansi-green-intense-fg { color: #007427; }
+.ansi-green-intense-bg { background-color: #007427; }
+.ansi-yellow-fg { color: #DDB62B; }
+.ansi-yellow-bg { background-color: #DDB62B; }
+.ansi-yellow-intense-fg { color: #B27D12; }
+.ansi-yellow-intense-bg { background-color: #B27D12; }
+.ansi-blue-fg { color: #208FFB; }
+.ansi-blue-bg { background-color: #208FFB; }
+.ansi-blue-intense-fg { color: #0065CA; }
+.ansi-blue-intense-bg { background-color: #0065CA; }
+.ansi-magenta-fg { color: #D160C4; }
+.ansi-magenta-bg { background-color: #D160C4; }
+.ansi-magenta-intense-fg { color: #A03196; }
+.ansi-magenta-intense-bg { background-color: #A03196; }
+.ansi-cyan-fg { color: #60C6C8; }
+.ansi-cyan-bg { background-color: #60C6C8; }
+.ansi-cyan-intense-fg { color: #258F8F; }
+.ansi-cyan-intense-bg { background-color: #258F8F; }
+.ansi-white-fg { color: #C5C1B4; }
+.ansi-white-bg { background-color: #C5C1B4; }
+.ansi-white-intense-fg { color: #A1A6B2; }
+.ansi-white-intense-bg { background-color: #A1A6B2; }
+
+.ansi-default-inverse-fg { color: #FFFFFF; }
+.ansi-default-inverse-bg { background-color: #000000; }
+
+.ansi-bold { font-weight: bold; }
+.ansi-underline { text-decoration: underline; }
+
+
+div.nbinput.container div.input_area div[class*=highlight] > pre,
+div.nboutput.container div.output_area div[class*=highlight] > pre,
+div.nboutput.container div.output_area div[class*=highlight].math,
+div.nboutput.container div.output_area.rendered_html,
+div.nboutput.container div.output_area > div.output_javascript,
+div.nboutput.container div.output_area:not(.rendered_html) > img{
+    padding: 0.3rem;
+}
+
+/* fix copybtn overflow problem in chromium (needed for 'sphinx_copybutton') */
+div.nbinput.container div.input_area > div[class^='highlight'],
+div.nboutput.container div.output_area > div[class^='highlight']{
+    overflow-y: hidden;
+}
+
+/* hide copybtn icon on prompts (needed for 'sphinx_copybutton') */
+.prompt a.copybtn {
+    display: none;
+}
+
+/* Some additional styling taken form the Jupyter notebook CSS */
+div.rendered_html table {
+  border: none;
+  border-collapse: collapse;
+  border-spacing: 0;
+  color: black;
+  font-size: 12px;
+  table-layout: fixed;
+}
+div.rendered_html thead {
+  border-bottom: 1px solid black;
+  vertical-align: bottom;
+}
+div.rendered_html tr,
+div.rendered_html th,
+div.rendered_html td {
+  text-align: right;
+  vertical-align: middle;
+  padding: 0.5em 0.5em;
+  line-height: normal;
+  white-space: normal;
+  max-width: none;
+  border: none;
+}
+div.rendered_html th {
+  font-weight: bold;
+}
+div.rendered_html tbody tr:nth-child(odd) {
+  background: #f5f5f5;
+}
+div.rendered_html tbody tr:hover {
+  background: rgba(66, 165, 245, 0.2);
+}
+
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast.container,
+.nboutput.nblast.container {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast.container + .nbinput.container {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
+</style>
+<p>Hola! Soy una celda en Raw NBConvert!</p>
+<div class="section" id="Receptor-Heterodino">
+<h1>Receptor Heterodino<a class="headerlink" href="#Receptor-Heterodino" title="Enlazar permanentemente con este título">¶</a></h1>
+<p>Heterodinar significa mezclar dos frecuencia en una etapa alineal (mezclador) a fin de obtener la suma o diferencia de las dos frecuencias de entrada. Los receptores superheterodinos basan su funcionamiento en la utilización de una o mas etapas mezcladoras, estas trasladan la frecuencia de recepción a un valor de frecuencia normalizado, generalmente menor, denominado Frecuencia Intermedia (FI), para poder mezclar o heterodinar dos señales se debe disponer de una etapa mezcladora y un oscilador
+local, este último es además el encargado de seleccionar la frecuencia que se desea recibir.</p>
+<p>La idea es convertir todas las frecuencias a recibir a una unica frecuencia llamada “Frecuencia Intermedia”. Esto permite que el receptor pueda recibir distintas frecuencias con un solo demodulador, donde el mayor esfuerzo en filtrado y amplificación en alta frecuencia se hace a la frecuencia intermedia. La sintonía se lleva a cabo modificando la frecuencia del oscilador (oscilador local) y la del filtro de entrada (si el margen de frecuencias a recibir es amplio).</p>
+<div class="section" id="Super-heterodino">
+<h2>Super-heterodino<a class="headerlink" href="#Super-heterodino" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Un receptor super-heterodino se diferencia de un heterodino común gracias a una serie de mejoras como un amplificador de RF de entrada, un circuito de AGC y otras etapas que optimizan el funcionamiento.</p>
+<p>A estos receptores básicamente se los puede clasificar en Receptores de Simple Conversión y Receptores de Doble Conversión.</p>
+</div>
+<div class="section" id="Super-heterodino-de-simple-conversión.">
+<h2>Super-heterodino de simple conversión.<a class="headerlink" href="#Super-heterodino-de-simple-conversión." title="Enlazar permanentemente con este título">¶</a></h2>
+<p>El diagrama en bloques de un receptor de simple conversión se ve a continuación:</p>
+<p><img alt="1-quinientos" src="../_images/SuperHeterodino1.png" /></p>
+<div class="section" id="Ejemplo-practico-:-Receptor-de-radiodifusión-AM.">
+<h3>Ejemplo practico : Receptor de radiodifusión AM.<a class="headerlink" href="#Ejemplo-practico-:-Receptor-de-radiodifusión-AM." title="Enlazar permanentemente con este título">¶</a></h3>
+<div class="line-block">
+<div class="line">Las frecuencias de la banda de AM comerncial:</div>
+</div>
+<blockquote>
+<div><div class="math notranslate nohighlight">
+\[F_{RF_{min}} = 520 KHz\]</div>
+</div></blockquote>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<blockquote>
+<div><div class="math notranslate nohighlight">
+\[F_{RF_{max}} = 1630 KHz\]</div>
+</div></blockquote>
+<p>Para la sintonia de la los distintos canales se emplea un receptor superheteroino de simple conversión, donde la frecuencia <span class="math notranslate nohighlight">\(F_{IF} = 455 KHz\)</span> y el ancho de banda del canal es de <span class="math notranslate nohighlight">\(\Delta F_{IF} = 10 KHz\)</span>, esto ultimo usando un filtro cerámico (SFU455A).</p>
+<p>El oscilador local puede tomar cualquiera de las siguientes frecuencias:</p>
+<div class="math notranslate nohighlight">
+\[f_{osc} = f_{RF} + f_{IF}\]</div>
+<div class="math notranslate nohighlight">
+\[f_{osc} = f_{RF} - f_{IF}\]</div>
+<p>Para este ejemplo, la emplearemos la primer opción: <span class="math notranslate nohighlight">\(f_{osc_{min}} = 975 kHz\)</span> y <span class="math notranslate nohighlight">\(f_{osc_{min}} = 2085 kHz\)</span>.</p>
+<p>El siguiente diagrama muestra como se realiza la recepcion del canal de <span class="math notranslate nohighlight">\(f_{RF} = 1MHz\)</span>.</p>
+<p><img alt="2-cuatrocientos" src="../_images/frecuenciasAM.png" /></p>
+<p>La señal de RF que que proviene de la antena ingresa a la etapa de RF. En la etapa de RF, el filtro de RF se encuentra sintonzado a la frecuencia del canal que se desea sintonizar (<span class="math notranslate nohighlight">\(f_{RF} = 1 MHz\)</span>). Este filtro al estar sintonizado a la frecuencia del canal no atenua el canal deseado. Tambien, la señal es amplificada por el amplificador de RF en esta etapa.</p>
+<p>La señal luego es mezclada con la señal del oscilador local, que debe estar operando a <span class="math notranslate nohighlight">\(f_{osc} = 1,455 MHz\)</span>.</p>
+<p>El mezclador ideal tiene una respuesta artimetica, de tal forma, la señal de salida se obtiene de la siguiente ecuación:</p>
+<div class="math notranslate nohighlight">
+\[v_{IF}(t) = K \cdot v_{OL}(t) \cdot v_{RF}(t)\]</div>
+<p>Si las señales de entrada son, en el caso más simple, ondas de tensión senoidales, entonces:</p>
+<div class="math notranslate nohighlight">
+\[v_{IF}(t) = K \cdot cos(\omega_{OL} \cdot t) \cdot cos(\omega_{RF} \cdot t)\]</div>
+<p>Para resolver esta ecuacion, podemos emplear la identidad trigonometrica:</p>
+<div class="math notranslate nohighlight">
+\[cos(\alpha) \cdot cos(\beta) = \frac{1}{2} \cdot [cos(\alpha + \beta) +  \cdot cos(\alpha - \beta)  ]\]</div>
+<p>Empleando la identidad:</p>
+<div class="math notranslate nohighlight">
+\[v_{IF}(t) = K \cdot \frac{1}{2} \cdot [cos( (\omega_{OL}+ \omega_{RF})  \cdot t) + cos( (\omega_{OL}-\omega_{RF} ) \cdot t) ]\]</div>
+<p>En función de la frecuencia, entonces:</p>
+<div class="math notranslate nohighlight">
+\[v_{IF}(t) = K \cdot \frac{1}{2} \cdot [cos( 2 \pi \cdot |f_{OL}+ f_{RF}|  \cdot t) + cos( 2 \pi \cdot |f_{OL}-f_{RF} | \cdot t) ]\]</div>
+<p>Como vemos, la señal de salida esta compuesta por dos componentes:</p>
+<div class="math notranslate nohighlight">
+\[|f_{OL}+ f_{RF}| = 1455 KHz + 1000 KHz = 2455 KHz\]</div>
+<div class="math notranslate nohighlight">
+\[|f_{OL}- f_{RF}| = 1455 KHz - 1000 KHz = 455 KHz\]</div>
+<p>La salida de un mezclador contiene la suma y la diferencia de las dos frecuencias de entrada, <span class="math notranslate nohighlight">\(f_{OL} \pm f_{RF}\)</span>.</p>
+<p>La componente de mas alta frecuencia (<span class="math notranslate nohighlight">\(f_{OL} + f_{RF}\)</span>) es atenuada por el filtro de IF. El ancho de banda de la señal resultante esta realcionada con la respuesta del filtro de RF, que por cuestiones constructivas, no tiene la suficiente selectividad como para eliminar los canales adyacentes. Esta selectividad se obtine del filtro de IF.</p>
+<div class="line-block">
+<div class="line">Notar que calculamos los modulos de las componentes de las frecuencias. En este caso la respuesta es para la componente positiva. Pero dada la respuesta del mezclador, la frecuencia <span class="math notranslate nohighlight">\(f_{RF} = 1910 KHz\)</span> también tiene respuesta en la frecuencia <span class="math notranslate nohighlight">\(455KHz\)</span>, la cual corresponde a la componente negativa del modulo.</div>
+<div class="line">Esta señal es no deseada y se llama “frecuencia imagen” o <span class="math notranslate nohighlight">\(f_{imagen}\)</span>, debido a la simetría entre ambas frecuencias detectables respecto a <span class="math notranslate nohighlight">\(f_{OL}\)</span>. Esta señal a la salida del mezclador no puede ser elmimada ya que su respuesta se superpone a la señal deseada, por lo tanto, debe ser eliminada antes de ingresar al mezclador.</div>
+</div>
+<p>La sensibilidad a la frecuencia imagen puede ser minimizada o bien mediante un filtro sintonizable que preceda al mezclador, o bien mediante un circuito mezclador mucho más complejo.</p>
+<p>La señal de frecuencia imagen está separada de la señal que se desea recibir en un valor igual a dos veces la FI, si esta señal de frecuencia imagen llega al mezclador, el receptor ya no será capaz de eliminarla. El rechazo de señales de frecuencia imagen generalmente se busca que sea menor a 60 dB (dependiendo esto del tipo de servicio), pudiendo ser necesario un valor mayor.</p>
+<p>En la siguiente figura se ilustra el rechazo de frecuencia imagen de una etapa de RF.</p>
+<div></div></div>
+<div class="section" id="Sensibilidad-del-receptor">
+<h3>Sensibilidad del receptor<a class="headerlink" href="#Sensibilidad-del-receptor" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Para que el receptor sea capaz de recibir señales de pequeña amplitud, el aporte de ruido de este debe ser también pequeño, fundamentalmente debe tener una cifra de ruido baja, idealmente 1, para esto se suele emplear amplificadores de bajo ruido (LNA).</p>
+<p>La fórmula de Friis se utiliza para calcular el factor de ruido total de etapas en serie, cada una con su respectivas pérdidas o ganancias y su respectiva factor de ruido. El factor de ruido total puede ser utilizado posteriormente para calcular la cifra de ruido total. El factor de ruido total se calcula mediante la siguiente fórmula:</p>
+<div class="math notranslate nohighlight">
+\[F_{total} = F_1 + \frac{F_2-1}{G_1} + \frac{F_3-1}{G_1 G_2} + \frac{F_4-1}{G_1 G_2 G_3} + ... + \frac{F_n - 1}{G_1 G_2 ... G_{n-1}}\]</div>
+<p>donde <span class="math notranslate nohighlight">\(F_n\)</span> y <span class="math notranslate nohighlight">\(G_n\)</span> son el factor de ruido y la ganancia en potencia disponible, respectivamente, de la enésima etapa.</p>
+<div class="math notranslate nohighlight">
+\[F_{receptor} = F_{LNA} + \frac{(F_{resto}-1)}{G_{LNA}}\]</div>
+<p>donde <span class="math notranslate nohighlight">\(F_{resto}\)</span> es el factor de ruido total de las etapas subsecuentes. De acuerdo a la ecuación, la cifra de ruido total, <span class="math notranslate nohighlight">\(F_{receptor}\)</span>, es dominada por la cifra de ruido del amplificador de bajo ruido, <span class="math notranslate nohighlight">\(F_{LNA}\)</span>, si la ganancia es lo suficientemente alta.</p>
+<div class="section" id="Ejemplo-de-receptor-de-conversión-simple">
+<h4>Ejemplo de receptor de conversión simple<a class="headerlink" href="#Ejemplo-de-receptor-de-conversión-simple" title="Enlazar permanentemente con este título">¶</a></h4>
+<p>Receptor de radiodifusión en FM (VHF, modulación en FM de banda ancha) con sintonía sintetizada con PLL:</p>
+<div class="math notranslate nohighlight">
+\[f_{RF_{min}} = 87,5 MHz\]</div>
+<div class="math notranslate nohighlight">
+\[f_{RF_{max}} = 108 MHz\]</div>
+<div class="math notranslate nohighlight">
+\[ \begin{align}\begin{aligned}f_{IF_{1}} = 10,7 MHz\\El filtros realizado con filtro ceramico.\end{aligned}\end{align} \]</div>
+<div class="math notranslate nohighlight">
+\[\Delta f_{IF_{2}} = 250 kHz\]</div>
+<div class="math notranslate nohighlight">
+\[f_{OL_{1min}} = 98,2 MHz\]</div>
+<div class="math notranslate nohighlight">
+\[f_{OL_{1max}} = 118,7 MHz\]</div>
+<div></div><p>Ejemplo de circuito integrado super-heterodino de simple conversión: MAX1471.</p>
+</div>
+</div>
+</div>
+<div class="section" id="Super-heterodino-de-doble-conversión.">
+<h2>Super-heterodino de doble conversión.<a class="headerlink" href="#Super-heterodino-de-doble-conversión." title="Enlazar permanentemente con este título">¶</a></h2>
+<p>En el receptor de simple conversión, la selectividad del receptor está fijada por la del filtro de IF. Si aumenta <span class="math notranslate nohighlight">\(f_{IF}\)</span> aumenta su ancho de banda (para igual Q) y, por tanto, disminuye la selectividad del receptor. Para solucionar este problema hay dos soluciones posibles:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Usar</span> <span class="n">filtros</span> <span class="n">de</span> <span class="n">más</span> <span class="n">calidad</span> <span class="p">(</span><span class="n">filtros</span> <span class="n">cerámicos</span> <span class="n">de</span> <span class="n">alta</span> <span class="n">calidad</span> <span class="n">o</span> <span class="n">filtros</span> <span class="n">de</span> <span class="n">cristal</span> <span class="n">de</span> <span class="n">cuarzo</span> <span class="n">en</span> <span class="n">vez</span> <span class="n">de</span> <span class="n">cerámicos</span><span class="p">)</span><span class="o">.</span>
+
+<span class="n">Usar</span> <span class="n">una</span> <span class="n">estructura</span> <span class="n">de</span> <span class="n">conversión</span> <span class="n">múltiple</span> <span class="p">(</span><span class="n">doble</span> <span class="n">o</span> <span class="n">triple</span><span class="p">)</span> <span class="n">como</span> <span class="n">el</span> <span class="n">superheterodino</span> <span class="n">de</span> <span class="n">doble</span> <span class="n">conversión</span><span class="o">.</span>
+</pre></div>
+</div>
+<div></div><p>Dos frecuencias intermedias:</p>
+<p>La primera frecuencia intermedia, <span class="math notranslate nohighlight">\(f_{IF_1}\)</span>, se elige relativamente alta para conseguir buen rechazo a la frecuencia imagen. La segunda frecuencia intermedia, <span class="math notranslate nohighlight">\(f_{IF_2}\)</span>, se elige relativamente baja para obtener una buena selectividad.</p>
+<div class="section" id="Primer-oscilador-variable-y-primera-IF-constante">
+<h3>Primer oscilador variable y primera IF constante<a class="headerlink" href="#Primer-oscilador-variable-y-primera-IF-constante" title="Enlazar permanentemente con este título">¶</a></h3>
+<div></div><p>Mejor solución si el margen de variación de <span class="math notranslate nohighlight">\(f_{RF}\)</span> es grande. El oscilador de más alta frecuencia es el variable, esto podria tener posibles problemas de estabilidad térmica. La solución es usar PLLs o DDSs.</p>
+</div>
+<div class="section" id="Primer-oscilador-constante-y-primera-IF-variable:">
+<h3>Primer oscilador constante y primera IF variable:<a class="headerlink" href="#Primer-oscilador-constante-y-primera-IF-variable:" title="Enlazar permanentemente con este título">¶</a></h3>
+<div></div><p>El oscilador de más alta frecuencia es de frecuencia fija (mejor desde el punto de vista de la estabilidad térmica). Solución sólo adecuada si el margen de variación de <span class="math notranslate nohighlight">\(f_{RF}\)</span> es pequeño. En caso contrario, existen problemas con el ruido y con el margen dinámico, ya que toda la banda a recibir es procesada por los amplificadores de RF y 1 IF, que deben ser de banda ancha.</p>
+</div>
+<div class="section" id="Receptor-de-radioaficionado-de-la-banda-de-2-m-(VHF,-modulación-en-FM-de-banda-estrecha):">
+<h3>Receptor de radioaficionado de la banda de 2 m (VHF, modulación en FM de banda estrecha):<a class="headerlink" href="#Receptor-de-radioaficionado-de-la-banda-de-2-m-(VHF,-modulación-en-FM-de-banda-estrecha):" title="Enlazar permanentemente con este título">¶</a></h3>
+<div class="math notranslate nohighlight">
+\[f_{RF_{min}} = 144 MHz\]</div>
+<div class="math notranslate nohighlight">
+\[f_{RF_{max}} = 146 MHz\]</div>
+<div class="math notranslate nohighlight">
+\[f_{IF_{1}} = 10,7 MHz\]</div>
+<div class="math notranslate nohighlight">
+\[ \begin{align}\begin{aligned}f_{IF_{2}} = 455  kHz\\Ambos filtros para las etapas intermedias realizados con filtros ceramicos.\end{aligned}\end{align} \]</div>
+<div class="math notranslate nohighlight">
+\[\Delta f_{IF_{2}} = 15  kHz\]</div>
+<div class="math notranslate nohighlight">
+\[f_{OL_{1min}} = 154,7 MHz\]</div>
+<div class="math notranslate nohighlight">
+\[ \begin{align}\begin{aligned}f_{OL_{1max}} = 156,7 MHz\\Se sintoniza empleando un PLL (phase locked loop).\end{aligned}\end{align} \]</div>
+<div class="math notranslate nohighlight">
+\[f_{OL_{2}} = 10,245 MHz\]</div>
+<div></div><p>Ejemplo de CI para receptor de doble conversión</p>
+</div>
+<div class="section" id="Receptor-con-rechazo-de-banda-imagen-por-estructura-I/Q">
+<h3>Receptor con rechazo de banda imagen por estructura I/Q<a class="headerlink" href="#Receptor-con-rechazo-de-banda-imagen-por-estructura-I/Q" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Otra manera de mejorar el rechazo de frecuencia imagen es emplear un receptor con rechazo de banda imagen por estructura I/Q. Ejemplo de este circuito es el integrado MAX2440.</p>
+<div></div><p>Los CI de receptor frontal altamente integrados MAX2440 proporcionan la solución de menor costo para teléfonos inalámbricos y radios de banda ISM que operan en la banda de 900MHz. Todos los dispositivos incorporan mezcladores de rechazo de imagen para reducir el costo del filtro. Funcionan con una fuente de alimentación de + 2.7V a + 4.8V, lo que permite la conexión directa a una pila de batería de 3 celdas. La entrada presenta un LNA de ganancia ajustable y un convertidor descendente de rechazo
+de imagen con supresión de imágenes de <span class="math notranslate nohighlight">\(35dB\)</span>. Estas características producen una excelente figura combinada de ruido del convertidor descendente (<span class="math notranslate nohighlight">\(4dB\)</span>) y alta linealidad con un punto de intercepción de tercer orden de entrada (IP3) de hasta <span class="math notranslate nohighlight">\(+2dBm\)</span>. Todos los dispositivos incluyen un oscilador local (LO) en el chip, que requiere solo un LC externo sintonizador de varactor Tanque para la operación. Es compatibles con los esquemas de modulación comúnmente utilizados como FSK,
+BPSK y QPSK, así como con el salto de frecuencia y los sistemas de espectro de dispersión de secuencia directa.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright Almela, UTN-FRBA
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,0 +1,1179 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="es" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="es" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Ejercicio 1 &mdash; documentación de EAIII2020 - </title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../../" src="../../../../_static/documentation_options.js"></script>
+        <script src="../../../../_static/jquery.js"></script>
+        <script src="../../../../_static/underscore.js"></script>
+        <script src="../../../../_static/doctools.js"></script>
+        <script src="../../../../_static/language_data.js"></script>
+        <script src="../../../../_static/clipboard.min.js"></script>
+        <script src="../../../../_static/copybutton.js"></script>
+        <script src="../../../../_static/translations.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
+    
+    <script type="text/javascript" src="../../../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../_static/copybutton.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../_static/gallery.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Índice" href="../../../../genindex.html" />
+    <link rel="search" title="Búsqueda" href="../../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../../index.html" class="icon icon-home"> EAIII2020
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Introduccion</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../introduccion/sistemas.html">Sistemas de radio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../introduccion/sistemas.html#Receptores-de-radiofrecuencia">Receptores de radiofrecuencia</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../introduccion/sistemas.html#Receptor-Homodino">Receptor Homodino</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../introduccion/sistemas.html#Receptor-Heterodino">Receptor Heterodino</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">EAIII2020</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../../index.html">Docs</a> &raquo;</li>
+        
+      <li>Ejercicio 1</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../../_sources/adaptacion/2_Redes_de_adaptacion/5_Ejercicios/SegundaEntrega/Ejercicio1.ipynb.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  
+<style>
+/* CSS for nbsphinx extension */
+
+/* remove conflicting styling from Sphinx themes */
+div.nbinput.container,
+div.nbinput.container div.prompt,
+div.nbinput.container div.input_area,
+div.nbinput.container div[class*=highlight],
+div.nbinput.container div[class*=highlight] pre,
+div.nboutput.container,
+div.nboutput.container div.prompt,
+div.nboutput.container div.output_area,
+div.nboutput.container div[class*=highlight],
+div.nboutput.container div[class*=highlight] pre {
+    background: none;
+    border: none;
+    padding: 0 0;
+    margin: 0;
+    box-shadow: none;
+}
+
+/* avoid gaps between output lines */
+div.nboutput.container div[class*=highlight] pre {
+    line-height: normal;
+}
+
+/* input/output containers */
+div.nbinput.container,
+div.nboutput.container {
+    display: -webkit-flex;
+    display: flex;
+    align-items: flex-start;
+    margin: 0;
+    width: 100%;
+}
+@media (max-width: 540px) {
+    div.nbinput.container,
+    div.nboutput.container {
+        flex-direction: column;
+    }
+}
+
+/* input container */
+div.nbinput.container {
+    padding-top: 5px;
+}
+
+/* last container */
+div.nblast.container {
+    padding-bottom: 5px;
+}
+
+/* input prompt */
+div.nbinput.container div.prompt pre {
+    color: #307FC1;
+}
+
+/* output prompt */
+div.nboutput.container div.prompt pre {
+    color: #BF5B3D;
+}
+
+/* all prompts */
+div.nbinput.container div.prompt,
+div.nboutput.container div.prompt {
+    min-width: 5ex;
+    padding-top: 0.3rem;
+    padding-right: 0.3rem;
+    text-align: right;
+    flex: 0;
+}
+@media (max-width: 540px) {
+    div.nbinput.container div.prompt,
+    div.nboutput.container div.prompt {
+        text-align: left;
+        padding: 0.4em;
+    }
+    div.nboutput.container div.prompt.empty {
+        padding: 0;
+    }
+}
+
+/* disable scrollbars on prompts */
+div.nbinput.container div.prompt pre,
+div.nboutput.container div.prompt pre {
+    overflow: hidden;
+}
+
+/* input/output area */
+div.nbinput.container div.input_area,
+div.nboutput.container div.output_area {
+    -webkit-flex: 1;
+    flex: 1;
+    overflow: auto;
+}
+@media (max-width: 540px) {
+    div.nbinput.container div.input_area,
+    div.nboutput.container div.output_area {
+        width: 100%;
+    }
+}
+
+/* input area */
+div.nbinput.container div.input_area {
+    border: 1px solid #e0e0e0;
+    border-radius: 2px;
+    background: #f5f5f5;
+}
+
+/* override MathJax center alignment in output cells */
+div.nboutput.container div[class*=MathJax] {
+    text-align: left !important;
+}
+
+/* override sphinx.ext.imgmath center alignment in output cells */
+div.nboutput.container div.math p {
+    text-align: left;
+}
+
+/* standard error */
+div.nboutput.container div.output_area.stderr {
+    background: #fdd;
+}
+
+/* ANSI colors */
+.ansi-black-fg { color: #3E424D; }
+.ansi-black-bg { background-color: #3E424D; }
+.ansi-black-intense-fg { color: #282C36; }
+.ansi-black-intense-bg { background-color: #282C36; }
+.ansi-red-fg { color: #E75C58; }
+.ansi-red-bg { background-color: #E75C58; }
+.ansi-red-intense-fg { color: #B22B31; }
+.ansi-red-intense-bg { background-color: #B22B31; }
+.ansi-green-fg { color: #00A250; }
+.ansi-green-bg { background-color: #00A250; }
+.ansi-green-intense-fg { color: #007427; }
+.ansi-green-intense-bg { background-color: #007427; }
+.ansi-yellow-fg { color: #DDB62B; }
+.ansi-yellow-bg { background-color: #DDB62B; }
+.ansi-yellow-intense-fg { color: #B27D12; }
+.ansi-yellow-intense-bg { background-color: #B27D12; }
+.ansi-blue-fg { color: #208FFB; }
+.ansi-blue-bg { background-color: #208FFB; }
+.ansi-blue-intense-fg { color: #0065CA; }
+.ansi-blue-intense-bg { background-color: #0065CA; }
+.ansi-magenta-fg { color: #D160C4; }
+.ansi-magenta-bg { background-color: #D160C4; }
+.ansi-magenta-intense-fg { color: #A03196; }
+.ansi-magenta-intense-bg { background-color: #A03196; }
+.ansi-cyan-fg { color: #60C6C8; }
+.ansi-cyan-bg { background-color: #60C6C8; }
+.ansi-cyan-intense-fg { color: #258F8F; }
+.ansi-cyan-intense-bg { background-color: #258F8F; }
+.ansi-white-fg { color: #C5C1B4; }
+.ansi-white-bg { background-color: #C5C1B4; }
+.ansi-white-intense-fg { color: #A1A6B2; }
+.ansi-white-intense-bg { background-color: #A1A6B2; }
+
+.ansi-default-inverse-fg { color: #FFFFFF; }
+.ansi-default-inverse-bg { background-color: #000000; }
+
+.ansi-bold { font-weight: bold; }
+.ansi-underline { text-decoration: underline; }
+
+
+div.nbinput.container div.input_area div[class*=highlight] > pre,
+div.nboutput.container div.output_area div[class*=highlight] > pre,
+div.nboutput.container div.output_area div[class*=highlight].math,
+div.nboutput.container div.output_area.rendered_html,
+div.nboutput.container div.output_area > div.output_javascript,
+div.nboutput.container div.output_area:not(.rendered_html) > img{
+    padding: 0.3rem;
+}
+
+/* fix copybtn overflow problem in chromium (needed for 'sphinx_copybutton') */
+div.nbinput.container div.input_area > div[class^='highlight'],
+div.nboutput.container div.output_area > div[class^='highlight']{
+    overflow-y: hidden;
+}
+
+/* hide copybtn icon on prompts (needed for 'sphinx_copybutton') */
+.prompt a.copybtn {
+    display: none;
+}
+
+/* Some additional styling taken form the Jupyter notebook CSS */
+div.rendered_html table {
+  border: none;
+  border-collapse: collapse;
+  border-spacing: 0;
+  color: black;
+  font-size: 12px;
+  table-layout: fixed;
+}
+div.rendered_html thead {
+  border-bottom: 1px solid black;
+  vertical-align: bottom;
+}
+div.rendered_html tr,
+div.rendered_html th,
+div.rendered_html td {
+  text-align: right;
+  vertical-align: middle;
+  padding: 0.5em 0.5em;
+  line-height: normal;
+  white-space: normal;
+  max-width: none;
+  border: none;
+}
+div.rendered_html th {
+  font-weight: bold;
+}
+div.rendered_html tbody tr:nth-child(odd) {
+  background: #f5f5f5;
+}
+div.rendered_html tbody tr:hover {
+  background: rgba(66, 165, 245, 0.2);
+}
+
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast.container,
+.nboutput.nblast.container {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast.container + .nbinput.container {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
+</style>
+<div class="section" id="Ejercicio-1">
+<h1>Ejercicio 1<a class="headerlink" href="#Ejercicio-1" title="Enlazar permanentemente con este título">¶</a></h1>
+<p>En la figura se muestra un circuitos de adaptación realizado con un inductor y un capacitor. El inductor tiene un <span class="math notranslate nohighlight">\(Q_{oL} = 100\)</span> y el capacitor tiene <span class="math notranslate nohighlight">\(ESR= 1\Omega\)</span>. La fuente tiene una <span class="math notranslate nohighlight">\(P_{disp} = 10nW\)</span> a <span class="math notranslate nohighlight">\(100MHz\)</span>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>1. Calcule $L_1$, $C_1$ y $Q_c$ del circuito resultante para adaptar MTEcte la carga y el generador a $100MHz$ mediante conversiones serie-paralelo, suponiendo sin perdidas en el capacitor.
+2. Verificar usando diagrama de Smith.
+3. Calcule $L_1$, $C_1$ y $Q_c$ del circuito resultante para adaptar MTEcte la carga y el generador a $100MHz$ mediante conversiones serie-paralelo, suponiendo componentes con perdidas.
+5. Calcule la potencia entregada por la fuente, la potencia en la carga y verificar usando simuladores.
+4. Verificar usando Spice.
+</pre></div>
+</div>
+</div>
+<div class="section" id="Comentarios">
+<h1>Comentarios<a class="headerlink" href="#Comentarios" title="Enlazar permanentemente con este título">¶</a></h1>
+<p>Este ejercicio plantea resolver un adaptador muy simple, un LC donde ambos componentes presentan perdidas.</p>
+<p>Las conversiones serie/paralelo facilitan encontrar los valores de los componentes del adaptador, donde llevamos el adaptador a un circuito RLC serie o paralelo según convenga.</p>
+<p>Para conocer la respuesta del circuito necesitamos estudiar su respuesta en frecuencia, ya que el modelo final RLC serie o paralelo no tiene la misma respuesta que el circuto practico dado diferencia en la topología.</p>
+<p>En esta hoja de calculo se resolvera el circuito suponiendo que los componentes L y C no presentan perdidas. Luego se analizará la respuesta del circuito en tres condiciones:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mf">1.</span> <span class="n">RL</span><span class="p">,</span> <span class="n">C1s</span> <span class="p">(</span><span class="n">puramente</span> <span class="n">serie</span><span class="p">)</span>
+<span class="mf">2.</span> <span class="n">RL</span> <span class="n">en</span> <span class="n">paralelo</span> <span class="n">con</span> <span class="n">C1</span> <span class="n">sin</span> <span class="n">perdidas</span>
+<span class="mf">3.</span> <span class="n">RL</span> <span class="n">en</span> <span class="n">paralelo</span> <span class="n">con</span> <span class="n">C1</span> <span class="n">con</span> <span class="n">perdidas</span>
+<span class="mf">4.</span> <span class="n">Recalculando</span> <span class="n">L1</span> <span class="n">para</span> <span class="n">la</span> <span class="n">condición</span> <span class="n">de</span> <span class="n">C1</span> <span class="n">con</span> <span class="n">perdidas</span><span class="o">.</span>
+</pre></div>
+</div>
+<p>Los gráficos mostrados en la hoja de calculo se muestean en dBm: <span class="math notranslate nohighlight">\(10 \cdot log_{10}(\frac{P}{10^{-3}})\)</span>.</p>
+<p>Las tensiones y corrientes calculadas estan en valores picos.</p>
+<p>Las potencias en valores eficaces.</p>
+<div class="section" id="NOTA!!:Los-gráficos-en-LTSpice-se-muestran-dB-se-realizan-con-la-conversión-$-20:nbsphinx-math:cdot-`log_{10}(f(x))$-,-por-lo-tanto-para-encotrar-el-ancho-de-banda-de-:math:-3dB`-hay-que-buscar-los--6dB.-No-significa-que-el-ancho-de-banda-en-potencia-sea-de--6dB.">
+<h2>NOTA!!:Los gráficos en LTSpice se muestran dB se realizan con la conversión $ 20:nbsphinx-math:<cite>cdot `log_{10}(f(x))$ , por lo tanto para encotrar el ancho de banda de :math:</cite>-3dB` hay que buscar los <span class="math notranslate nohighlight">\(-6dB\)</span>. No significa que el ancho de banda en potencia sea de <span class="math notranslate nohighlight">\(-6dB\)</span>.<a class="headerlink" href="#NOTA!!:Los-gráficos-en-LTSpice-se-muestran-dB-se-realizan-con-la-conversión-$-20:nbsphinx-math:cdot-`log_{10}(f(x))$-,-por-lo-tanto-para-encotrar-el-ancho-de-banda-de-:math:-3dB`-hay-que-buscar-los--6dB.-No-significa-que-el-ancho-de-banda-en-potencia-sea-de--6dB." title="Enlazar permanentemente con este título">¶</a></h2>
+<div class="section" id="Respuestas">
+<h3>Respuestas<a class="headerlink" href="#Respuestas" title="Enlazar permanentemente con este título">¶</a></h3>
+<div class="section" id="1.-Calcule-L_1,-C_1-y-Q_c-del-circuito-resultante-para-adaptar-MTEcte-la-carga-y-el-generador-a-100MHz-mediante-conversiones-serie-paralelo,-suponiendo-sin-perdidas-en-el-capacitor.">
+<h4>1. Calcule <span class="math notranslate nohighlight">\(L_1\)</span>, <span class="math notranslate nohighlight">\(C_1\)</span> y <span class="math notranslate nohighlight">\(Q_c\)</span> del circuito resultante para adaptar MTEcte la carga y el generador a <span class="math notranslate nohighlight">\(100MHz\)</span> mediante conversiones serie-paralelo, suponiendo sin perdidas en el capacitor.<a class="headerlink" href="#1.-Calcule-L_1,-C_1-y-Q_c-del-circuito-resultante-para-adaptar-MTEcte-la-carga-y-el-generador-a-100MHz-mediante-conversiones-serie-paralelo,-suponiendo-sin-perdidas-en-el-capacitor." title="Enlazar permanentemente con este título">¶</a></h4>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">C1</span>  <span class="o">=</span>  <span class="mf">4.7746e-11</span> <span class="n">F</span>
+<span class="n">L1</span>  <span class="o">=</span>  <span class="mf">4.7746e-08</span> <span class="n">Hy</span>
+<span class="n">Qc</span>  <span class="o">=</span>  <span class="mf">1.478e+00</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="2.-Verificar-usando-diagrama-de-Smith.">
+<h4>2. Verificar usando diagrama de Smith.<a class="headerlink" href="#2.-Verificar-usando-diagrama-de-Smith." title="Enlazar permanentemente con este título">¶</a></h4>
+</div>
+<div class="section" id="3.-Calcule-L_1,-C_1-y-Q_c-del-circuito-resultante-para-adaptar-MTEcte-la-carga-y-el-generador-a-100MHz-mediante-conversiones-serie-paralelo,-suponiendo-componentes-con-perdidas.">
+<h4>3. Calcule <span class="math notranslate nohighlight">\(L_1\)</span>, <span class="math notranslate nohighlight">\(C_1\)</span> y <span class="math notranslate nohighlight">\(Q_c\)</span> del circuito resultante para adaptar MTEcte la carga y el generador a <span class="math notranslate nohighlight">\(100MHz\)</span> mediante conversiones serie-paralelo, suponiendo componentes con perdidas.<a class="headerlink" href="#3.-Calcule-L_1,-C_1-y-Q_c-del-circuito-resultante-para-adaptar-MTEcte-la-carga-y-el-generador-a-100MHz-mediante-conversiones-serie-paralelo,-suponiendo-componentes-con-perdidas." title="Enlazar permanentemente con este título">¶</a></h4>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">C1</span>  <span class="o">=</span>  <span class="mf">4.7746e-11</span> <span class="n">F</span>
+<span class="n">El</span> <span class="n">Qoc</span> <span class="k">del</span> <span class="n">capacitor</span> <span class="n">empleado</span> <span class="p">(</span><span class="n">ESR</span><span class="p">):</span>
+<span class="n">Qoc</span> <span class="o">=</span>  <span class="mf">33.333</span>
+<span class="n">rpcp</span> <span class="o">=</span>  <span class="mf">1112.111</span> <span class="n">ohms</span>
+<span class="n">El</span> <span class="n">Qoc</span> <span class="n">resultante</span><span class="p">:</span>
+<span class="n">QoC</span> <span class="o">=</span>  <span class="mf">21.074</span>
+<span class="n">rpcs</span> <span class="o">=</span>  <span class="mf">0.715</span> <span class="n">ohms</span>
+
+<span class="n">L1</span>  <span class="o">=</span>  <span class="mf">4.6898e-08</span> <span class="n">Hy</span>
+<span class="n">QoL</span> <span class="o">=</span>  <span class="mf">100.000</span>
+<span class="n">rpls</span> <span class="o">=</span>  <span class="mf">0.295</span> <span class="n">ohms</span>
+
+<span class="n">Qc</span>  <span class="o">=</span>  <span class="mf">1.358</span>
+<span class="n">BW</span>  <span class="o">=</span>  <span class="mf">7.362e+07</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="4.-Calcule-la-potencia-entregada-por-la-fuente,-la-potencia-en-la-carga.">
+<h4>4. Calcule la potencia entregada por la fuente, la potencia en la carga.<a class="headerlink" href="#4.-Calcule-la-potencia-entregada-por-la-fuente,-la-potencia-en-la-carga." title="Enlazar permanentemente con este título">¶</a></h4>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Potenicia</span><span class="p">:</span>
+<span class="n">PRL</span>  <span class="o">=</span>  <span class="mf">8.914e-09</span> <span class="n">W</span> <span class="p">(</span><span class="n">eff</span><span class="p">)</span>
+<span class="n">PRL</span>  <span class="o">=</span>  <span class="o">-</span><span class="mf">5.05e+01</span> <span class="n">dBm</span> <span class="p">(</span><span class="n">eff</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="5.-Verificar-usando-Spice.">
+<h4>5. Verificar usando Spice.<a class="headerlink" href="#5.-Verificar-usando-Spice." title="Enlazar permanentemente con este título">¶</a></h4>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="Calculos">
+<h1>Calculos<a class="headerlink" href="#Calculos" title="Enlazar permanentemente con este título">¶</a></h1>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">scipy</span>                  <span class="c1"># http://scipy.org/</span>
+<span class="kn">from</span> <span class="nn">scipy</span> <span class="k">import</span> <span class="n">signal</span>
+
+<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="k">import</span> <span class="n">Image</span>
+<span class="o">%</span><span class="k">matplotlib</span> inline
+<span class="n">params</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;legend.fontsize&#39;</span><span class="p">:</span> <span class="mi">24</span><span class="p">,</span>
+          <span class="s1">&#39;figure.figsize&#39;</span><span class="p">:</span> <span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">8</span><span class="p">),</span>
+         <span class="s1">&#39;axes.labelsize&#39;</span><span class="p">:</span> <span class="mi">24</span><span class="p">,</span>
+         <span class="s1">&#39;axes.titlesize&#39;</span><span class="p">:</span> <span class="mi">24</span><span class="p">,</span>
+         <span class="s1">&#39;xtick.labelsize&#39;</span><span class="p">:</span><span class="mi">24</span><span class="p">,</span>
+         <span class="s1">&#39;ytick.labelsize&#39;</span><span class="p">:</span><span class="mi">24</span><span class="p">}</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">params</span><span class="p">)</span>
+
+<span class="kn">import</span> <span class="nn">myplot</span> <span class="k">as</span> <span class="nn">myp</span>
+
+<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="k">import</span> <span class="n">Image</span>
+
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># Datos</span>
+<span class="n">QoL</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="n">ESR</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">zg</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">Pdisp</span>  <span class="o">=</span> <span class="mf">10e-9</span> <span class="c1"># W RMS</span>
+<span class="n">RL</span>  <span class="o">=</span> <span class="mi">100</span>
+
+<span class="n">fo</span>  <span class="o">=</span>  <span class="mf">100e6</span>
+<span class="n">wo</span> <span class="o">=</span> <span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">*</span><span class="n">fo</span>
+
+
+<span class="c1"># Calculo la impedancia de la fuente para el modelo paralelo</span>
+<span class="n">rg</span> <span class="o">=</span> <span class="n">zg</span><span class="o">.</span><span class="n">real</span>
+
+
+
+<span class="n">Ptot</span>   <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">Pdisp</span>
+<span class="n">vg</span>     <span class="o">=</span> <span class="p">(</span><span class="n">Ptot</span><span class="o">*</span> <span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">rg</span><span class="p">)</span> <span class="o">*</span><span class="mi">2</span><span class="p">)</span><span class="o">**</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span> <span class="c1">#</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;rg =  </span><span class="si">{:1.1f}</span><span class="s1"> ohms&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">rg</span><span class="p">)</span> <span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;vg =  </span><span class="si">{:1.2e}</span><span class="s1"> V&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">vg</span><span class="p">)</span> <span class="p">)</span>
+
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+rg =  10.0 ohms
+vg =  8.94e-04 V
+</pre></div></div>
+</div>
+</div>
+<div class="section" id="Primero-vamos-a-resolver-suponiendo-que-no-hay-perdidas-en-el-capacitor-pero-teniendo-en-cuenta-las-perdidas-del-inductor.">
+<h1>Primero vamos a resolver suponiendo que no hay perdidas en el capacitor pero teniendo en cuenta las perdidas del inductor.<a class="headerlink" href="#Primero-vamos-a-resolver-suponiendo-que-no-hay-perdidas-en-el-capacitor-pero-teniendo-en-cuenta-las-perdidas-del-inductor." title="Enlazar permanentemente con este título">¶</a></h1>
+<div class="section" id="Conversión-paralelo-serie-del-capacitor-C1-con-RL">
+<h2>Conversión paralelo serie del capacitor C1 con RL<a class="headerlink" href="#Conversión-paralelo-serie-del-capacitor-C1-con-RL" title="Enlazar permanentemente con este título">¶</a></h2>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># conversión RL a RLs, para máxima transferencia de energía a Q constante</span>
+<span class="c1"># RL = rg (no se tiene en cuenta las perdidas de adaptador)</span>
+<span class="n">RLp</span> <span class="o">=</span> <span class="mf">100.</span>
+<span class="n">RLs</span> <span class="o">=</span> <span class="mf">10.</span>
+
+<span class="c1"># Calculo del Qm (Q matching)</span>
+<span class="c1"># RLp =  RLs *(1 + Qm**2)</span>
+<span class="n">Qm</span> <span class="o">=</span> <span class="p">(</span><span class="n">RLp</span><span class="o">/</span><span class="n">RLs</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span><span class="o">**</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="c1"># con el Qm es posible calcular C1</span>
+<span class="c1">#Qm = RLp * wo * C1</span>
+<span class="n">C1</span> <span class="o">=</span> <span class="n">Qm</span> <span class="o">/</span> <span class="p">(</span><span class="n">RLp</span> <span class="o">*</span> <span class="n">wo</span><span class="p">)</span>
+
+<span class="c1"># Calculo del capacitor resultante serie</span>
+<span class="n">C1p</span>  <span class="o">=</span> <span class="n">C1</span>
+
+<span class="c1"># Xcs =  Xcp /(1 + 1/Qm**2)</span>
+<span class="c1">#  1/(wo*C1s) =  (1/(wo*C1p)) /(1 + 1/Qm**2)</span>
+<span class="c1">#  C1p =  C1s /(1 + 1/Qm**2)</span>
+<span class="n">C1s</span> <span class="o">=</span>  <span class="n">C1p</span> <span class="o">*</span><span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="mi">1</span><span class="o">/</span><span class="n">Qm</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="c1"># En el modelo serie L sintoniza a C1s</span>
+<span class="n">L1</span> <span class="o">=</span> <span class="mi">1</span><span class="o">/</span><span class="p">(</span><span class="n">wo</span><span class="o">**</span><span class="mi">2</span> <span class="o">*</span> <span class="n">C1s</span><span class="p">)</span>
+<span class="c1">#  calculo la resistencia de perdida serie del inductor</span>
+<span class="n">rpls</span> <span class="o">=</span> <span class="p">(</span><span class="n">wo</span><span class="o">*</span><span class="n">L1</span><span class="p">)</span><span class="o">/</span><span class="n">QoL</span>
+
+
+<span class="c1"># 1/Qc = 1/QoL  + Rext/(wo*L) # Rext = 10 + 10 = 20</span>
+<span class="n">Rext</span> <span class="o">=</span> <span class="n">rg</span> <span class="o">+</span> <span class="n">RLs</span>
+<span class="n">Qc</span> <span class="o">=</span> <span class="mi">1</span><span class="o">/</span><span class="p">((</span><span class="mi">1</span><span class="o">/</span><span class="n">QoL</span><span class="p">)</span>  <span class="o">+</span> <span class="p">(</span><span class="n">Rext</span><span class="o">/</span><span class="p">(</span><span class="n">wo</span><span class="o">*</span><span class="n">L1</span><span class="p">))</span> <span class="p">)</span>
+
+<span class="n">BW</span> <span class="o">=</span> <span class="n">fo</span><span class="o">/</span><span class="n">Qc</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Qm  =  </span><span class="si">{:1.1f}</span><span class="s1"> &#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">Qm</span><span class="p">)</span> <span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;C1  =  </span><span class="si">{:1.4e}</span><span class="s1"> F&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">C1p</span><span class="p">)</span> <span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;C1s =  </span><span class="si">{:1.3e}</span><span class="s1"> F&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">C1s</span><span class="p">)</span> <span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;L1  =  </span><span class="si">{:1.4e}</span><span class="s1"> Hy&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">L1</span><span class="p">)</span> <span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;rpls  =  </span><span class="si">{:1.3f}</span><span class="s1"> ohm&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">rpls</span><span class="p">)</span> <span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Qc  =  </span><span class="si">{:1.3e}</span><span class="s1"> &#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">Qc</span><span class="p">)</span> <span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;BW  =  </span><span class="si">{:1.3f}</span><span class="s1"> MHz&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">BW</span><span class="o">/</span><span class="mf">1e6</span><span class="p">)</span> <span class="p">)</span>
+
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Qm  =  3.0
+C1  =  4.7746e-11 F
+C1s =  5.305e-11 F
+L1  =  4.7746e-08 Hy
+rpls  =  0.300 ohm
+Qc  =  1.478e+00
+BW  =  67.667 MHz
+</pre></div></div>
+</div>
+</div>
+</div>
+<div class="section" id="Simulación-y-calculos-del-RLC-serie-resultante,-C1-en-serie-y-sin-perdidas.">
+<h1>Simulación y calculos del RLC serie resultante, C1 en serie y sin perdidas.<a class="headerlink" href="#Simulación-y-calculos-del-RLC-serie-resultante,-C1-en-serie-y-sin-perdidas." title="Enlazar permanentemente con este título">¶</a></h1>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># Simulando y verificando el circuito serie</span>
+<span class="c1"># Se mide la potencia en RL (ancho de banda de 6dB)</span>
+<span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span> <span class="s2">&quot;fig/eje1sim1.png&quot;</span><span class="p">,</span><span class="n">width</span><span class="o">=</span><span class="mi">750</span><span class="p">)</span>
+
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<a class="reference internal image-reference" href="../../../../_images/adaptacion_2_Redes_de_adaptacion_5_Ejercicios_SegundaEntrega_Ejercicio1_9_0.png"><img alt="../../../../_images/adaptacion_2_Redes_de_adaptacion_5_Ejercicios_SegundaEntrega_Ejercicio1_9_0.png" src="../../../../_images/adaptacion_2_Redes_de_adaptacion_5_Ejercicios_SegundaEntrega_Ejercicio1_9_0.png" style="width: 750px;" /></a>
+</div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># Ahora calculando en la hoja de calculo</span>
+<span class="c1"># Defino el array de frecuencia</span>
+<span class="n">f</span> <span class="o">=</span>  <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mf">10e6</span><span class="p">,</span><span class="mf">200e6</span><span class="p">,</span><span class="o">.</span><span class="mf">1e6</span><span class="p">)</span>
+<span class="c1"># armo el array de w</span>
+<span class="n">w</span> <span class="o">=</span> <span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">*</span><span class="n">f</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1">## simulando el circuito RLC totalmente SERIE!</span>
+
+<span class="c1">## DATOS</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Los datos empleados para los calculos:&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;RLs  =  </span><span class="si">{:1.3f}</span><span class="s1"> ohm&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">RLs</span><span class="p">)</span> <span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;C1s =  </span><span class="si">{:1.3e}</span><span class="s1"> F&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">C1s</span><span class="p">)</span> <span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;L1  =  </span><span class="si">{:1.4e}</span><span class="s1"> Hy&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">L1</span><span class="p">)</span> <span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;rpls  =  </span><span class="si">{:1.3f}</span><span class="s1"> ohm&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">rpls</span><span class="p">)</span> <span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;rg  =  </span><span class="si">{:1.3f}</span><span class="s1"> ohm&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">rg</span><span class="p">)</span> <span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;vg  =  </span><span class="si">{:1.3e}</span><span class="s1"> Vp&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">vg</span><span class="p">)</span> <span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+
+
+
+<span class="c1"># Capacitor serie</span>
+<span class="n">Xcs</span>  <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="o">/</span><span class="p">(</span><span class="n">w</span><span class="o">*</span><span class="n">C1s</span><span class="p">)</span>
+<span class="n">ZC</span>   <span class="o">=</span> <span class="mi">1</span><span class="n">j</span><span class="o">*</span><span class="n">Xcs</span>
+<span class="c1"># inductor serie</span>
+<span class="n">Xls</span>  <span class="o">=</span> <span class="n">w</span><span class="o">*</span><span class="n">L1</span>
+<span class="n">ZL</span>   <span class="o">=</span> <span class="n">rpls</span> <span class="o">+</span> <span class="mi">1</span><span class="n">j</span><span class="o">*</span><span class="n">Xls</span>
+
+<span class="c1"># impedancia total que carga a la fuente incluida su impedancia interna</span>
+<span class="n">Z</span>   <span class="o">=</span> <span class="n">rg</span> <span class="o">+</span> <span class="n">ZL</span> <span class="o">+</span> <span class="n">ZC</span> <span class="o">+</span> <span class="n">RLs</span>
+<span class="c1">#plt.plot(f,Z.imag)</span>
+<span class="c1">#plt.show()</span>
+
+
+<span class="c1"># Potenicia en la carga</span>
+<span class="n">i</span>   <span class="o">=</span> <span class="n">vg</span> <span class="o">/</span><span class="n">Z</span>
+<span class="n">vrl</span> <span class="o">=</span> <span class="n">i</span> <span class="o">*</span> <span class="n">RLs</span>
+<span class="n">irl</span> <span class="o">=</span> <span class="n">i</span>
+<span class="n">Prl</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">irl</span><span class="o">*</span><span class="n">vrl</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span> <span class="c1"># valor eficaz</span>
+
+<span class="n">myp</span><span class="o">.</span><span class="n">imprimePRL</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">Prl</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Los datos empleados para los calculos:
+RLs  =  10.000 ohm
+C1s =  5.305e-11 F
+L1  =  4.7746e-08 Hy
+rpls  =  0.300 ohm
+rg  =  10.000 ohm
+vg  =  8.944e-04 Vp
+
+frecuencia central
+fo =  1.000e+08 MHz
+Ancho de banda:
+Qc  =  1.479e+00
+BW  =  67.600 MHz
+
+Potenicia:
+PRL  =  9.707e-09 W (eff)
+PRL  =  -5.01e+01 dBm (eff)
+</pre></div></div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../../../_images/adaptacion_2_Redes_de_adaptacion_5_Ejercicios_SegundaEntrega_Ejercicio1_11_1.png" src="../../../../_images/adaptacion_2_Redes_de_adaptacion_5_Ejercicios_SegundaEntrega_Ejercicio1_11_1.png" />
+</div>
+</div>
+</div>
+<div class="section" id="Calculos-del-RLC,-pero-con-C1-en-derivación-y-sin-perdidas.">
+<h1>Calculos del RLC, pero con C1 en derivación y sin perdidas.<a class="headerlink" href="#Calculos-del-RLC,-pero-con-C1-en-derivación-y-sin-perdidas." title="Enlazar permanentemente con este título">¶</a></h1>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># Simulando y verificando el circuito serie con derivación</span>
+<span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span> <span class="s2">&quot;fig/eje1sim2.png&quot;</span><span class="p">,</span><span class="n">width</span><span class="o">=</span><span class="mi">750</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<a class="reference internal image-reference" href="../../../../_images/adaptacion_2_Redes_de_adaptacion_5_Ejercicios_SegundaEntrega_Ejercicio1_13_0.png"><img alt="../../../../_images/adaptacion_2_Redes_de_adaptacion_5_Ejercicios_SegundaEntrega_Ejercicio1_13_0.png" src="../../../../_images/adaptacion_2_Redes_de_adaptacion_5_Ejercicios_SegundaEntrega_Ejercicio1_13_0.png" style="width: 750px;" /></a>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[10]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># Ahora comparamos con el circuito usando el capacitor sin perdidas</span>
+<span class="c1">## DATOS</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Los datos empleados para los calculos:&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;RL  =  </span><span class="si">{:1.1f}</span><span class="s1"> ohm&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">RL</span><span class="p">)</span> <span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;C1 =  </span><span class="si">{:1.3e}</span><span class="s1"> F&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">C1</span><span class="p">)</span> <span class="p">)</span>
+
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;L1  =  </span><span class="si">{:1.4e}</span><span class="s1"> Hy&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">L1</span><span class="p">)</span> <span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;rpls  =  </span><span class="si">{:1.3f}</span><span class="s1"> ohm&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">rpls</span><span class="p">)</span> <span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;rg  =  </span><span class="si">{:1.3f}</span><span class="s1"> ohm&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">rg</span><span class="p">)</span> <span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;vg  =  </span><span class="si">{:1.3e}</span><span class="s1"> Vp&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">vg</span><span class="p">)</span> <span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+
+<span class="c1"># Capacitor serie</span>
+<span class="n">Xcs</span>  <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="o">/</span><span class="p">(</span><span class="n">w</span><span class="o">*</span><span class="n">C1</span><span class="p">)</span>
+<span class="n">Zc</span>   <span class="o">=</span> <span class="mi">1</span><span class="n">j</span><span class="o">*</span><span class="n">Xcs</span>
+
+<span class="c1"># C1 sin perdidas en paralelo con RL</span>
+<span class="n">ZcRL</span> <span class="o">=</span> <span class="n">RL</span> <span class="o">*</span> <span class="n">Zc</span> <span class="o">/</span> <span class="p">(</span><span class="n">RL</span> <span class="o">+</span>  <span class="n">Zc</span><span class="p">)</span>
+
+<span class="c1"># inductor serie con perdidas</span>
+<span class="n">Xls</span>  <span class="o">=</span> <span class="n">w</span><span class="o">*</span><span class="n">L1</span>
+<span class="n">ZL</span>   <span class="o">=</span> <span class="n">rpls</span> <span class="o">+</span> <span class="mi">1</span><span class="n">j</span><span class="o">*</span><span class="n">Xls</span>
+
+
+<span class="c1"># Impedancia total incluida la impedancia del generador</span>
+<span class="n">Z</span>   <span class="o">=</span> <span class="n">rg</span> <span class="o">+</span> <span class="n">ZL</span> <span class="o">+</span> <span class="n">ZcRL</span>
+
+<span class="c1"># Calculo de la potenicia de RL</span>
+<span class="n">i</span>   <span class="o">=</span> <span class="n">vg</span> <span class="o">/</span><span class="n">Z</span>
+<span class="n">vrl</span> <span class="o">=</span> <span class="n">i</span> <span class="o">*</span> <span class="n">ZcRL</span>
+<span class="n">irl</span> <span class="o">=</span> <span class="n">vrl</span><span class="o">/</span><span class="n">RL</span>
+<span class="n">Prl</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">irl</span><span class="o">*</span><span class="n">vrl</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span> <span class="c1"># potenica eficaz</span>
+
+<span class="n">myp</span><span class="o">.</span><span class="n">imprimePRL</span><span class="p">(</span><span class="n">f</span><span class="p">,</span><span class="n">Prl</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Los datos empleados para los calculos:
+RL  =  100.0 ohm
+C1 =  4.775e-11 F
+L1  =  4.7746e-08 Hy
+rpls  =  0.300 ohm
+rg  =  10.000 ohm
+vg  =  8.944e-04 Vp
+
+frecuencia central
+fo =  9.980e+07 MHz
+Ancho de banda:
+Qc  =  1.289e+00
+BW  =  77.400 MHz
+
+Potenicia:
+PRL  =  9.707e-09 W (eff)
+PRL  =  -5.01e+01 dBm (eff)
+</pre></div></div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../../../_images/adaptacion_2_Redes_de_adaptacion_5_Ejercicios_SegundaEntrega_Ejercicio1_14_1.png" src="../../../../_images/adaptacion_2_Redes_de_adaptacion_5_Ejercicios_SegundaEntrega_Ejercicio1_14_1.png" />
+</div>
+</div>
+</div>
+<div class="section" id="Comentario">
+<h1>Comentario<a class="headerlink" href="#Comentario" title="Enlazar permanentemente con este título">¶</a></h1>
+<p>El ancho de banda es mayor debido a que la definición de Qc es valida para circuitos puramente serie o paralelos.</p>
+</div>
+<div class="section" id="Calculos-del-RLC,-pero-con-C1-en-derivación-y-con-perdidas.">
+<h1>Calculos del RLC, pero con C1 en derivación y con perdidas.<a class="headerlink" href="#Calculos-del-RLC,-pero-con-C1-en-derivación-y-con-perdidas." title="Enlazar permanentemente con este título">¶</a></h1>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[11]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># Simulando y verificando el circuito serie con derivación y las perdidas del capacitor</span>
+<span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span> <span class="s2">&quot;fig/eje1sim3.png&quot;</span><span class="p">,</span><span class="n">width</span><span class="o">=</span><span class="mi">750</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[11]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<a class="reference internal image-reference" href="../../../../_images/adaptacion_2_Redes_de_adaptacion_5_Ejercicios_SegundaEntrega_Ejercicio1_17_0.png"><img alt="../../../../_images/adaptacion_2_Redes_de_adaptacion_5_Ejercicios_SegundaEntrega_Ejercicio1_17_0.png" src="../../../../_images/adaptacion_2_Redes_de_adaptacion_5_Ejercicios_SegundaEntrega_Ejercicio1_17_0.png" style="width: 750px;" /></a>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[13]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># Ahora comparamos con el circuito usando el capacitor con perdidas</span>
+<span class="c1">## DATOS</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Los datos empleados para los calculos:&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;RL  =  </span><span class="si">{:1.1f}</span><span class="s1"> ohm&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">RL</span><span class="p">)</span> <span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;C1 =  </span><span class="si">{:1.3e}</span><span class="s1"> F&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">C1</span><span class="p">)</span> <span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;ESR  =  </span><span class="si">{:1.3f}</span><span class="s1"> ohm&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">ESR</span><span class="p">)</span> <span class="p">)</span>
+
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;L1  =  </span><span class="si">{:1.4e}</span><span class="s1"> Hy&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">L1</span><span class="p">)</span> <span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;rpls  =  </span><span class="si">{:1.3f}</span><span class="s1"> ohm&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">rpls</span><span class="p">)</span> <span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;rg  =  </span><span class="si">{:1.3f}</span><span class="s1"> ohm&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">rg</span><span class="p">)</span> <span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;vg  =  </span><span class="si">{:1.3e}</span><span class="s1"> Vp&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">vg</span><span class="p">)</span> <span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+
+<span class="c1"># Capacitor serie</span>
+<span class="n">Xcs</span>  <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="o">/</span><span class="p">(</span><span class="n">w</span><span class="o">*</span><span class="n">C1</span><span class="p">)</span>
+<span class="n">Zc</span>   <span class="o">=</span>  <span class="n">ESR</span> <span class="o">+</span>  <span class="mi">1</span><span class="n">j</span><span class="o">*</span><span class="n">Xcs</span>
+
+<span class="c1"># C1 sin perdidas en paralelo con RL</span>
+<span class="n">ZcRL</span> <span class="o">=</span> <span class="n">RL</span> <span class="o">*</span> <span class="n">Zc</span> <span class="o">/</span> <span class="p">(</span><span class="n">RL</span> <span class="o">+</span>  <span class="n">Zc</span><span class="p">)</span>
+
+<span class="c1"># inductor serie con perdidas</span>
+<span class="n">Xls</span>  <span class="o">=</span> <span class="n">w</span><span class="o">*</span><span class="n">L1</span>
+<span class="n">ZL</span>   <span class="o">=</span> <span class="n">rpls</span> <span class="o">+</span> <span class="mi">1</span><span class="n">j</span><span class="o">*</span><span class="n">Xls</span>
+
+
+<span class="c1"># Impedancia total incluida la impedancia del generador</span>
+<span class="n">Z</span>   <span class="o">=</span> <span class="n">rg</span> <span class="o">+</span> <span class="n">ZL</span> <span class="o">+</span> <span class="n">ZcRL</span>
+
+<span class="c1"># Calculo de la potenicia de RL</span>
+<span class="n">i</span>   <span class="o">=</span> <span class="n">vg</span> <span class="o">/</span><span class="n">Z</span>
+<span class="n">vrl</span> <span class="o">=</span> <span class="n">i</span> <span class="o">*</span> <span class="n">ZcRL</span>
+<span class="n">irl</span> <span class="o">=</span> <span class="n">vrl</span><span class="o">/</span><span class="n">RL</span>
+<span class="n">Prl</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">irl</span><span class="o">*</span><span class="n">vrl</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span> <span class="c1"># potenica eficaz</span>
+
+<span class="n">myp</span><span class="o">.</span><span class="n">imprimePRL</span><span class="p">(</span><span class="n">f</span><span class="p">,</span><span class="n">Prl</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Los datos empleados para los calculos:
+RL  =  100.0 ohm
+C1 =  4.775e-11 F
+ESR  =  1.000 ohm
+L1  =  4.7746e-08 Hy
+rpls  =  0.300 ohm
+rg  =  10.000 ohm
+vg  =  8.944e-04 Vp
+
+frecuencia central
+fo =  9.820e+07 MHz
+Ancho de banda:
+Qc  =  1.187e+00
+BW  =  82.700 MHz
+
+Potenicia:
+PRL  =  8.920e-09 W (eff)
+PRL  =  -5.05e+01 dBm (eff)
+</pre></div></div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../../../_images/adaptacion_2_Redes_de_adaptacion_5_Ejercicios_SegundaEntrega_Ejercicio1_18_1.png" src="../../../../_images/adaptacion_2_Redes_de_adaptacion_5_Ejercicios_SegundaEntrega_Ejercicio1_18_1.png" />
+</div>
+</div>
+</div>
+<div class="section" id="id1">
+<h1>Comentario<a class="headerlink" href="#id1" title="Enlazar permanentemente con este título">¶</a></h1>
+<p>Si ahora se incluye las perdidas del capacitor C1 con los valores calculados. Se observa que la frecuencia de resonancia ya no es la de proyecto.</p>
+<p>Se calculará a continuación el nuevo valor del inductor.</p>
+</div>
+<div class="section" id="Recalculando-L1-con-C1-con-perdidas">
+<h1>Recalculando L1 con C1 con perdidas<a class="headerlink" href="#Recalculando-L1-con-C1-con-perdidas" title="Enlazar permanentemente con este título">¶</a></h1>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[14]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># Calculos</span>
+<span class="c1">## DATOS</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Los datos empleados para los calculos:&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;RL  =  </span><span class="si">{:1.1f}</span><span class="s1"> ohm&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">RL</span><span class="p">)</span> <span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;C1 =  </span><span class="si">{:1.3e}</span><span class="s1"> F&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">C1</span><span class="p">)</span> <span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;QoL =  </span><span class="si">{:1.1f}</span><span class="s1"> &#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">QoL</span><span class="p">)</span> <span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;rg  =  </span><span class="si">{:1.3f}</span><span class="s1"> ohm&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">rg</span><span class="p">)</span> <span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;vg  =  </span><span class="si">{:1.3e}</span><span class="s1"> Vp&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">vg</span><span class="p">)</span> <span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+
+<span class="c1"># Capacitor serie</span>
+<span class="n">Xcs</span>  <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="o">/</span><span class="p">(</span><span class="n">wo</span><span class="o">*</span><span class="n">C1</span><span class="p">)</span>
+<span class="n">Zc</span>   <span class="o">=</span>  <span class="n">ESR</span> <span class="o">+</span>  <span class="mi">1</span><span class="n">j</span><span class="o">*</span><span class="n">Xcs</span>
+<span class="n">Qoc</span>  <span class="o">=</span> <span class="o">-</span><span class="n">Xcs</span><span class="o">*</span><span class="n">ESR</span>
+<span class="n">rpcp</span> <span class="o">=</span> <span class="n">ESR</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="n">Qoc</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="c1"># Calculando el paralelo</span>
+<span class="n">ZcRL</span> <span class="o">=</span> <span class="n">Zc</span> <span class="o">*</span> <span class="n">RLp</span> <span class="o">/</span> <span class="p">(</span><span class="n">Zc</span> <span class="o">+</span> <span class="n">RLp</span><span class="p">)</span>
+
+<span class="c1"># De la impedancia resultante calculo Xc</span>
+<span class="n">Xc</span>  <span class="o">=</span> <span class="o">-</span><span class="n">ZcRL</span><span class="o">.</span><span class="n">imag</span>
+<span class="c1"># Calculando las perididas del adaptador</span>
+<span class="n">rt</span> <span class="o">=</span>  <span class="n">ZcRL</span><span class="o">.</span><span class="n">real</span>
+<span class="n">rpcs</span> <span class="o">=</span> <span class="n">rt</span> <span class="o">-</span> <span class="n">RLs</span>
+<span class="c1"># El Qoc</span>
+<span class="n">QoC</span> <span class="o">=</span> <span class="n">Xc</span><span class="o">*</span><span class="n">rpcs</span>
+
+<span class="c1"># El inductor que sintoniza Xc</span>
+<span class="n">Xl</span>  <span class="o">=</span> <span class="n">Xc</span>
+<span class="n">L1</span>  <span class="o">=</span> <span class="n">Xl</span><span class="o">/</span><span class="n">wo</span>
+
+<span class="c1"># Calculando las perdidas</span>
+<span class="c1"># QoL = Xl/rpls</span>
+<span class="n">rpls</span> <span class="o">=</span> <span class="n">Xl</span><span class="o">/</span><span class="n">QoL</span>
+<span class="n">ZL</span> <span class="o">=</span> <span class="n">rpls</span> <span class="o">+</span> <span class="mi">1</span><span class="n">j</span><span class="o">*</span><span class="n">Xl</span>
+
+<span class="c1"># Rext de un circuito serie</span>
+<span class="n">Rext</span> <span class="o">=</span> <span class="n">rg</span> <span class="o">+</span> <span class="n">RLs</span>
+<span class="c1"># Caculando el Qc</span>
+<span class="c1"># 1/Qc = 1/QoL + 1/QoC + rext/(w*L1)</span>
+<span class="n">Qc</span> <span class="o">=</span> <span class="mi">1</span><span class="o">/</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="n">QoL</span> <span class="o">+</span> <span class="mi">1</span><span class="o">/</span><span class="n">QoC</span> <span class="o">+</span> <span class="n">Rext</span><span class="o">/</span><span class="p">(</span><span class="n">wo</span><span class="o">*</span><span class="n">L1</span><span class="p">))</span>
+
+<span class="n">BW</span> <span class="o">=</span> <span class="n">fo</span><span class="o">/</span><span class="n">Qc</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Resultado&#39;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;C1  =  </span><span class="si">{:1.4e}</span><span class="s1"> F&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">C1p</span><span class="p">)</span> <span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;El Qoc del capacitor empleado (ESR):&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Qoc =  </span><span class="si">{:1.3f}</span><span class="s1"> &#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">Qoc</span><span class="p">)</span> <span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;rpcp =  </span><span class="si">{:1.3f}</span><span class="s1"> ohms&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">rpcp</span><span class="p">)</span> <span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;El Qoc resultante:&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;QoC =  </span><span class="si">{:1.3f}</span><span class="s1"> &#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">QoC</span><span class="p">)</span> <span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;rpcs =  </span><span class="si">{:1.3f}</span><span class="s1"> ohms&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">rpcs</span><span class="p">)</span> <span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;L1  =  </span><span class="si">{:1.4e}</span><span class="s1"> Hy&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">L1</span><span class="p">)</span> <span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;QoL =  </span><span class="si">{:1.3f}</span><span class="s1"> &#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">QoL</span><span class="p">)</span> <span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;rpls =  </span><span class="si">{:1.3f}</span><span class="s1"> ohms&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">rpls</span><span class="p">)</span> <span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Qc  =  </span><span class="si">{:1.3f}</span><span class="s1"> &#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">Qc</span><span class="p">)</span> <span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;BW  =  </span><span class="si">{:1.3e}</span><span class="s1"> &#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">BW</span><span class="p">)</span> <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Los datos empleados para los calculos:
+RL  =  100.0 ohm
+C1 =  4.775e-11 F
+QoL =  100.0
+rg  =  10.000 ohm
+vg  =  8.944e-04 Vp
+
+
+Resultado
+C1  =  4.7746e-11 F
+El Qoc del capacitor empleado (ESR):
+Qoc =  33.333
+rpcp =  1112.111 ohms
+El Qoc resultante:
+QoC =  21.074
+rpcs =  0.715 ohms
+
+L1  =  4.6898e-08 Hy
+QoL =  100.000
+rpls =  0.295 ohms
+
+Qc  =  1.358
+BW  =  7.362e+07
+</pre></div></div>
+</div>
+</div>
+<div class="section" id="Simulando-y-calculando-potencia-sobre-la-carga">
+<h1>Simulando y calculando potencia sobre la carga<a class="headerlink" href="#Simulando-y-calculando-potencia-sobre-la-carga" title="Enlazar permanentemente con este título">¶</a></h1>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[15]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># Simulando y verificando el circuito serie con derivación y las perdidas del capacitor</span>
+<span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span> <span class="s2">&quot;fig/eje1sim4c.png&quot;</span><span class="p">,</span><span class="n">width</span><span class="o">=</span><span class="mi">750</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[15]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<a class="reference internal image-reference" href="../../../../_images/adaptacion_2_Redes_de_adaptacion_5_Ejercicios_SegundaEntrega_Ejercicio1_23_0.png"><img alt="../../../../_images/adaptacion_2_Redes_de_adaptacion_5_Ejercicios_SegundaEntrega_Ejercicio1_23_0.png" src="../../../../_images/adaptacion_2_Redes_de_adaptacion_5_Ejercicios_SegundaEntrega_Ejercicio1_23_0.png" style="width: 750px;" /></a>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[17]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># Ahora comparamos con el circuito usando el capacitor sin perdidas</span>
+<span class="c1">## DATOS</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Los datos empleados para los calculos:&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;RL  =  </span><span class="si">{:1.1f}</span><span class="s1"> ohm&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">RL</span><span class="p">)</span> <span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;C1 =  </span><span class="si">{:1.3e}</span><span class="s1"> F&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">C1</span><span class="p">)</span> <span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;L1  =  </span><span class="si">{:1.4e}</span><span class="s1"> Hy&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">L1</span><span class="p">)</span> <span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;rpls  =  </span><span class="si">{:1.3f}</span><span class="s1"> ohm&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">rpls</span><span class="p">)</span> <span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;rg  =  </span><span class="si">{:1.3f}</span><span class="s1"> ohm&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">rg</span><span class="p">)</span> <span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;vg  =  </span><span class="si">{:1.3e}</span><span class="s1"> Vp&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">vg</span><span class="p">)</span> <span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+
+<span class="c1"># Capacitor serie</span>
+<span class="n">Xcs</span>  <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="o">/</span><span class="p">(</span><span class="n">w</span><span class="o">*</span><span class="n">C1</span><span class="p">)</span>
+<span class="n">Zc</span>   <span class="o">=</span> <span class="n">ESR</span> <span class="o">+</span> <span class="mi">1</span><span class="n">j</span><span class="o">*</span><span class="n">Xcs</span>
+
+<span class="c1"># C1 con perdidas en paralelo con RL</span>
+<span class="n">ZcRL</span> <span class="o">=</span> <span class="n">RL</span> <span class="o">*</span> <span class="n">Zc</span> <span class="o">/</span> <span class="p">(</span><span class="n">RL</span> <span class="o">+</span>  <span class="n">Zc</span><span class="p">)</span>
+
+<span class="c1"># inductor serie con perdidas</span>
+<span class="n">Xls</span>  <span class="o">=</span> <span class="n">w</span><span class="o">*</span><span class="n">L1</span>
+<span class="n">ZL</span>   <span class="o">=</span> <span class="n">rpls</span> <span class="o">+</span> <span class="mi">1</span><span class="n">j</span><span class="o">*</span><span class="n">Xls</span>
+
+
+<span class="c1"># Impedancia total incluida la impedancia del generador</span>
+<span class="n">Z</span>   <span class="o">=</span> <span class="n">rg</span> <span class="o">+</span> <span class="n">ZL</span> <span class="o">+</span> <span class="n">ZcRL</span>
+
+<span class="c1"># Calculo de la potenicia de RL</span>
+<span class="n">i</span>   <span class="o">=</span> <span class="n">vg</span> <span class="o">/</span><span class="n">Z</span>
+<span class="n">vrl</span> <span class="o">=</span> <span class="n">i</span> <span class="o">*</span> <span class="n">ZcRL</span>
+<span class="n">irl</span> <span class="o">=</span> <span class="n">vrl</span><span class="o">/</span><span class="n">RL</span>
+<span class="n">Prl</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">irl</span><span class="o">*</span><span class="n">vrl</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span> <span class="c1"># potenica eficaz</span>
+
+<span class="n">myp</span><span class="o">.</span><span class="n">imprimePRL</span><span class="p">(</span><span class="n">f</span><span class="p">,</span><span class="n">Prl</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Los datos empleados para los calculos:
+RL  =  100.0 ohm
+C1 =  4.775e-11 F
+L1  =  4.6898e-08 Hy
+rpls  =  0.295 ohm
+rg  =  10.000 ohm
+vg  =  8.944e-04 Vp
+
+frecuencia central
+fo =  9.910e+07 MHz
+Ancho de banda:
+Qc  =  1.187e+00
+BW  =  83.500 MHz
+
+Potenicia:
+PRL  =  8.914e-09 W (eff)
+PRL  =  -5.05e+01 dBm (eff)
+</pre></div></div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../../../_images/adaptacion_2_Redes_de_adaptacion_5_Ejercicios_SegundaEntrega_Ejercicio1_24_1.png" src="../../../../_images/adaptacion_2_Redes_de_adaptacion_5_Ejercicios_SegundaEntrega_Ejercicio1_24_1.png" />
+</div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright Almela, UTN-FRBA
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

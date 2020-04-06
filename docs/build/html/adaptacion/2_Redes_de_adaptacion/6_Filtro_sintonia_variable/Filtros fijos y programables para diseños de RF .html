@@ -1,0 +1,253 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="es" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="es" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Filtros fijos y programables para diseños de RF &mdash; documentación de EAIII2020 - </title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/language_data.js"></script>
+        <script src="../../../_static/clipboard.min.js"></script>
+        <script src="../../../_static/copybutton.js"></script>
+        <script src="../../../_static/translations.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/copybutton.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/gallery.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Índice" href="../../../genindex.html" />
+    <link rel="search" title="Búsqueda" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> EAIII2020
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Introduccion</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../introduccion/sistemas.html">Sistemas de radio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../introduccion/sistemas.html#Receptores-de-radiofrecuencia">Receptores de radiofrecuencia</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../introduccion/sistemas.html#Receptor-Homodino">Receptor Homodino</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../introduccion/sistemas.html#Receptor-Heterodino">Receptor Heterodino</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">EAIII2020</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+      <li>Filtros fijos y programables para diseños de RF</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../_sources/adaptacion/2_Redes_de_adaptacion/6_Filtro_sintonia_variable/Filtros fijos y programables para diseños de RF .ipynb.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  
+<style>
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast.container,
+.nboutput.nblast.container {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast.container + .nbinput.container {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
+</style>
+<div class="section" id="Filtros-fijos-y-programables-para-diseños-de-RF">
+<h1>Filtros fijos y programables para diseños de RF<a class="headerlink" href="#Filtros-fijos-y-programables-para-diseños-de-RF" title="Enlazar permanentemente con este título">¶</a></h1>
+<p>El encapsulamiento de complejos bloques funcionales de RF en silicio está transformando los tipos de dispositivos y equipos que usamos.</p>
+<p>La mayoría de los diseños de RF se basan en normas, utilizando especificaciones formalizadas por el IEEE o un grupo de consorcio que abarca varios fabricantes que han acordado desarrollar y adherirse a un conjunto de directrices. Sin embargo, no todos los diseños son de dominio público y están abiertos a cualquier receptor. De hecho, puede ser necesario un cifrado seguro y no estándar, o transmisiones ocultas para asegurar la privacidad, el sigilo o la seguridad, así como para permitir funciones
+de control personalizadas.</p>
+<p>Los filtros juegan un importante papel aquí. Mezclar señales y manipular el ancho de banda, la modulación y los datos puede añadir información que no será detectada a menos que sepas exactamente qué buscar. Al igual que los datos que se esconden en un archivo de imagen, los datos pueden ocultarse en un flujo de audio como ráfagas cortas de energía en frecuencias específicas y en momentos clave que serán indetectables para el oyente. Este procedimiento puede permitir que incluso un diseño
+orientado a las normas cuente con características y funcionalidades únicas, ya que ahora el usuario dispone de un canal de control.</p>
+<p>Por ejemplo, si está en un coche manteniendo una conversación telefónica con un auricular Bluetooth y se recibe otra llamada, una señal de detección en el auricular puede transmitir una señal de red de área personal (PAN) de muy baja potencia a una pantalla de aviso en el parabrisas, lo que le permite saber que está recibiendo una llamada y proporcionar el número de teléfono y la identidad de la persona que llama, todo ello sin interrumpir la transmisión de audio. Ahora puede decidir si quiere
+interrumpir su llamada o no sin distraerse.</p>
+<p>Este artículo trata sobre las piezas y técnicas de filtrado estándar y no estándar que pueden utilizarse para ayudar a personalizar un enlace de RF.</p>
+</div>
+<div class="section" id="Datos-mezclados-y-modulados">
+<h1>Datos mezclados y modulados<a class="headerlink" href="#Datos-mezclados-y-modulados" title="Enlazar permanentemente con este título">¶</a></h1>
+<p>Las radios emplean mezcladores, filtros, amplificadores y moduladores. A una frecuencia de radio específica, el ancho de banda de la señal recuperada es proporcional a la Frecuencia Intermedia (FI) mezclada con la portadora. Las señales mezcladas tienen cada una de las señales constituyentes, así como frecuencias sumas y diferencias (Figura 1). Como tal, la anchura de banda de la señal recuperada, cualquiera que sea el esquema de modulación, es fijada por Nyquist y es directamente proporcional a
+la frecuencia IF.</p>
+<p>No todos los diseños de radio son un complejo envoltorio digital atado a un transceptor de RF. Las etapas básicas de RF siguen siendo útiles y aprovechan los esquemas de modulación AM, FM, FSK y de cambio de fase bien refinados y bien entendidos. Estos diseños también son típicamente de muy bajo costo.</p>
+<p>Como resultado, y sin grandes gastos, teóricamente se puede extender el ancho de banda de las señales transmitidas para permitir el paso de los componentes de alta frecuencia, mientras que los receptores estándar que no tienen un ancho de banda expandido no recuperarán estas señales. Los ingenieros pueden jugar con las etapas de FI aquí usando filtros estándar específicos de RF o crear sus propios filtros con componentes discretos.</p>
+<p>Sin embargo, una advertencia: cuanto más amplio sea el ancho de banda, mayor será el nivel de ruido resultante en la relación señal-ruido. Las bandas más estrechas tienen menos ruido fuera de banda, ya que los filtros de muesca eficaces eliminan prácticamente todo el ruido fuera de banda.</p>
+<div class="section" id="Filtros-para-determinadas-normas">
+<h2>Filtros para determinadas normas<a class="headerlink" href="#Filtros-para-determinadas-normas" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Consideremos ahora las radios diseñadas para cumplir con las normas de interoperabilidad. Los ejemplos incluyen funciones específicas como enlaces de voz, redes, audio/video, control de juegos, etc. Éstas tienen anchos de banda y características de señal definidos, por lo que realmente no se puede jugar con parámetros a este nivel. Pero, para facilitarnos la vida, muchos proveedores ofrecen filtros enlatados adaptados a estas normas a un costo competitivo.</p>
+<p>Por ejemplo, los diseños de Bluetooth - incluyendo el nuevo sabor Low Energy - pueden aprovechar el centro de 2,441 GHz, con frecuencia central de 2,45 GHz, 78 MHz, y 100 MHz de ancho de banda de piezas monolíticas afinadas que ahorran espacio en el PCB y reducen el costo. Del mismo modo, los diseñadores de Wi-Fi pueden elegir entre filtros de 2,45 y 5,5 GHz con anchos de banda variables de 100 MHz a 1,02 GHz. Las configuraciones específicas para WiMAX también están disponibles en los estantes.
+A menudo, estos filtros son en realidad múltiples inductores, condensadores y a veces resistencias empaquetadas como una sola pieza.</p>
+<p>Se harán muy pocas modificaciones a los filtros para estos y otros estándares bien definidos, pero siempre puede crear sus propios filtros de paso bajo, paso de banda, muesca y paso alto a medida, utilizando los muchos componentes de filtros específicos de RF discretos disponibles a su disposición. Tomar esta ruta de diseño podría dar a su producto una mejor sensibilidad de recepción o rango de transmisión, lo que resultaría en una clara ventaja competitiva.</p>
+<p>Por ejemplo, Johanson Technology ofrece el filtro de paso de banda de 2593BP44B186E 2.593 GHz para diseños WiMAX con un rango de paso de banda de 186 MHz. La empresa también proporciona un módulo de capacitación sobre el uso de su software MLCsoft, que permite variar iterativamente los parámetros y ajustar el rendimiento (Figura 2).</p>
+<p>Algunas partes, como el Quickfilter QF4A512A-LQ-B, contienen múltiples filtros programables con anti alias, ganancia programable, referencias de voltaje de precisión y control de SPI (Figura 4). Las entradas individuales o diferenciales pueden procesarse bajo el control de un microcontrolador local para establecer los parámetros del coeficiente de filtro de respuesta a impulsos finitos (FIR) y las tasas de muestreo.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright Almela, UTN-FRBA
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

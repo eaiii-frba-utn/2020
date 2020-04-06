@@ -1,0 +1,808 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="es" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="es" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Es importante correr el código siguiente en orden para no alterar los valores guardados en nw &mdash; documentación de EAIII2020 - </title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../../" src="../../../../_static/documentation_options.js"></script>
+        <script src="../../../../_static/jquery.js"></script>
+        <script src="../../../../_static/underscore.js"></script>
+        <script src="../../../../_static/doctools.js"></script>
+        <script src="../../../../_static/language_data.js"></script>
+        <script src="../../../../_static/clipboard.min.js"></script>
+        <script src="../../../../_static/copybutton.js"></script>
+        <script src="../../../../_static/translations.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
+    
+    <script type="text/javascript" src="../../../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../_static/copybutton.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../_static/gallery.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Índice" href="../../../../genindex.html" />
+    <link rel="search" title="Búsqueda" href="../../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../../index.html" class="icon icon-home"> EAIII2020
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Introduccion</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../introduccion/sistemas.html">Sistemas de radio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../introduccion/sistemas.html#Receptores-de-radiofrecuencia">Receptores de radiofrecuencia</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../introduccion/sistemas.html#Receptor-Homodino">Receptor Homodino</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../introduccion/sistemas.html#Receptor-Heterodino">Receptor Heterodino</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">EAIII2020</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../../index.html">Docs</a> &raquo;</li>
+        
+      <li>Es importante correr el código siguiente en orden para no alterar los valores guardados en nw</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../../_sources/adaptacion/2_Redes_de_adaptacion/5_Ejercicios/SegundaEntrega/Ejercicio 1 SMITH.ipynb.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  
+<style>
+/* CSS for nbsphinx extension */
+
+/* remove conflicting styling from Sphinx themes */
+div.nbinput.container,
+div.nbinput.container div.prompt,
+div.nbinput.container div.input_area,
+div.nbinput.container div[class*=highlight],
+div.nbinput.container div[class*=highlight] pre,
+div.nboutput.container,
+div.nboutput.container div.prompt,
+div.nboutput.container div.output_area,
+div.nboutput.container div[class*=highlight],
+div.nboutput.container div[class*=highlight] pre {
+    background: none;
+    border: none;
+    padding: 0 0;
+    margin: 0;
+    box-shadow: none;
+}
+
+/* avoid gaps between output lines */
+div.nboutput.container div[class*=highlight] pre {
+    line-height: normal;
+}
+
+/* input/output containers */
+div.nbinput.container,
+div.nboutput.container {
+    display: -webkit-flex;
+    display: flex;
+    align-items: flex-start;
+    margin: 0;
+    width: 100%;
+}
+@media (max-width: 540px) {
+    div.nbinput.container,
+    div.nboutput.container {
+        flex-direction: column;
+    }
+}
+
+/* input container */
+div.nbinput.container {
+    padding-top: 5px;
+}
+
+/* last container */
+div.nblast.container {
+    padding-bottom: 5px;
+}
+
+/* input prompt */
+div.nbinput.container div.prompt pre {
+    color: #307FC1;
+}
+
+/* output prompt */
+div.nboutput.container div.prompt pre {
+    color: #BF5B3D;
+}
+
+/* all prompts */
+div.nbinput.container div.prompt,
+div.nboutput.container div.prompt {
+    min-width: 5ex;
+    padding-top: 0.3rem;
+    padding-right: 0.3rem;
+    text-align: right;
+    flex: 0;
+}
+@media (max-width: 540px) {
+    div.nbinput.container div.prompt,
+    div.nboutput.container div.prompt {
+        text-align: left;
+        padding: 0.4em;
+    }
+    div.nboutput.container div.prompt.empty {
+        padding: 0;
+    }
+}
+
+/* disable scrollbars on prompts */
+div.nbinput.container div.prompt pre,
+div.nboutput.container div.prompt pre {
+    overflow: hidden;
+}
+
+/* input/output area */
+div.nbinput.container div.input_area,
+div.nboutput.container div.output_area {
+    -webkit-flex: 1;
+    flex: 1;
+    overflow: auto;
+}
+@media (max-width: 540px) {
+    div.nbinput.container div.input_area,
+    div.nboutput.container div.output_area {
+        width: 100%;
+    }
+}
+
+/* input area */
+div.nbinput.container div.input_area {
+    border: 1px solid #e0e0e0;
+    border-radius: 2px;
+    background: #f5f5f5;
+}
+
+/* override MathJax center alignment in output cells */
+div.nboutput.container div[class*=MathJax] {
+    text-align: left !important;
+}
+
+/* override sphinx.ext.imgmath center alignment in output cells */
+div.nboutput.container div.math p {
+    text-align: left;
+}
+
+/* standard error */
+div.nboutput.container div.output_area.stderr {
+    background: #fdd;
+}
+
+/* ANSI colors */
+.ansi-black-fg { color: #3E424D; }
+.ansi-black-bg { background-color: #3E424D; }
+.ansi-black-intense-fg { color: #282C36; }
+.ansi-black-intense-bg { background-color: #282C36; }
+.ansi-red-fg { color: #E75C58; }
+.ansi-red-bg { background-color: #E75C58; }
+.ansi-red-intense-fg { color: #B22B31; }
+.ansi-red-intense-bg { background-color: #B22B31; }
+.ansi-green-fg { color: #00A250; }
+.ansi-green-bg { background-color: #00A250; }
+.ansi-green-intense-fg { color: #007427; }
+.ansi-green-intense-bg { background-color: #007427; }
+.ansi-yellow-fg { color: #DDB62B; }
+.ansi-yellow-bg { background-color: #DDB62B; }
+.ansi-yellow-intense-fg { color: #B27D12; }
+.ansi-yellow-intense-bg { background-color: #B27D12; }
+.ansi-blue-fg { color: #208FFB; }
+.ansi-blue-bg { background-color: #208FFB; }
+.ansi-blue-intense-fg { color: #0065CA; }
+.ansi-blue-intense-bg { background-color: #0065CA; }
+.ansi-magenta-fg { color: #D160C4; }
+.ansi-magenta-bg { background-color: #D160C4; }
+.ansi-magenta-intense-fg { color: #A03196; }
+.ansi-magenta-intense-bg { background-color: #A03196; }
+.ansi-cyan-fg { color: #60C6C8; }
+.ansi-cyan-bg { background-color: #60C6C8; }
+.ansi-cyan-intense-fg { color: #258F8F; }
+.ansi-cyan-intense-bg { background-color: #258F8F; }
+.ansi-white-fg { color: #C5C1B4; }
+.ansi-white-bg { background-color: #C5C1B4; }
+.ansi-white-intense-fg { color: #A1A6B2; }
+.ansi-white-intense-bg { background-color: #A1A6B2; }
+
+.ansi-default-inverse-fg { color: #FFFFFF; }
+.ansi-default-inverse-bg { background-color: #000000; }
+
+.ansi-bold { font-weight: bold; }
+.ansi-underline { text-decoration: underline; }
+
+
+div.nbinput.container div.input_area div[class*=highlight] > pre,
+div.nboutput.container div.output_area div[class*=highlight] > pre,
+div.nboutput.container div.output_area div[class*=highlight].math,
+div.nboutput.container div.output_area.rendered_html,
+div.nboutput.container div.output_area > div.output_javascript,
+div.nboutput.container div.output_area:not(.rendered_html) > img{
+    padding: 0.3rem;
+}
+
+/* fix copybtn overflow problem in chromium (needed for 'sphinx_copybutton') */
+div.nbinput.container div.input_area > div[class^='highlight'],
+div.nboutput.container div.output_area > div[class^='highlight']{
+    overflow-y: hidden;
+}
+
+/* hide copybtn icon on prompts (needed for 'sphinx_copybutton') */
+.prompt a.copybtn {
+    display: none;
+}
+
+/* Some additional styling taken form the Jupyter notebook CSS */
+div.rendered_html table {
+  border: none;
+  border-collapse: collapse;
+  border-spacing: 0;
+  color: black;
+  font-size: 12px;
+  table-layout: fixed;
+}
+div.rendered_html thead {
+  border-bottom: 1px solid black;
+  vertical-align: bottom;
+}
+div.rendered_html tr,
+div.rendered_html th,
+div.rendered_html td {
+  text-align: right;
+  vertical-align: middle;
+  padding: 0.5em 0.5em;
+  line-height: normal;
+  white-space: normal;
+  max-width: none;
+  border: none;
+}
+div.rendered_html th {
+  font-weight: bold;
+}
+div.rendered_html tbody tr:nth-child(odd) {
+  background: #f5f5f5;
+}
+div.rendered_html tbody tr:hover {
+  background: rgba(66, 165, 245, 0.2);
+}
+
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast.container,
+.nboutput.nblast.container {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast.container + .nbinput.container {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
+</style>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+
+
+<span class="kn">from</span> <span class="nn">pylab</span> <span class="k">import</span> <span class="o">*</span>
+
+
+<span class="kn">from</span> <span class="nn">skrf.media</span> <span class="k">import</span> <span class="n">DistributedCircuit</span>
+<span class="kn">from</span> <span class="nn">skrf</span> <span class="k">import</span> <span class="n">Frequency</span>
+<span class="kn">from</span> <span class="nn">skrf</span> <span class="k">import</span> <span class="n">network</span>
+<span class="kn">from</span> <span class="nn">skrf.network</span> <span class="k">import</span> <span class="o">*</span>
+
+<span class="kn">from</span> <span class="nn">skrf</span> <span class="k">import</span> <span class="n">plotting</span>
+
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="k">import</span> <span class="n">Image</span>
+
+<span class="o">%</span><span class="k">matplotlib</span> inline
+
+<span class="n">my_params</span> <span class="o">=</span> <span class="p">{</span>
+<span class="s1">&#39;figure.dpi&#39;</span><span class="p">:</span> <span class="mi">240</span><span class="p">,</span>
+<span class="s1">&#39;figure.figsize&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span><span class="mi">10</span><span class="p">],</span>
+<span class="s1">&#39;figure.subplot.left&#39;</span> <span class="p">:</span> <span class="mf">0.15</span><span class="p">,</span>
+<span class="s1">&#39;figure.subplot.right&#39;</span> <span class="p">:</span> <span class="mf">0.9</span><span class="p">,</span>
+<span class="s1">&#39;figure.subplot.bottom&#39;</span> <span class="p">:</span> <span class="mf">0.12</span><span class="p">,</span>
+<span class="s1">&#39;axes.titlesize&#39;</span> <span class="p">:</span> <span class="s1">&#39;medium&#39;</span><span class="p">,</span>
+<span class="s1">&#39;axes.labelsize&#39;</span> <span class="p">:</span> <span class="mi">10</span> <span class="p">,</span>
+<span class="s1">&#39;ytick.labelsize&#39;</span> <span class="p">:</span><span class="s1">&#39;small&#39;</span><span class="p">,</span>
+<span class="s1">&#39;xtick.labelsize&#39;</span> <span class="p">:</span><span class="s1">&#39;small&#39;</span><span class="p">,</span>
+<span class="s1">&#39;legend.fontsize&#39;</span> <span class="p">:</span> <span class="mi">8</span><span class="p">,</span> <span class="c1">#small,</span>
+<span class="s1">&#39;legend.loc&#39;</span> <span class="p">:</span> <span class="s1">&#39;best&#39;</span><span class="p">,</span>
+<span class="s1">&#39;font.size&#39;</span> <span class="p">:</span> <span class="mf">10.0</span><span class="p">,</span>
+<span class="s1">&#39;font.family&#39;</span> <span class="p">:</span> <span class="s1">&#39;serif&#39;</span><span class="p">,</span>
+<span class="s1">&#39;text.usetex&#39;</span> <span class="p">:</span> <span class="kc">False</span><span class="p">,</span> <span class="c1"># if you dont have latex</span>
+<span class="p">}</span>
+<span class="n">rcParams</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">my_params</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># funciones empleadas estan definidas en mysmith.py</span>
+
+<span class="kn">import</span> <span class="nn">mysmith</span> <span class="k">as</span> <span class="nn">mys</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="Es-importante-correr-el-código-siguiente-en-orden-para-no-alterar-los-valores-guardados-en-nw">
+<h1>Es importante correr el código siguiente en orden para no alterar los valores guardados en nw<a class="headerlink" href="#Es-importante-correr-el-código-siguiente-en-orden-para-no-alterar-los-valores-guardados-en-nw" title="Enlazar permanentemente con este título">¶</a></h1>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>. $r_g = 10 \Omega$
+. $f_o = 100MHz$
+
+. $RL  = 100 \Omega$
+
+. $L1 = 10 Hz, QoL = 100 $
+. $C1 = 10 F,  ESR = 1 $
+</pre></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span> <span class="s2">&quot;fig/eje1.png&quot;</span><span class="p">,</span><span class="n">width</span><span class="o">=</span><span class="mi">450</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<a class="reference internal image-reference" href="../../../../_images/adaptacion_2_Redes_de_adaptacion_5_Ejercicios_SegundaEntrega_Ejercicio_1_SMITH_3_0.png"><img alt="../../../../_images/adaptacion_2_Redes_de_adaptacion_5_Ejercicios_SegundaEntrega_Ejercicio_1_SMITH_3_0.png" src="../../../../_images/adaptacion_2_Redes_de_adaptacion_5_Ejercicios_SegundaEntrega_Ejercicio_1_SMITH_3_0.png" style="width: 450px;" /></a>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># impedancia de carga</span>
+<span class="n">RL</span> <span class="o">=</span> <span class="mi">100</span>
+
+<span class="c1"># componentes</span>
+<span class="n">C1</span>   <span class="o">=</span>  <span class="mf">4.7746e-11</span>
+<span class="n">rpcs</span> <span class="o">=</span>  <span class="mi">1</span>
+
+<span class="n">L1</span>  <span class="o">=</span>  <span class="mf">4.6898e-08</span>
+<span class="n">Qol</span> <span class="o">=</span>  <span class="mi">100</span>
+
+
+<span class="c1">## Frecuencia de trabajo</span>
+<span class="n">fo</span> <span class="o">=</span>  <span class="mf">100e6</span>
+<span class="n">wo</span> <span class="o">=</span>  <span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">*</span><span class="n">fo</span>
+<span class="n">freq</span> <span class="o">=</span> <span class="n">Frequency</span><span class="p">(</span><span class="n">fo</span><span class="o">/</span><span class="mf">1e6</span><span class="p">,</span><span class="mi">100</span><span class="o">/</span><span class="mf">1e6</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="s1">&#39;mhz&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;fo = </span><span class="si">{:0.4}</span><span class="s1"> Hz&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">freq</span><span class="o">.</span><span class="n">f</span><span class="p">)</span> <span class="p">)</span> <span class="p">)</span>
+
+<span class="c1"># impedancia de referencia</span>
+<span class="n">z0</span> <span class="o">=</span> <span class="mi">50</span>
+
+<span class="c1"># Perdidas capacitor</span>
+<span class="n">Qoc</span>  <span class="o">=</span> <span class="mi">1</span><span class="o">/</span><span class="p">(</span><span class="n">rpcs</span><span class="o">*</span><span class="n">wo</span><span class="o">*</span><span class="n">C1</span><span class="p">)</span>
+<span class="n">rpcp</span> <span class="o">=</span> <span class="n">rpcs</span> <span class="o">*</span><span class="p">(</span><span class="mi">1</span><span class="o">+</span> <span class="n">Qoc</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="c1"># perdidas inductor</span>
+<span class="n">rpls</span> <span class="o">=</span> <span class="p">(</span><span class="n">wo</span><span class="o">*</span><span class="n">L1</span><span class="p">)</span><span class="o">/</span><span class="n">Qol</span>
+
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+fo = 1e+08 Hz
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># Defino el valor de capacidad paralelo</span>
+<span class="n">C1p</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">C1</span><span class="o">/</span><span class="mi">100</span><span class="p">,</span> <span class="n">C1</span><span class="p">,</span> <span class="mi">1000</span><span class="p">)</span>
+
+<span class="c1"># Defino el valor de inductancia serie</span>
+<span class="n">L1s</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">L1</span><span class="o">/</span><span class="mi">100</span><span class="p">,</span> <span class="n">L1</span><span class="p">,</span> <span class="mi">1000</span><span class="p">)</span>
+
+<span class="c1"># Defino el valor de las perdidas</span>
+<span class="n">rps</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">((</span><span class="n">rpcs</span><span class="o">+</span><span class="n">rpls</span><span class="p">)</span><span class="o">*</span><span class="mi">10</span><span class="p">,</span> <span class="p">(</span><span class="n">rpcs</span><span class="o">+</span><span class="n">rpls</span><span class="p">),</span> <span class="mi">10</span><span class="p">)</span>
+
+
+<span class="c1">## Sin perdidas !</span>
+<span class="n">nw1</span> <span class="o">=</span>  <span class="n">mys</span><span class="o">.</span><span class="n">ZL</span><span class="p">(</span><span class="n">freq</span><span class="p">,</span><span class="n">RL</span><span class="p">,</span><span class="n">z0</span><span class="p">)</span>
+<span class="n">nw</span>   <span class="o">=</span> <span class="n">nw1</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;ZL&#39;</span><span class="p">)</span>
+<span class="n">mys</span><span class="o">.</span><span class="n">printZ</span><span class="p">(</span><span class="n">nw</span><span class="o">.</span><span class="n">z</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+
+
+<span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">C1p</span><span class="p">:</span>
+    <span class="n">nwa</span> <span class="o">=</span> <span class="n">mys</span><span class="o">.</span><span class="n">Zparal</span><span class="p">(</span><span class="n">freq</span><span class="p">,</span><span class="mi">1</span><span class="n">j</span><span class="o">*</span><span class="n">mys</span><span class="o">.</span><span class="n">Xc</span><span class="p">(</span><span class="n">freq</span><span class="o">.</span><span class="n">f</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">c</span><span class="p">),</span><span class="n">z0</span><span class="p">)</span>
+    <span class="n">nw2</span>  <span class="o">=</span> <span class="n">cascade</span><span class="p">(</span><span class="n">nwa</span><span class="p">,</span><span class="n">nw1</span><span class="p">)</span>
+    <span class="n">nw</span>   <span class="o">=</span> <span class="n">stitch</span><span class="p">(</span><span class="n">nw</span><span class="p">,</span><span class="n">nw2</span> <span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;(C1//RL)&#39;</span><span class="p">)</span>
+<span class="n">mys</span><span class="o">.</span><span class="n">printZ</span><span class="p">(</span><span class="n">nw</span><span class="o">.</span><span class="n">z</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">l</span> <span class="ow">in</span> <span class="n">L1s</span><span class="p">:</span>
+    <span class="n">nwa</span> <span class="o">=</span> <span class="n">mys</span><span class="o">.</span><span class="n">Yserie</span><span class="p">(</span><span class="n">freq</span><span class="p">,</span><span class="mi">1</span><span class="n">j</span><span class="o">*</span><span class="n">mys</span><span class="o">.</span><span class="n">Bl</span><span class="p">(</span><span class="n">freq</span><span class="o">.</span><span class="n">f</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">l</span><span class="p">),</span><span class="n">z0</span><span class="p">)</span>
+    <span class="n">nw3</span> <span class="o">=</span> <span class="n">cascade</span><span class="p">(</span><span class="n">nwa</span><span class="p">,</span><span class="n">nw2</span><span class="p">)</span>
+    <span class="n">nw</span>   <span class="o">=</span> <span class="n">stitch</span><span class="p">(</span><span class="n">nw</span><span class="p">,</span><span class="n">nw3</span> <span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;L1(C1//RL)&#39;</span><span class="p">)</span>
+<span class="n">mys</span><span class="o">.</span><span class="n">printZ</span><span class="p">(</span><span class="n">nw</span><span class="o">.</span><span class="n">z</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+ZL
+R = 1.000e+02 ohms
+X = 0.000e+00 ohms
+Q = 0.00
+
+(C1//RL)
+R = 1.000e+01 ohms
+X = -3.000e+01 ohms
+Q = 3.00
+
+L1(C1//RL)
+R = 1.000e+01 ohms
+X = -5.334e-01 ohms
+Q = 0.05
+
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">nw</span><span class="o">.</span><span class="n">plot_s_smith</span><span class="p">(</span><span class="n">m</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">n</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">,</span><span class="n">draw_labels</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span><span class="n">show_legend</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span> <span class="n">chart_type</span><span class="o">=</span><span class="s1">&#39;yz&#39;</span><span class="p">)</span>
+<span class="c1">#plotting.smith(draw_vswr=[100.0] )</span>
+
+<span class="n">nw1</span><span class="o">.</span><span class="n">plot_s_smith</span><span class="p">(</span><span class="n">m</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">n</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;g&#39;</span><span class="p">,</span><span class="n">draw_labels</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span><span class="n">show_legend</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span> <span class="n">chart_type</span><span class="o">=</span><span class="s1">&#39;yz&#39;</span><span class="p">,</span><span class="n">marker</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">)</span>
+<span class="n">nw2</span><span class="o">.</span><span class="n">plot_s_smith</span><span class="p">(</span><span class="n">m</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">n</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="n">draw_labels</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span><span class="n">show_legend</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span> <span class="n">chart_type</span><span class="o">=</span><span class="s1">&#39;yz&#39;</span><span class="p">,</span><span class="n">marker</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">)</span>
+<span class="n">nw3</span><span class="o">.</span><span class="n">plot_s_smith</span><span class="p">(</span><span class="n">m</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">n</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;y&#39;</span><span class="p">,</span><span class="n">draw_labels</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span><span class="n">show_legend</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span> <span class="n">chart_type</span><span class="o">=</span><span class="s1">&#39;yz&#39;</span><span class="p">,</span><span class="n">marker</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;RL  = </span><span class="si">{:1.3f}</span><span class="s1"> ohms&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">nw</span><span class="o">.</span><span class="n">z</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">real</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Zin = </span><span class="si">{:1.3f}</span><span class="s1"> ohms&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">nw</span><span class="o">.</span><span class="n">z</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]))</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+RL  = 100.000 ohms
+Zin = 10.000-0.533j ohms
+</pre></div></div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../../../_images/adaptacion_2_Redes_de_adaptacion_5_Ejercicios_SegundaEntrega_Ejercicio_1_SMITH_6_1.png" src="../../../../_images/adaptacion_2_Redes_de_adaptacion_5_Ejercicios_SegundaEntrega_Ejercicio_1_SMITH_6_1.png" />
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[16]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># Con Perdidas (en serie)</span>
+
+<span class="c1"># Defino el valor de capacidad paralelo</span>
+<span class="n">C1p</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">C1</span><span class="o">/</span><span class="mi">10</span><span class="p">,</span> <span class="n">C1</span><span class="p">,</span> <span class="mi">1000</span><span class="p">)</span>
+
+<span class="c1"># Defino las perdidas del capacitor</span>
+<span class="n">rpp</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">((</span><span class="n">rpcp</span><span class="p">),</span> <span class="p">(</span><span class="n">rpcp</span><span class="p">)</span><span class="o">*</span><span class="mi">1000</span><span class="p">,</span> <span class="mi">100</span><span class="p">)[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+
+<span class="c1"># Defino el valor de inductancia serie</span>
+<span class="n">L1s</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">L1</span><span class="o">/</span><span class="mi">10</span><span class="p">,</span> <span class="n">L1</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+
+<span class="c1"># Defino las perdidas del inductor</span>
+<span class="n">rps</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">((</span><span class="n">rpls</span><span class="p">)</span><span class="o">/</span><span class="mi">100</span><span class="p">,</span> <span class="p">(</span><span class="n">rpls</span><span class="p">),</span> <span class="mi">100</span><span class="p">)</span>
+
+
+<span class="c1">## Sin perdidas !</span>
+<span class="n">nw1</span> <span class="o">=</span>  <span class="n">mys</span><span class="o">.</span><span class="n">ZL</span><span class="p">(</span><span class="n">freq</span><span class="p">,</span><span class="n">RL</span><span class="p">,</span><span class="n">z0</span><span class="p">)</span>
+<span class="n">nw</span>   <span class="o">=</span> <span class="n">nw1</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;RL&#39;</span><span class="p">)</span>
+<span class="n">mys</span><span class="o">.</span><span class="n">printZ</span><span class="p">(</span><span class="n">nw</span><span class="o">.</span><span class="n">z</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">C1p</span><span class="p">:</span>
+    <span class="n">nwa</span> <span class="o">=</span> <span class="n">mys</span><span class="o">.</span><span class="n">Zparal</span><span class="p">(</span><span class="n">freq</span><span class="p">,</span><span class="mi">1</span><span class="n">j</span><span class="o">*</span><span class="n">mys</span><span class="o">.</span><span class="n">Xc</span><span class="p">(</span><span class="n">freq</span><span class="o">.</span><span class="n">f</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">c</span><span class="p">),</span><span class="n">z0</span><span class="p">)</span>
+    <span class="n">nw2</span>  <span class="o">=</span> <span class="n">cascade</span><span class="p">(</span><span class="n">nwa</span><span class="p">,</span><span class="n">nw1</span><span class="p">)</span>
+    <span class="n">nw</span>   <span class="o">=</span> <span class="n">stitch</span><span class="p">(</span><span class="n">nw</span><span class="p">,</span><span class="n">nw2</span> <span class="p">)</span>
+
+
+
+<span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">rpp</span><span class="p">:</span>
+    <span class="n">nwa</span> <span class="o">=</span> <span class="n">mys</span><span class="o">.</span><span class="n">Zparal</span><span class="p">(</span><span class="n">freq</span><span class="p">,</span><span class="n">r</span><span class="p">,</span><span class="n">z0</span><span class="p">)</span>
+    <span class="n">nw3</span>  <span class="o">=</span> <span class="n">cascade</span><span class="p">(</span><span class="n">nwa</span><span class="p">,</span><span class="n">nw2</span><span class="p">)</span>
+    <span class="n">nw</span>   <span class="o">=</span> <span class="n">stitch</span><span class="p">(</span><span class="n">nw</span><span class="p">,</span><span class="n">nw3</span> <span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;(C1//RL)&#39;</span><span class="p">)</span>
+<span class="n">mys</span><span class="o">.</span><span class="n">printZ</span><span class="p">(</span><span class="n">nw</span><span class="o">.</span><span class="n">z</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">l</span> <span class="ow">in</span> <span class="n">L1s</span><span class="p">:</span>
+    <span class="n">nwa</span> <span class="o">=</span> <span class="n">mys</span><span class="o">.</span><span class="n">Yserie</span><span class="p">(</span><span class="n">freq</span><span class="p">,</span><span class="mi">1</span><span class="n">j</span><span class="o">*</span><span class="n">mys</span><span class="o">.</span><span class="n">Bl</span><span class="p">(</span><span class="n">freq</span><span class="o">.</span><span class="n">f</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">l</span><span class="p">),</span><span class="n">z0</span><span class="p">)</span>
+    <span class="n">nw4</span> <span class="o">=</span> <span class="n">cascade</span><span class="p">(</span><span class="n">nwa</span><span class="p">,</span><span class="n">nw3</span><span class="p">)</span>
+    <span class="n">nw</span>   <span class="o">=</span> <span class="n">stitch</span><span class="p">(</span><span class="n">nw</span><span class="p">,</span><span class="n">nw4</span> <span class="p">)</span>
+
+<span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">rps</span><span class="p">:</span>
+    <span class="n">nwa</span> <span class="o">=</span> <span class="n">mys</span><span class="o">.</span><span class="n">Yserie</span><span class="p">(</span><span class="n">freq</span><span class="p">,</span><span class="mi">1</span><span class="o">/</span><span class="n">r</span><span class="p">,</span><span class="n">z0</span><span class="p">)</span>
+    <span class="n">nw5</span> <span class="o">=</span> <span class="n">cascade</span><span class="p">(</span><span class="n">nwa</span><span class="p">,</span><span class="n">nw4</span><span class="p">)</span>
+    <span class="n">nw</span>  <span class="o">=</span> <span class="n">stitch</span><span class="p">(</span><span class="n">nw</span><span class="p">,</span><span class="n">nw5</span> <span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;L1(C1//RL)&#39;</span><span class="p">)</span>
+<span class="n">mys</span><span class="o">.</span><span class="n">printZ</span><span class="p">(</span><span class="n">nw</span><span class="o">.</span><span class="n">z</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+RL
+R = 1.000e+02 ohms
+X = 0.000e+00 ohms
+Q = 0.00
+
+(C1//RL)
+R = 1.070e+01 ohms
+X = -2.945e+01 ohms
+Q = 2.75
+
+L1(C1//RL)
+R = 1.099e+01 ohms
+X = 2.001e-02 ohms
+Q = 0.00
+
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[15]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">nw</span><span class="o">.</span><span class="n">plot_s_smith</span><span class="p">(</span><span class="n">m</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">n</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">,</span><span class="n">draw_labels</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span><span class="n">show_legend</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span> <span class="n">chart_type</span><span class="o">=</span><span class="s1">&#39;yz&#39;</span><span class="p">)</span>
+<span class="c1">#plotting.smith(draw_vswr=[100.0] )</span>
+
+<span class="n">nw1</span><span class="o">.</span><span class="n">plot_s_smith</span><span class="p">(</span><span class="n">m</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">n</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;g&#39;</span><span class="p">,</span><span class="n">draw_labels</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span><span class="n">show_legend</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span> <span class="n">chart_type</span><span class="o">=</span><span class="s1">&#39;yz&#39;</span><span class="p">,</span><span class="n">marker</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">)</span>
+<span class="n">nw2</span><span class="o">.</span><span class="n">plot_s_smith</span><span class="p">(</span><span class="n">m</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">n</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="n">draw_labels</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span><span class="n">show_legend</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span> <span class="n">chart_type</span><span class="o">=</span><span class="s1">&#39;yz&#39;</span><span class="p">,</span><span class="n">marker</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">)</span>
+<span class="n">nw3</span><span class="o">.</span><span class="n">plot_s_smith</span><span class="p">(</span><span class="n">m</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">n</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">,</span><span class="n">draw_labels</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span><span class="n">show_legend</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span> <span class="n">chart_type</span><span class="o">=</span><span class="s1">&#39;yz&#39;</span><span class="p">,</span><span class="n">marker</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">)</span>
+<span class="n">nw4</span><span class="o">.</span><span class="n">plot_s_smith</span><span class="p">(</span><span class="n">m</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">n</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;c&#39;</span><span class="p">,</span><span class="n">draw_labels</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span><span class="n">show_legend</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span> <span class="n">chart_type</span><span class="o">=</span><span class="s1">&#39;yz&#39;</span><span class="p">,</span><span class="n">marker</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">)</span>
+<span class="n">nw5</span><span class="o">.</span><span class="n">plot_s_smith</span><span class="p">(</span><span class="n">m</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">n</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;g&#39;</span><span class="p">,</span><span class="n">draw_labels</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span><span class="n">show_legend</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span> <span class="n">chart_type</span><span class="o">=</span><span class="s1">&#39;yz&#39;</span><span class="p">,</span><span class="n">marker</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;RL  = </span><span class="si">{:1.3f}</span><span class="s1"> ohms&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">nw</span><span class="o">.</span><span class="n">z</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">real</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Zin = </span><span class="si">{:1.3f}</span><span class="s1"> ohms&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">nw</span><span class="o">.</span><span class="n">z</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]))</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+RL  = 100.000 ohms
+Zin = 10.993+0.020j ohms
+</pre></div></div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../../../_images/adaptacion_2_Redes_de_adaptacion_5_Ejercicios_SegundaEntrega_Ejercicio_1_SMITH_8_1.png" src="../../../../_images/adaptacion_2_Redes_de_adaptacion_5_Ejercicios_SegundaEntrega_Ejercicio_1_SMITH_8_1.png" />
+</div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright Almela, UTN-FRBA
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
