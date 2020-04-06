@@ -43,7 +43,8 @@
   <link rel="stylesheet" href="../_static/gallery.css" type="text/css" />
   <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
     <link rel="index" title="Índice" href="../genindex.html" />
-    <link rel="search" title="Búsqueda" href="../search.html" /> 
+    <link rel="search" title="Búsqueda" href="../search.html" />
+    <link rel="prev" title="Sistemas de radio" href="../introduccion/sistemas.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -93,6 +94,15 @@
 <li class="toctree-l1"><a class="reference internal" href="../introduccion/sistemas.html#Receptores-de-radiofrecuencia">Receptores de radiofrecuencia</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../introduccion/sistemas.html#Receptor-Homodino">Receptor Homodino</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../introduccion/sistemas.html#Receptor-Heterodino">Receptor Heterodino</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Adaptacion</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Circuito RLC paralelo.</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#Q_o-(Q-libre)-y-$Q_c-$-(Q-cargado)-en-circuitos-RLC-paralelos."><span class="math notranslate nohighlight">\(Q_o\)</span> (<span class="math notranslate nohighlight">\(Q\)</span> libre) y $Q_c $ (<span class="math notranslate nohighlight">\(Q\)</span> cargado) en circuitos RLC paralelos.</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Circuito-RLC-serie.">Circuito RLC serie.</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#$Q_o-$-(Q-libre)-y-$Q_c-$-(Q-cargado)-en-circuitos-RLC-serie.">$Q_o $ (<span class="math notranslate nohighlight">\(Q\)</span> libre) y $Q_c $ (<span class="math notranslate nohighlight">\(Q\)</span> cargado) en circuitos RLC serie.</a></li>
+</ul>
+</li>
 </ul>
 
             
@@ -399,38 +409,6 @@ div.rendered_html tbody tr:hover {
     text-align: unset;
 }
 </style>
-<div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
-</pre></div>
-</div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="o">%%html</span>
-<span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span>
-<span class="nt">img</span><span class="o">[</span><span class="nt">alt</span><span class="o">$=</span><span class="nt">quinientos</span><span class="o">]</span> <span class="p">{</span>
-    <span class="k">width</span><span class="p">:</span> <span class="mi">500</span><span class="kt">px</span><span class="p">;</span>
-<span class="p">}</span>
-
-<span class="nt">img</span><span class="o">[</span><span class="nt">alt</span><span class="o">$=</span><span class="nt">cuatrocientos</span><span class="o">]</span> <span class="p">{</span>
-    <span class="k">width</span><span class="p">:</span> <span class="mi">400</span><span class="kt">px</span><span class="p">;</span>
-<span class="p">}</span>
-<span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
-</pre></div>
-</div>
-</div>
-<div class="nboutput nblast docutils container">
-<div class="prompt empty docutils container">
-</div>
-<div class="output_area rendered_html docutils container">
-<style>
-img[alt$=quinientos] {
-    width: 500px;
-}
-
-img[alt$=cuatrocientos] {
-    width: 400px;
-}
-</style></div>
-</div>
 <div class="section" id="Circuito-RLC-paralelo.">
 <h1>Circuito RLC paralelo.<a class="headerlink" href="#Circuito-RLC-paralelo." title="Enlazar permanentemente con este título">¶</a></h1>
 <p>En un circuito RLC paralelo en resonancia</p>
@@ -444,13 +422,13 @@ img[alt$=cuatrocientos] {
 \[Q_o = \frac{Pot_{reactiva}}{ Pot_{activa}} =  \frac{v_g^2 \cdot w_o \cdot C }{ \frac{v_g^2}{R} } = R \cdot w_o \cdot C\]</div>
 <div class="section" id="Q_o-(Q-libre)-y-$Q_c-$-(Q-cargado)-en-circuitos-RLC-paralelos.">
 <h2><span class="math notranslate nohighlight">\(Q_o\)</span> (<span class="math notranslate nohighlight">\(Q\)</span> libre) y $Q_c $ (<span class="math notranslate nohighlight">\(Q\)</span> cargado) en circuitos RLC paralelos.<a class="headerlink" href="#Q_o-(Q-libre)-y-$Q_c-$-(Q-cargado)-en-circuitos-RLC-paralelos." title="Enlazar permanentemente con este título">¶</a></h2>
-<p>El $ Q_o $ (libre) de un inductor para el modelo paralelo, dada una resistencia de perdida <span class="math notranslate nohighlight">\(r_p\)</span> se calcula como:</p>
+<p>El <span class="math notranslate nohighlight">\(Q_o\)</span> (libre) de un inductor para el modelo paralelo, dada una resistencia de perdida <span class="math notranslate nohighlight">\(r_p\)</span> se calcula como:</p>
 <div class="math notranslate nohighlight">
 \[Q_o =  \frac{r_p}{w_o \cdot L}\]</div>
 <p>El $ Q_c $ (cargado) de un inductor para el modelo paralelo, dada una resistencia total $:nbsphinx-math:<cite>frac{1}{r}</cite> = <span class="math">\frac{1}{r_p}</span> + <span class="math">\frac{1}{R}</span> $ se calcula como:</p>
 <div class="math notranslate nohighlight">
 \[Q_c =  \frac{r}{w_o \cdot L}\]</div>
-<p>Entonces, remplazando $ r $:</p>
+<p>Entonces, remplazando <span class="math notranslate nohighlight">\(r\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[\frac{1}{Q_c} = \frac{w_o \cdot L}{r} = \frac{w_o \cdot L}{r_p} + \frac{w_o \cdot L}{R}\]</div>
 <div class="math notranslate nohighlight">
@@ -470,17 +448,26 @@ img[alt$=cuatrocientos] {
 </div>
 <div class="section" id="$Q_o-$-(Q-libre)-y-$Q_c-$-(Q-cargado)-en-circuitos-RLC-serie.">
 <h2>$Q_o $ (<span class="math notranslate nohighlight">\(Q\)</span> libre) y $Q_c $ (<span class="math notranslate nohighlight">\(Q\)</span> cargado) en circuitos RLC serie.<a class="headerlink" href="#$Q_o-$-(Q-libre)-y-$Q_c-$-(Q-cargado)-en-circuitos-RLC-serie." title="Enlazar permanentemente con este título">¶</a></h2>
-<p>El $ Q_o $ (libre) de un inductor para el modelo paralelo, dada una resistencia de perdida <span class="math notranslate nohighlight">\(r_s\)</span> se calcula como:</p>
+<p>El <span class="math notranslate nohighlight">\(Q_o\)</span> (libre) de un inductor para el modelo paralelo, dada una resistencia de perdida <span class="math notranslate nohighlight">\(r_s\)</span> se calcula como:</p>
 <div class="math notranslate nohighlight">
 \[Q_o =  \frac{w_o \cdot L}{r_s}\]</div>
-<p>El $ Q_c $ (cargado) de un inductor para el modelo paralelo, dada una resistencia total $r = r_s + R $ se calcula como:</p>
+<p>El <span class="math notranslate nohighlight">\(Q_c\)</span> (cargado) de un inductor para el modelo paralelo, dada una resistencia total $r = r_s + R $ se calcula como:</p>
 <div class="math notranslate nohighlight">
 \[Q_c =  \frac{w_o \cdot L}{r}\]</div>
-<p>Entonces, remplazando $ r $:</p>
+<p>Entonces, remplazando <span class="math notranslate nohighlight">\(r\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[\frac{1}{Q_c} = \frac{r}{w_o \cdot L} = \frac{r_s}{w_o \cdot L} + \frac{R}{w_o \cdot L}\]</div>
 <div class="math notranslate nohighlight">
 \[\frac{1}{Q_c} =  \frac{1}{Q_o} + \frac{R}{w_o \cdot L}\]</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>
+</pre></div>
+</div>
+</div>
 </div>
 </div>
 
@@ -489,6 +476,13 @@ img[alt$=cuatrocientos] {
            
           </div>
           <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="../introduccion/sistemas.html" class="btn btn-neutral float-left" title="Sistemas de radio" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
   
 
   <hr/>

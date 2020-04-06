@@ -18,6 +18,6 @@ Bienvenidos a Electronica Aplicada III 2020
 .. toctree::
    :maxdepth: 3
    :caption: Adaptacion
-
+   
    adaptacion/adaptacion.ipynb
    
