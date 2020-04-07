@@ -10,14 +10,14 @@ Bienvenidos a Electronica Aplicada III 2020
   
 .. toctree::
    :maxdepth: 3
-   :caption: Introduccion
+   :caption: Introducción
 
    introduccion/sistemas.ipynb
    
 
 .. toctree::
    :maxdepth: 3
-   :caption: Adaptacion
+   :caption: Técnicas de adaptación 
    
    adaptacion/adaptacion.ipynb
    

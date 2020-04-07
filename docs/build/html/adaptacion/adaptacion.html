@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Circuito RLC paralelo. &mdash; documentación de EAIII2020 - </title>
+  <title>Técnicas de adaptación &mdash; documentación de EAIII2020 - </title>
   
 
   
@@ -88,21 +88,39 @@
               
             
             
-              <p class="caption"><span class="caption-text">Introduccion</span></p>
+              <p class="caption"><span class="caption-text">Introducción</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../introduccion/sistemas.html">Sistemas de radio</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../introduccion/sistemas.html#Receptores-de-radiofrecuencia">Receptores de radiofrecuencia</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../introduccion/sistemas.html#Receptor-Homodino">Receptor Homodino</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../introduccion/sistemas.html#Receptor-Heterodino">Receptor Heterodino</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../introduccion/sistemas.html#Ganancia-de-potencia-y-definiciones">Ganancia de potencia y definiciones</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Adaptacion</span></p>
+<p class="caption"><span class="caption-text">Técnicas de adaptación</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Circuito RLC paralelo.</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#Q_o-(Q-libre)-y-$Q_c-$-(Q-cargado)-en-circuitos-RLC-paralelos."><span class="math notranslate nohighlight">\(Q_o\)</span> (<span class="math notranslate nohighlight">\(Q\)</span> libre) y $Q_c $ (<span class="math notranslate nohighlight">\(Q\)</span> cargado) en circuitos RLC paralelos.</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#Circuito-RLC-serie.">Circuito RLC serie.</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#$Q_o-$-(Q-libre)-y-$Q_c-$-(Q-cargado)-en-circuitos-RLC-serie.">$Q_o $ (<span class="math notranslate nohighlight">\(Q\)</span> libre) y $Q_c $ (<span class="math notranslate nohighlight">\(Q\)</span> cargado) en circuitos RLC serie.</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Técnicas de adaptación</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#Adaptador-de-impedancia.">Adaptador de impedancia.</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#Cuadripolo-admitancia">Cuadripolo admitancia</a></li>
 </ul>
 </li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#Circuitos-resonantes.">Circuitos resonantes.</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#Circuito-paralelo">Circuito paralelo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Circuito-serie">Circuito serie</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Q_o-(Q-libre)-en-inductores-y-capacitores"><span class="math notranslate nohighlight">\(Q_o\)</span> (<span class="math notranslate nohighlight">\(Q\)</span> libre) en inductores y capacitores</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#Inductores-de-alto-Q-para-RF">Inductores de alto Q para RF</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#El-factor-de-selectividad-y-la-resistencia-equivalente-serie-(ESR)">El factor de selectividad y la resistencia equivalente serie (ESR)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#Q_c-(Q-cargado)-en-circuitos-RLC-paralelos."><span class="math notranslate nohighlight">\(Q_c\)</span> (<span class="math notranslate nohighlight">\(Q\)</span> cargado) en circuitos RLC paralelos.</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Q_c-(Q-cargado)-en-circuitos-RLC-serie."><span class="math notranslate nohighlight">\(Q_c\)</span> (<span class="math notranslate nohighlight">\(Q\)</span> cargado) en circuitos RLC serie.</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#Conversión-serie-a-paralelo">Conversión serie a paralelo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#Máxima-transferencia-Q-constante.">Máxima transferencia <span class="math notranslate nohighlight">\(Q\)</span> constante.</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#Divisor-capacitivo">Divisor capacitivo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#Procedimiento-de-cálculo-si-Q_{m2}-&gt;-10">Procedimiento de cálculo si <span class="math notranslate nohighlight">\(Q_{m2} &gt; 10\)</span></a></li>
 </ul>
 
             
@@ -148,7 +166,7 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-      <li>Circuito RLC paralelo.</li>
+      <li>Técnicas de adaptación</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -409,56 +427,559 @@ div.rendered_html tbody tr:hover {
     text-align: unset;
 }
 </style>
-<div class="section" id="Circuito-RLC-paralelo.">
-<h1>Circuito RLC paralelo.<a class="headerlink" href="#Circuito-RLC-paralelo." title="Enlazar permanentemente con este título">¶</a></h1>
-<p>En un circuito RLC paralelo en resonancia</p>
+<div class="section" id="Técnicas-de-adaptación">
+<h1>Técnicas de adaptación<a class="headerlink" href="#Técnicas-de-adaptación" title="Enlazar permanentemente con este título">¶</a></h1>
+<div class="section" id="Adaptador-de-impedancia.">
+<h2>Adaptador de impedancia.<a class="headerlink" href="#Adaptador-de-impedancia." title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Un adaptador de impedancia, en este caso un el cuadripolo colocado en cascada en el circuito, modifica la resistencia de carga dada <span class="math notranslate nohighlight">\(R_L\)</span> a una un valor dado de entrada o la resistencia de entrada a un valor dado de salida.</p>
+<p><img alt="1-cuatrocientos" src="../_images/cuadripolo.png" /></p>
+<p>Dependiendo del uso, estos valores de entrada o salida se ajustan para lograr distintos objetivos. A continuación se listan los mas frecuentes.</p>
+<p>Transferencia de energia óptima: maximiza la transferencia de energia desde la fuente (por ejemplo, una antena) y la carga (por ejemplo, un amplificador).</p>
+<p>Cifra de ruido óptima: amplificadores que agreguen la menor cantidad de ruido a una señal mientras realizan la amplificación. Esta depende de la impedancia presentada al dispositivo activo.</p>
+<p>Criterio de estabilidad, donde se busca la estabilidad del sistema.</p>
+<p>Reflexiones mínimas en las líneas de transmisión: Las reflexiones causan dispersión e interferencia y dan como resultado una impedancia de entrada sensible cuando se mira en la línea de transmisión (cambia con la distancia).</p>
+<p>Eficiencia óptima: los amplificadores de potencia obtienen la máxima eficiencia cuando utilizamos la mayor oscilación de voltaje posible en el nodo de salida de los elentos activos (drain o colector), lo que requiere que hagamos coincidir la carga con un valor que satisfaga las condiciones de potencia de carga y oscilación de carga.</p>
+<div class="section" id="Cuadripolo-admitancia">
+<h3>Cuadripolo admitancia<a class="headerlink" href="#Cuadripolo-admitancia" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>El circuito de un cuadripolo admitancia se muestra en la figura.</p>
+<p><img alt="2-cuatrocientos" src="../_images/admitancia.png" /></p>
+<p>Las ecuaciones del cuadripolo en función de los parametros de admitancia y tensiones del circuito:</p>
 <div class="math notranslate nohighlight">
-\[w_o  = \frac{1}{ \sqrt{LC} }\]</div>
-<p>,</p>
-<p>el <span class="math notranslate nohighlight">\(Q_o\)</span> se calcula como:</p>
+\[i_i = v_i\cdot y_{11} + v_o \cdot y_{12}\]</div>
 <div class="math notranslate nohighlight">
-\[Q_o = \frac{Pot_{reactiva}}{ Pot_{activa}} = \frac{ \frac{v_g^2}{w_o \cdot L} }{ \frac{v_g^2}{R} } = \frac{R}{w_o \cdot L}\]</div>
+\[i_o = v_i\cdot y_{21} + v_o \cdot y_{22}\]</div>
+<p><img alt="3-cuatrocientos" src="../_images/admiEntrada.png" /></p>
+<p>Del circuito, se puede calcular la admitacia de entrada dada una admitancia de salida <span class="math notranslate nohighlight">\(y_{L}\)</span>:</p>
 <div class="math notranslate nohighlight">
-\[Q_o = \frac{Pot_{reactiva}}{ Pot_{activa}} =  \frac{v_g^2 \cdot w_o \cdot C }{ \frac{v_g^2}{R} } = R \cdot w_o \cdot C\]</div>
-<div class="section" id="Q_o-(Q-libre)-y-$Q_c-$-(Q-cargado)-en-circuitos-RLC-paralelos.">
-<h2><span class="math notranslate nohighlight">\(Q_o\)</span> (<span class="math notranslate nohighlight">\(Q\)</span> libre) y $Q_c $ (<span class="math notranslate nohighlight">\(Q\)</span> cargado) en circuitos RLC paralelos.<a class="headerlink" href="#Q_o-(Q-libre)-y-$Q_c-$-(Q-cargado)-en-circuitos-RLC-paralelos." title="Enlazar permanentemente con este título">¶</a></h2>
+\[y_{in}=y_{11}- \frac {y_{12}y_{21}}{y_{22}+y_{L}}\]</div>
+<p><img alt="4-cuatrocientos" src="../_images/admiSalida.png" /></p>
+<p>Del circuito, se puede calcular la admitacia de entrada dada una admitancia de salida <span class="math notranslate nohighlight">\(y_{L}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[y_{out}=y_{22}- \frac {y_{12}y_{21}}{y_{11}+y_{g}}\]</div>
+</div>
+</div>
+</div>
+<div class="section" id="Circuitos-resonantes.">
+<h1>Circuitos resonantes.<a class="headerlink" href="#Circuitos-resonantes." title="Enlazar permanentemente con este título">¶</a></h1>
+<p>Ademas de realizar adaptaciones de impedancia, los sistemas de RF precisan filtros pasabanda para atenuar las bandas de frecuencias no deseada, como la de frecuencia imagen. Por su flexibilidad, los circuitos resonantes permiten diseñar filtros pasabanda fijos o variables.</p>
+<p>En su forma mas básica, estan formados por elementos reactivos (inductancias y capacitancia). Estos circuitos pueden ser relizados por elementos de constantes concetradas como inductores o capacitores, elementos de constantes distribuidas, como los obtenidos de las líneas transmisión o elementos resonantes como cristales piezoeléctricos.</p>
+<p>A continuación, se analizaran circuitos resonantes simples formados por inductancias y capacitancia en paralelo y en serie.</p>
+<p>El factor de selectividad es un parámetro que mide la relación entre la energía reactiva que almacena y la energía que disipa durante un ciclo completo de la señal. Un alto factor Q indica una tasa baja de pérdida de energía en relación a la energía almacenada por el resonador. Es un parámetro importante para los osciladores, filtros y otros circuitos sintonizados, pues proporciona una medida de lo selectiva que es su resonancia.</p>
+<p>El factor de selectividad entonces se calcula como:</p>
+<div class="math notranslate nohighlight">
+\[Q_o = \frac{Pot_{reactiva}}{ Pot_{activa}}\]</div>
+<div class="section" id="Circuito-paralelo">
+<h2>Circuito paralelo<a class="headerlink" href="#Circuito-paralelo" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>En un circuito paralelo conformado por una reactancia y una resistencia, la tensión es un parametro comun para ambos componentes, por lo tanto, las potencias las debemos calcular en función de este.</p>
+<p>En un circuito RL:</p>
+<div class="math notranslate nohighlight">
+\[Q_o =  \frac{ \frac{v_g^2}{w_o \cdot L} }{ \frac{v_g^2}{R} } = \frac{R}{w_o \cdot L}\]</div>
+<p>En un circuito RC:</p>
+<div class="math notranslate nohighlight">
+\[Q_o = \frac{v_g^2 \cdot w_o \cdot C }{ \frac{v_g^2}{R} } = R \cdot w_o \cdot C\]</div>
+</div>
+<div class="section" id="Circuito-serie">
+<h2>Circuito serie<a class="headerlink" href="#Circuito-serie" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>En un circuito serie conformado por una reactancia y una resistencia, la corriente es un parametro comun para ambos componentes, por lo tanto, las potencias las debemos calcular en función de este.</p>
+<p>En un circuito RL:</p>
+<div class="math notranslate nohighlight">
+\[Q_o =  \frac{ \frac{i_g^2}{w_o \cdot C} }{i_g^2 \cdot R } = \frac{1}{R \cdot w_o \cdot C}\]</div>
+<p>En un circuito RC:</p>
+<div class="math notranslate nohighlight">
+\[Q_o =  \frac{i_g^2 \cdot w_o \cdot L }{ i_g^2 \cdot R } = \frac{w_o \cdot L}{R }\]</div>
+<p>Comenzamos el analisis empleando el circuito de la figura.</p>
+<p><img alt="5-cuatrocientos" src="../_images/RLCpara.png" /></p>
+<p>Calcularemos la transferencia del circuito. Vamos a emplear una fuente de corriente y calcular la tensión en el nodo comun.</p>
+<div class="math notranslate nohighlight">
+\[v_{g} = i_{g} \cdot \frac{1}{(\frac{1}{R} +\frac{1}{SL} + SC)}\]</div>
+<p>Calculando para <span class="math notranslate nohighlight">\(S=j\omega\)</span>, para el analisis del comporatamiento del circuito en frecuencia:</p>
+<div class="math notranslate nohighlight">
+\[\frac{v_{g}}{i_{g}} =  \frac{1}{(\frac{1}{R} +\frac{1}{j\omega L} + j\omega C)}\]</div>
+<div class="math notranslate nohighlight">
+\[\frac{v_{g}}{i_{g}} =  \frac{j\omega }{C ( \frac{j \omega }{CR} +\frac{1}{LC} - \omega^2 )}\]</div>
+<p>Donde podemos normalizar la ecuación empleando los terminos <span class="math notranslate nohighlight">\(Q\)</span>, ya presentado, y <span class="math notranslate nohighlight">\(\omega_o^2 = \frac{1}{LC}\)</span> como la frecuencia de resonancia.</p>
+<div class="math notranslate nohighlight">
+\[\frac{v_{g}}{i_{g}} =  \frac{j\omega }{C(\omega^2  - \omega_o^2 + j Q)}\]</div>
+<p>Podemos remplazar el <span class="math notranslate nohighlight">\(\frac{\omega }{C} = Q R\)</span></p>
+<div class="math notranslate nohighlight">
+\[\frac{v_{g}}{i_{g}} =  \frac{j Q R}{(\omega^2  - \omega_o^2) + j Q}\]</div>
+<p>Donde es facil reconocer el que el máximo de transferencia se produce cuando <span class="math notranslate nohighlight">\(\omega^2 = \omega_o^2\)</span> (resonancia).</p>
+<div class="math notranslate nohighlight">
+\[\frac{v_{g}}{i_{g}}(\omega_o) =  R\]</div>
+<p>El factor de selectividad relaciona el <span class="math notranslate nohighlight">\(Q\)</span> con el ancho de banda del circuito mediante la ecuación :</p>
+<div class="math notranslate nohighlight">
+\[BW = \frac{f_o}{Q}\]</div>
+<p>donde <span class="math notranslate nohighlight">\(f_o\)</span> corresponde a la frecuencia de resonancia (<span class="math notranslate nohighlight">\(\omega = 2 \pi f_o\)</span>).</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[23]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="o">%</span><span class="k">matplotlib</span> inline
+<span class="c1"># Ejemplo de respuesta en frecuencia</span>
+<span class="n">R</span>  <span class="o">=</span> <span class="mi">1</span>
+<span class="n">fo</span> <span class="o">=</span> <span class="mi">1</span>
+
+<span class="c1"># respuesta vg/ig</span>
+<span class="k">def</span> <span class="nf">resp</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">fo</span><span class="p">,</span> <span class="n">Q</span><span class="p">,</span> <span class="n">R</span><span class="p">):</span>
+    <span class="k">return</span>  <span class="mi">1</span><span class="n">j</span><span class="o">*</span><span class="n">Q</span><span class="o">*</span><span class="n">R</span><span class="o">/</span><span class="p">(</span> <span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span> <span class="o">*</span><span class="p">(</span><span class="n">f</span><span class="o">**</span><span class="mi">2</span> <span class="o">-</span> <span class="n">fo</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="n">j</span> <span class="o">*</span> <span class="n">Q</span><span class="p">)</span>
+
+<span class="c1">#Defino el vector Frecuencia</span>
+<span class="n">freq</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mf">0.1</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mf">0.01</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">Q</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">100</span><span class="p">]:</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">semilogx</span><span class="p">(</span><span class="n">freq</span><span class="p">,</span> <span class="nb">abs</span><span class="p">(</span><span class="n">resp</span><span class="p">(</span><span class="n">freq</span><span class="p">,</span><span class="n">fo</span><span class="p">,</span><span class="n">Q</span><span class="p">,</span><span class="n">R</span><span class="p">)),</span> <span class="n">label</span><span class="o">=</span><span class="n">Q</span> <span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;vo/ig&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;frecuencia[Hz]&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../_images/adaptacion_adaptacion_2_0.png" src="../_images/adaptacion_adaptacion_2_0.png" />
+</div>
+</div>
+</div>
+<div class="section" id="Q_o-(Q-libre)-en-inductores-y-capacitores">
+<h2><span class="math notranslate nohighlight">\(Q_o\)</span> (<span class="math notranslate nohighlight">\(Q\)</span> libre) en inductores y capacitores<a class="headerlink" href="#Q_o-(Q-libre)-en-inductores-y-capacitores" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Los inductores y capaciores reales presentan perdidas. Esto quiere decir que a la frecuencia de trabajo, el comportamieto de estos componentes se pude modelizar (de la manera mas simple) como una inductancia o capacitancia, en paralelo con una resistencia de perdidas.</p>
+<p><img alt="6-cuatrocientos" src="../_images/perdidaPara.png" /></p>
 <p>El <span class="math notranslate nohighlight">\(Q_o\)</span> (libre) de un inductor para el modelo paralelo, dada una resistencia de perdida <span class="math notranslate nohighlight">\(r_p\)</span> se calcula como:</p>
 <div class="math notranslate nohighlight">
 \[Q_o =  \frac{r_p}{w_o \cdot L}\]</div>
-<p>El $ Q_c $ (cargado) de un inductor para el modelo paralelo, dada una resistencia total $:nbsphinx-math:<cite>frac{1}{r}</cite> = <span class="math">\frac{1}{r_p}</span> + <span class="math">\frac{1}{R}</span> $ se calcula como:</p>
+<div class="section" id="Inductores-de-alto-Q-para-RF">
+<h3>Inductores de alto Q para RF<a class="headerlink" href="#Inductores-de-alto-Q-para-RF" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Como ejemplo podemos ver como la curva de los inductores de alto Q que comercializa la empresa Johanson (<a class="reference external" href="https://www.johansontechnology.com/downloads/johanson-technology-rf-wirewound-chip-inductors.pdf">https://www.johansontechnology.com/downloads/johanson-technology-rf-wirewound-chip-inductors.pdf</a>)</p>
+<p><img alt="2" src="../_images/QlibreL.png" /></p>
+</div>
+<div class="section" id="El-factor-de-selectividad-y-la-resistencia-equivalente-serie-(ESR)">
+<h3>El factor de selectividad y la resistencia equivalente serie (ESR)<a class="headerlink" href="#El-factor-de-selectividad-y-la-resistencia-equivalente-serie-(ESR)" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Uno de los parámetros más importantes en la evaluación de un condensador de chip de alta frecuencia es el factor Q, o la resistencia en serie equivalente (ESR) relacionada.</p>
+<p>Un condensador sin perdidas presenta un ESR de cero ohmios y sería puramente reactivo sin ningún componente real (resistiva). La corriente que pasa por el capacitor conduciría el voltaje a través exactamente 90 grados en todas las frecuencias.</p>
+<p>Los capacitores no son ideales, y siempre exhibirá una cantidad finita de ESR. El ESR varía con la frecuencia de un capacitor dado y es “equivalente” porque su fuente proviene de las características de las estructuras de electrodo conductor y de la estructura dieléctrica aislante. Con el propósito de modelar, el ESR se representa como un elemento parásito de una sola serie. En las últimas décadas, todos los parámetros del condensador se midieron a un estándar de 1 MHz, pero en el mundo de alta
+frecuencia actual, esto está lejos de ser suficiente. Los valores típicos para un buen condensador de alta frecuencia de un valor dado podrían funcionar en el orden de aproximadamente 0,05 ohmios a 200 MHz, 0,11 ohmios a 900 MHz y 0,14 ohmios a 2000 MHz.</p>
+<p>El factor de calidad Q es un número adimensional que es igual a la reactancia del capacitor dividido por la resistencia parásita del capacitor (ESR). El valor de Q cambia mucho con la frecuencia, ya que tanto la reactancia como la resistencia cambian con la frecuencia. La reactancia de un condensador cambia enormemente con la frecuencia o con el valor de capacitancia y, por lo tanto, el valor Q podría variar en gran medida.</p>
+<p><a class="reference external" href="http://www.vishay.com/docs/28534/highqdielectric.pdf">http://www.vishay.com/docs/28534/highqdielectric.pdf</a></p>
+<p><img alt="7" src="../_images/QlibreC.png" /></p>
+</div>
+</div>
+<div class="section" id="Q_c-(Q-cargado)-en-circuitos-RLC-paralelos.">
+<h2><span class="math notranslate nohighlight">\(Q_c\)</span> (<span class="math notranslate nohighlight">\(Q\)</span> cargado) en circuitos RLC paralelos.<a class="headerlink" href="#Q_c-(Q-cargado)-en-circuitos-RLC-paralelos." title="Enlazar permanentemente con este título">¶</a></h2>
+<p>El <span class="math notranslate nohighlight">\(Q_c\)</span> nos permite conocer el comporatamiento del circuito cuando esta cargado por la impedancia de la fuente y la de la carga.</p>
+<p><img alt="8-cuatrocientos" src="../_images/maxPot.png" /></p>
+<p>Del circuito resonante paralelo, en resonancia (donde se anula la componente imaginaria) la resistencia total $:nbsphinx-math:<cite>frac{1}{r}</cite> = <span class="math">\frac{1}{r_p}</span> + <span class="math">\frac{1}{R_{ext}}</span> $ se calcula como:</p>
+<p>donde $R_{ext} = <span class="math">\frac{r_g R_L}{r_g + R_L}</span> $</p>
 <div class="math notranslate nohighlight">
 \[Q_c =  \frac{r}{w_o \cdot L}\]</div>
-<p>Entonces, remplazando <span class="math notranslate nohighlight">\(r\)</span>:</p>
+<p>Entonces, de igual manera multiplicando ambos terminos por <span class="math notranslate nohighlight">\(w_o \cdot L\)</span>:</p>
 <div class="math notranslate nohighlight">
-\[\frac{1}{Q_c} = \frac{w_o \cdot L}{r} = \frac{w_o \cdot L}{r_p} + \frac{w_o \cdot L}{R}\]</div>
+\[\frac{w_o \cdot L}{r} = \frac{w_o \cdot L}{r_p} + \frac{w_o \cdot L}{R_{ext}}\]</div>
 <div class="math notranslate nohighlight">
-\[\frac{1}{Q_c} =  \frac{1}{Q_o} + \frac{w_o \cdot L}{R}\]</div>
-</div>
-<div class="section" id="Circuito-RLC-serie.">
-<h2>Circuito RLC serie.<a class="headerlink" href="#Circuito-RLC-serie." title="Enlazar permanentemente con este título">¶</a></h2>
+\[\frac{1}{Q_c} =  \frac{1}{Q_o} + \frac{w_o \cdot L}{R_{ext}}\]</div>
+<p><a class="reference external" href="https://www.coilcraft.com/pdfs/Doc945_Inductors_as_RF_Chokes.pdf">https://www.coilcraft.com/pdfs/Doc945_Inductors_as_RF_Chokes.pdf</a></p>
+<p><a class="reference external" href="http://www.ee.iitm.ac.in/~ani/2011/ee6240/pdf/AN721_AppNote_Matching.pdf">http://www.ee.iitm.ac.in/~ani/2011/ee6240/pdf/AN721_AppNote_Matching.pdf</a></p>
+<p><a class="reference external" href="https://www.spelektroniikka.fi/kuvat/schot7.pdf">https://www.spelektroniikka.fi/kuvat/schot7.pdf</a></p>
+<p><img alt="9-cuatrocientos" src="../_images/RLCserie.png" /></p>
 <p>En un circuito RLC serie en resonancia,</p>
 <div class="math notranslate nohighlight">
 \[w_o  = \frac{1}{ \sqrt{LC} }\]</div>
 <p>,</p>
-<p>el <span class="math notranslate nohighlight">\(Q_o\)</span> se calcula como:</p>
-<div class="math notranslate nohighlight">
-\[Q_o = \frac{Pot_{reactiva}}{ Pot_{activa}} = \frac{ \frac{i_g^2}{w_o \cdot C} }{i_g^2 \cdot R } = \frac{1}{R \cdot w_o \cdot C}\]</div>
-<div class="math notranslate nohighlight">
-\[Q_o = \frac{Pot_{reactiva}}{ Pot_{activa}} =  \frac{i_g^2 \cdot w_o \cdot L }{ i_g^2 \cdot R } = \frac{w_o \cdot L}{R }\]</div>
 </div>
-<div class="section" id="$Q_o-$-(Q-libre)-y-$Q_c-$-(Q-cargado)-en-circuitos-RLC-serie.">
-<h2>$Q_o $ (<span class="math notranslate nohighlight">\(Q\)</span> libre) y $Q_c $ (<span class="math notranslate nohighlight">\(Q\)</span> cargado) en circuitos RLC serie.<a class="headerlink" href="#$Q_o-$-(Q-libre)-y-$Q_c-$-(Q-cargado)-en-circuitos-RLC-serie." title="Enlazar permanentemente con este título">¶</a></h2>
+<div class="section" id="Q_c-(Q-cargado)-en-circuitos-RLC-serie.">
+<h2><span class="math notranslate nohighlight">\(Q_c\)</span> (<span class="math notranslate nohighlight">\(Q\)</span> cargado) en circuitos RLC serie.<a class="headerlink" href="#Q_c-(Q-cargado)-en-circuitos-RLC-serie." title="Enlazar permanentemente con este título">¶</a></h2>
 <p>El <span class="math notranslate nohighlight">\(Q_o\)</span> (libre) de un inductor para el modelo paralelo, dada una resistencia de perdida <span class="math notranslate nohighlight">\(r_s\)</span> se calcula como:</p>
 <div class="math notranslate nohighlight">
 \[Q_o =  \frac{w_o \cdot L}{r_s}\]</div>
-<p>El <span class="math notranslate nohighlight">\(Q_c\)</span> (cargado) de un inductor para el modelo paralelo, dada una resistencia total $r = r_s + R $ se calcula como:</p>
+<p>El <span class="math notranslate nohighlight">\(Q_c\)</span> (cargado) de un inductor para el modelo paralelo, dada una resistencia total <span class="math notranslate nohighlight">\(r = r_s + R_{ext}\)</span> se calcula como <span class="math notranslate nohighlight">\(Q_c = \frac{w_o \cdot L}{r}\)</span>, donde <span class="math notranslate nohighlight">\(R_{ext} = r_g + R_L\)</span>.</p>
+<p>Entonces, dividiendo ambos miembros de la ecuación por <span class="math notranslate nohighlight">\(w_o \cdot L\)</span>:</p>
 <div class="math notranslate nohighlight">
-\[Q_c =  \frac{w_o \cdot L}{r}\]</div>
-<p>Entonces, remplazando <span class="math notranslate nohighlight">\(r\)</span>:</p>
-<div class="math notranslate nohighlight">
-\[\frac{1}{Q_c} = \frac{r}{w_o \cdot L} = \frac{r_s}{w_o \cdot L} + \frac{R}{w_o \cdot L}\]</div>
+\[\frac{r}{w_o \cdot L} = \frac{r_s}{w_o \cdot L} + \frac{R}{w_o \cdot L}\]</div>
 <div class="math notranslate nohighlight">
 \[\frac{1}{Q_c} =  \frac{1}{Q_o} + \frac{R}{w_o \cdot L}\]</div>
+</div>
+</div>
+<div class="section" id="Conversión-serie-a-paralelo">
+<h1>Conversión serie a paralelo<a class="headerlink" href="#Conversión-serie-a-paralelo" title="Enlazar permanentemente con este título">¶</a></h1>
+<p>Buscaremos la relación entre un circuito resonante serie y un resonante paralelo. Esto será muy util para el diseño y verificación de los filtros, ya que no permitiran agilizar los calculos.</p>
+<p><img alt="10-cuatrocientos" src="../_images/paraserie.png" /></p>
+<p>En un circuito resonante paralelo, la impedancia de entrada se calcula como:</p>
+<div class="math notranslate nohighlight">
+\[\frac{1}{ Z_p}  = \frac{1}{R_p}   + \frac{1}{j \cdot X_p}\]</div>
+<p>Separando la parte real de la parte imaginaria:</p>
+<div class="math notranslate nohighlight">
+\[\frac{1}{ Z_p}  = \frac{R_p + j \cdot X_p }{R_p \cdot j \cdot X_p }\]</div>
+<div class="math notranslate nohighlight">
+\[Z_p  =  \frac{R_p \cdot j \cdot X_p }{R_p + j \cdot X_p } \cdot \frac{R_p - j \cdot X_p }{R_p - j \cdot X_p }\]</div>
+<div class="math notranslate nohighlight">
+\[Z_p  =  \frac{R_p \cdot j \cdot X_p \cdot (R_p - j \cdot X_p) }{(R_p^2 +  X_p^2 ) }\]</div>
+<div class="math notranslate nohighlight">
+\[Z_p  =  \frac{( R_p \cdot X_p^2 ) + j \cdot ( R_p^2 \cdot X_p) }{(R_p^2 +   X_p^2) }\]</div>
+<div class="math notranslate nohighlight">
+\[Z_p  =  \frac{( R_p \cdot X_p^2 ) }{(R_p^2 +   X_p^2) } + j \cdot \frac{ ( R_p^2 \cdot X_p) }{(R_p^2 +   X_p^2)}\]</div>
+<div class="math notranslate nohighlight">
+\[Z_p  =  \frac{( R_p \cdot (\frac{R_p}{Q_o})^2 ) }{(R_p^2 +   (\frac{R_p}{Q_o})^2) } + j \cdot \frac{ ( R_p^2 \cdot X_p) }{(R_p^2 +   (\frac{R_p}{Q_o})^2)}\]</div>
+<p>En un circuito resonante serie, la impedancia de entrada se calcula como:</p>
+<div class="math notranslate nohighlight">
+\[Z_s  = R_s   + j \cdot X_s\]</div>
+<p>Entonces, en resonancia, igualando la parte real de la impedancia :</p>
+<div class="math notranslate nohighlight">
+\[R_s = \frac{( R_p \cdot X_p^2 ) }{(R_p^2 +   X_p^2) }\]</div>
+<p>En resonancia, $Q_o = <span class="math">\frac{R}{X_p}</span> $, entonces $X_p = <span class="math">\frac{R}{Q_o}</span> $. Remplazando resulta:</p>
+<div class="math notranslate nohighlight">
+\[R_s = \frac{( R_p \cdot (\frac{R_p}{Q_o})^2 ) }{(R_p^2 +   (\frac{R_p}{Q_o})^2) }\]</div>
+<p>Sacando $ R_p^2 $ como factor comun y simplificando resulta:</p>
+<div class="math notranslate nohighlight">
+\[R_s = \frac{ R_p \cdot (\frac{1}{Q_o^2})  }{(1 +   (\frac{1}{Q_o^2})) } = \frac{ R_p }{(1 +   Q_o^2) }\]</div>
+<p>Por lo tanto, en resonancia, igualando la parte imaginaria de la impedancia :</p>
+<div class="math notranslate nohighlight">
+\[X_s = \frac{ ( R_p^2 \cdot X_p) }{(R_p^2 +   (\frac{R_p}{Q_o})^2)}\]</div>
+<div class="math notranslate nohighlight">
+\[X_s = \frac{ X_p }{(1 +   \frac{1}{Q_o^2})}\]</div>
+<p>De las ecuaciones, podemos concliuir que para realizar una conversion de serie a paralelo, donde el <span class="math notranslate nohighlight">\(Q_o\)</span> se suele llamar <span class="math notranslate nohighlight">\(Q_m\)</span> (Q de adaptación o ‘matching’), ya que no solo se emplea para las perdidas de los compoentes:</p>
+<div class="math notranslate nohighlight">
+\[R_s =  \frac{ R_p }{(1 +   Q_m^2) }\]</div>
+<div class="math notranslate nohighlight">
+\[X_s = \frac{ X_p }{(1 +   \frac{1}{Q_m^2})}\]</div>
+<p>Si el <span class="math notranslate nohighlight">\(Q_m\)</span> es mayor a 10 podemos despreciar el termino <span class="math notranslate nohighlight">\(\frac{1}{Q_m^2}\)</span></p>
+<div class="math notranslate nohighlight">
+\[X_s \sim X_p\]</div>
+</div>
+<div class="section" id="Máxima-transferencia-Q-constante.">
+<h1>Máxima transferencia <span class="math notranslate nohighlight">\(Q\)</span> constante.<a class="headerlink" href="#Máxima-transferencia-Q-constante." title="Enlazar permanentemente con este título">¶</a></h1>
+<p>Se desea encontrar el valor de <span class="math notranslate nohighlight">\(R_L\)</span> que maximice la tranferencia de energía desde el generado a la carga, teniendo en cuenta que se emplea un circuito sintonizado <span class="math notranslate nohighlight">\(LC\)</span> con perdidas (<span class="math notranslate nohighlight">\(r_p\)</span>).</p>
+<p>Dado que el circuito sintonizado esta compuesto por dos componentes, <span class="math notranslate nohighlight">\(L\)</span> y <span class="math notranslate nohighlight">\(C\)</span>, para cada valor de <span class="math notranslate nohighlight">\(R_L\)</span> podriamos proponer que el inductor L se escoja para tener un <span class="math notranslate nohighlight">\(Qc\)</span> dado y, luego, se buscará el valor de <span class="math notranslate nohighlight">\(C\)</span> que sintonice a <span class="math notranslate nohighlight">\(w_o\)</span>.</p>
+<p>Se busca el valor de <span class="math notranslate nohighlight">\(R_L\)</span> para lograr la máxima transferencia de energía desde la fuente para un dado un <span class="math notranslate nohighlight">\(Q_c\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[P_{R_L} = \frac{v_L^2}{ R_L}\]</div>
+<div class="math notranslate nohighlight">
+\[P_{R_L} = \frac{(i_g \cdot \frac{1}{\frac{1}{r_g} + \frac{1}{r_p} + \frac{1}{R_L} })^2}{ R_L}\]</div>
+<div class="math notranslate nohighlight">
+\[P_{R_L} = \frac{i_g^2}{  R_L \cdot (\frac{1}{r_g} + \frac{1}{r_p} + \frac{1}{R_L})^2 }\]</div>
+<p><span class="math notranslate nohighlight">\(r_p\)</span> se puede escribir en función de <span class="math notranslate nohighlight">\(Q_c\)</span> como:</p>
+<div class="math notranslate nohighlight">
+\[\frac{1}{Q_c} =  \frac{1}{Q_o} + \frac{w_o \cdot L}{R }\]</div>
+<div class="math notranslate nohighlight">
+\[w_o \cdot L = R \cdot (\frac{1}{Q_c} -  \frac{1}{Q_o} )\]</div>
+<p>donde <span class="math notranslate nohighlight">\(R = \frac{R_L \cdot r_g }{ R_L + r_g }\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[Q_o = \frac{r_p}{ w_o \cdot L}\]</div>
+<div class="math notranslate nohighlight">
+\[r_p = w_o \cdot L \cdot Q_o\]</div>
+<div class="math notranslate nohighlight">
+\[r_p = R \cdot (\frac{1}{Q_c} -  \frac{1}{Q_o} ) \cdot Q_o\]</div>
+<div class="math notranslate nohighlight">
+\[r_p = \frac{R_L \cdot r_g }{ R_L + r_g  } \cdot (\frac{Q_o}{Q_c} -  1 )\]</div>
+<p>Remplazando <span class="math notranslate nohighlight">\(r_p\)</span> en la ecuación de la potencia <span class="math notranslate nohighlight">\(P_{R_L}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[P_{R_L} = \frac{i_g^2}{  R_L \cdot (\frac{1}{r_g} + \frac{1}{\frac{R_L \cdot r_g }{ R_L + r_g  } \cdot (\frac{Q_o}{Q_c} -  1 ) } + \frac{1}{R_L})^2 }\]</div>
+<div class="math notranslate nohighlight">
+\[P_{R_L} = \frac{i_g^2}{  R_L \cdot (\frac{1}{r_g} + \frac{R_L + r_g  }{R_L \cdot r_g \cdot (\frac{Q_o}{Q_c} -  1 ) } + \frac{1}{R_L})^2 }\]</div>
+<div class="math notranslate nohighlight">
+\[P_{R_L} = \frac{i_g^2 \cdot R_L^2 \cdot r_g^2 }{  R_L \cdot (r_g + \frac{R_L + r_g  }{ (\frac{Q_o}{Q_c} -  1 ) } + R_L)^2 }\]</div>
+<div class="math notranslate nohighlight">
+\[P_{R_L} = \frac{i_g^2 \cdot R_L \cdot r_g^2 }{  (r_g + \frac{R_L + r_g  }{ (\frac{Q_o}{Q_c} -  1 ) } + R_L)^2 }\]</div>
+<div class="math notranslate nohighlight">
+\[P_{R_L} = \frac{i_g^2 \cdot R_L \cdot r_g^2 }{ (R_L + r_g)^2 \cdot (1 + \frac{ 1 }{ (\frac{Q_o}{Q_c} -  1 ) } )^2 }\]</div>
+<div class="math notranslate nohighlight">
+\[P_{R_L} = \frac{i_g^2 \cdot R_L \cdot r_g^2 }{ (R_L + r_g)^2 \cdot ( \frac{ \frac{Q_o}{Q_c} }{ (\frac{Q_o}{Q_c} -  1 ) } )^2 }\]</div>
+<div class="math notranslate nohighlight">
+\[P_{R_L} = \frac{i_g^2 \cdot R_L \cdot r_g^2 }{ (R_L + r_g)^2 \cdot ( \frac{ Q_o }{ Q_o -  Q_c  } )^2 }\]</div>
+<div class="math notranslate nohighlight">
+\[P_{R_L} = \frac{i_g^2 \cdot R_L }{ (\frac{R_L + r_g}{r_g}  \cdot  \frac{ Q_o }{ Q_o -  Q_c  } )^2 }\]</div>
+<div class="math notranslate nohighlight">
+\[P_{R_L} =  \frac{i_g^2}{(\frac{ Q_o }{ Q_o -  Q_c  })^2}   \cdot \frac{ R_L \cdot  r_g^2}{ (R_L + r_g)^2 }\]</div>
+<p>Buscando el máximo valor de <span class="math notranslate nohighlight">\(P_{R_L}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\frac{\partial P_{R_L}}{\partial R_L } = \frac{i_g^2}{(\frac{ Q_o }{ Q_o -  Q_c  })^2}   \cdot \frac{[(r_g^2 \cdot (R_L^2 + r_g)^2) - 2 \cdot (R_L +  r_g) \cdot (R_L \cdot  r_g^2)  ]}{(R_L +  r_g)^4} = 0\]</div>
+<div class="math notranslate nohighlight">
+\[(r_g^2 \cdot (R_L + r_g)^2) - 2 \cdot (R_L +  r_g) \cdot (R_L \cdot  r_g^2)   = 0\]</div>
+<div class="math notranslate nohighlight">
+\[r_g^2 \cdot (R_L + r_g)^2 = 2 \cdot (R_L +  r_g) \cdot (R_L \cdot  r_g^2)\]</div>
+<div class="math notranslate nohighlight">
+\[(R_L + r_g)  = 2 \cdot R_L\]</div>
+<div class="math notranslate nohighlight">
+\[R_L = r_g\]</div>
+<p>Entonces :</p>
+<div class="math notranslate nohighlight">
+\[P_{R_L} =  \frac{i_g^2}{(\frac{ Q_o }{ Q_o -  Q_c  })^2}   \cdot \frac{ r_g \cdot  r_g^2}{ (r_g + r_g)^2 }\]</div>
+<div class="math notranslate nohighlight">
+\[P_{R_L} =  \frac{i_g^2}{(\frac{ Q_o }{ Q_o -  Q_c  })^2}   \cdot \frac{ r_g }{ 4 }\]</div>
+<div class="math notranslate nohighlight">
+\[P_{R_L MAX: (RL =  rg) } =  \frac{i_g^2 \cdot r_g}{4}   \cdot (1 - \frac{ Q_c }{ Q_o })^2\]</div>
+<p>Suponer que <span class="math notranslate nohighlight">\(R_g = 10 \Omega\)</span>, <span class="math notranslate nohighlight">\(f_o = 1 MHz\)</span>, <span class="math notranslate nohighlight">\(Q_0 = 30\)</span> y <span class="math notranslate nohighlight">\(Q_c = 10\)</span>.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[26]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># Librerias</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="o">%</span><span class="k">matplotlib</span> inline
+
+<span class="c1"># Tamaño del grafico</span>
+<span class="n">params</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;figure.figsize&#39;</span><span class="p">:</span> <span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">)}</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">params</span><span class="p">)</span>
+
+<span class="c1"># Funciones para el calculo de potencias</span>
+<span class="k">def</span> <span class="nf">PRL</span><span class="p">(</span><span class="n">ig</span><span class="p">,</span> <span class="n">RL</span><span class="p">,</span> <span class="n">rg</span><span class="p">,</span> <span class="n">Qo</span><span class="p">,</span> <span class="n">Qc</span><span class="p">):</span>
+    <span class="n">wL</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="n">Qc</span> <span class="o">-</span> <span class="mi">1</span><span class="o">/</span><span class="n">Qo</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">rl</span> <span class="o">*</span> <span class="n">rg</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">rl</span> <span class="o">+</span> <span class="n">rg</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">ig</span><span class="o">**</span><span class="mi">2</span> <span class="o">*</span> <span class="p">(</span><span class="n">RL</span> <span class="o">*</span> <span class="n">rg</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">RL</span> <span class="o">+</span> <span class="n">rg</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">Qc</span><span class="o">/</span><span class="n">Qo</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span>
+
+<span class="k">def</span> <span class="nf">PRG</span><span class="p">(</span><span class="n">ig</span><span class="p">,</span> <span class="n">RL</span><span class="p">,</span> <span class="n">rg</span><span class="p">,</span> <span class="n">Qo</span><span class="p">,</span> <span class="n">Qc</span><span class="p">):</span>
+    <span class="n">wL</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="n">Qc</span> <span class="o">-</span> <span class="mi">1</span><span class="o">/</span><span class="n">Qo</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">rl</span> <span class="o">*</span> <span class="n">rg</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">rl</span> <span class="o">+</span> <span class="n">rg</span><span class="p">)</span>
+    <span class="n">rp</span> <span class="o">=</span> <span class="n">Qo</span> <span class="o">*</span> <span class="n">wL</span>
+    <span class="k">return</span> <span class="n">ig</span><span class="o">**</span><span class="mi">2</span> <span class="o">/</span> <span class="n">rg</span> <span class="o">/</span> <span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="n">RL</span> <span class="o">+</span><span class="mi">1</span><span class="o">/</span><span class="n">rg</span> <span class="o">+</span> <span class="mi">1</span><span class="o">/</span><span class="n">rp</span> <span class="p">)</span><span class="o">**</span><span class="mi">2</span>
+
+<span class="k">def</span> <span class="nf">PRP</span><span class="p">(</span><span class="n">ig</span><span class="p">,</span> <span class="n">RL</span><span class="p">,</span> <span class="n">rg</span><span class="p">,</span> <span class="n">Qo</span><span class="p">,</span> <span class="n">Qc</span><span class="p">):</span>
+    <span class="n">wL</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="n">Qc</span> <span class="o">-</span> <span class="mi">1</span><span class="o">/</span><span class="n">Qo</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">rl</span> <span class="o">*</span> <span class="n">rg</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">rl</span> <span class="o">+</span> <span class="n">rg</span><span class="p">)</span>
+    <span class="n">rp</span> <span class="o">=</span> <span class="n">Qo</span> <span class="o">*</span> <span class="n">wL</span>
+    <span class="k">return</span> <span class="n">ig</span><span class="o">**</span><span class="mi">2</span> <span class="o">/</span> <span class="n">rp</span> <span class="o">/</span> <span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="n">RL</span> <span class="o">+</span><span class="mi">1</span><span class="o">/</span><span class="n">rg</span> <span class="o">+</span> <span class="mi">1</span><span class="o">/</span><span class="n">rp</span> <span class="p">)</span><span class="o">**</span><span class="mi">2</span>
+
+
+<span class="c1"># Datos</span>
+<span class="n">rg</span> <span class="o">=</span> <span class="mi">10</span>    <span class="c1"># resistencia del generador</span>
+<span class="n">fo</span> <span class="o">=</span> <span class="mf">1e6</span>   <span class="c1"># Frecuencia de trabajo</span>
+<span class="n">Qo</span> <span class="o">=</span> <span class="mi">100</span>   <span class="c1"># Q libre</span>
+<span class="n">Qc</span> <span class="o">=</span> <span class="mi">10</span>    <span class="c1"># Q cargado</span>
+
+
+<span class="c1"># Defino valores para RL</span>
+<span class="n">rl</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="c1"># Calculo las potencias para los valores de rl (estas variables son vectores)</span>
+<span class="n">prl</span>  <span class="o">=</span> <span class="n">PRL</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">rl</span><span class="p">,</span> <span class="n">rg</span><span class="p">,</span> <span class="n">Qo</span><span class="p">,</span> <span class="n">Qc</span><span class="p">)</span>
+<span class="n">prp</span>  <span class="o">=</span> <span class="n">PRP</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">rl</span><span class="p">,</span> <span class="n">rg</span><span class="p">,</span> <span class="n">Qo</span><span class="p">,</span> <span class="n">Qc</span><span class="p">)</span>
+<span class="n">prg</span>  <span class="o">=</span> <span class="n">PRG</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">rl</span><span class="p">,</span> <span class="n">rg</span><span class="p">,</span> <span class="n">Qo</span><span class="p">,</span> <span class="n">Qc</span><span class="p">)</span>
+<span class="n">pt</span>   <span class="o">=</span> <span class="n">prl</span> <span class="o">+</span> <span class="n">prp</span>
+
+<span class="c1"># Grafico el resultado</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">rl</span><span class="p">,</span> <span class="n">prl</span> <span class="o">/</span> <span class="nb">max</span><span class="p">(</span><span class="n">pt</span><span class="p">),</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;PRL&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">rl</span><span class="p">,</span> <span class="n">prp</span> <span class="o">/</span> <span class="nb">max</span><span class="p">(</span><span class="n">pt</span><span class="p">),</span> <span class="s1">&#39;y&#39;</span><span class="p">,</span><span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;Prp&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">rl</span><span class="p">,</span> <span class="n">pt</span> <span class="o">/</span> <span class="nb">max</span><span class="p">(</span><span class="n">pt</span><span class="p">),</span> <span class="s1">&#39;g&#39;</span><span class="p">,</span><span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;Pentregada&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;RL&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;P(RL)/max(Pt)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Buscamos Qc=</span><span class="si">{:1.0f}</span><span class="s1">. Valor de rg=</span><span class="si">{:1.1f}</span><span class="s1">ohms, Qo=</span><span class="si">{:1.0f}</span><span class="s1"> y RL variando. El eje de abscisas es RL. &#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">Qc</span><span class="p">,</span><span class="n">rg</span><span class="p">,</span><span class="n">Qo</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+
+
+<span class="c1"># Agrego los puntos de</span>
+<span class="c1"># condición de MAXIMA TRANSFERENCIA DE POTENCIA A Q constante</span>
+<span class="c1"># Para la maxima potencia a Qcte, (Q=10)</span>
+<span class="n">rl</span> <span class="o">=</span> <span class="n">rg</span>
+<span class="c1"># Calculo wL</span>
+<span class="n">wL</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="n">Qc</span> <span class="o">-</span> <span class="mi">1</span><span class="o">/</span><span class="n">Qo</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">rl</span> <span class="o">*</span> <span class="n">rg</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">rl</span> <span class="o">+</span> <span class="n">rg</span><span class="p">)</span>
+<span class="c1"># dado que esta defindo Qo calculo la perdida:</span>
+<span class="c1"># Qo = rp/wL</span>
+<span class="n">rp</span> <span class="o">=</span> <span class="n">Qo</span> <span class="o">*</span> <span class="n">wL</span>
+<span class="n">Zin</span> <span class="o">=</span> <span class="n">rl</span> <span class="o">*</span> <span class="n">rp</span> <span class="o">/</span><span class="p">(</span><span class="n">rl</span> <span class="o">+</span> <span class="n">rp</span><span class="p">)</span>
+<span class="n">Prl</span> <span class="o">=</span> <span class="n">PRL</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">rl</span><span class="p">,</span> <span class="n">rg</span><span class="p">,</span> <span class="n">Qo</span><span class="p">,</span> <span class="n">Qc</span><span class="p">)</span>
+<span class="c1"># Marco en el grafico</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">rl</span><span class="p">,</span> <span class="n">Prl</span> <span class="o">/</span> <span class="nb">max</span><span class="p">(</span><span class="n">pt</span><span class="p">),</span> <span class="s1">&#39;or&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="n">s</span><span class="o">=</span><span class="s1">&#39;PRLMAX(Zin=</span><span class="si">{:1.1f}</span><span class="s1">)&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">Zin</span><span class="p">),</span><span class="n">xy</span><span class="o">=</span><span class="p">(</span><span class="n">rl</span><span class="p">,</span><span class="n">Prl</span><span class="o">*</span><span class="mf">1.02</span><span class="o">/</span> <span class="nb">max</span><span class="p">(</span><span class="n">pt</span><span class="p">)),</span> <span class="n">xycoords</span><span class="o">=</span><span class="s1">&#39;data&#39;</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="mf">12.0</span><span class="p">,</span><span class="n">textcoords</span><span class="o">=</span><span class="s1">&#39;data&#39;</span><span class="p">,</span><span class="n">ha</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="n">s</span><span class="o">=</span><span class="s1">&#39;PRLMAX(RL=</span><span class="si">{:1.1f}</span><span class="s1">)&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">rl</span><span class="p">),</span><span class="n">xy</span><span class="o">=</span><span class="p">(</span><span class="n">rl</span><span class="p">,</span><span class="n">Prl</span><span class="o">*</span><span class="mf">0.94</span><span class="o">/</span> <span class="nb">max</span><span class="p">(</span><span class="n">pt</span><span class="p">)),</span> <span class="n">xycoords</span><span class="o">=</span><span class="s1">&#39;data&#39;</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="mf">12.0</span><span class="p">,</span><span class="n">textcoords</span><span class="o">=</span><span class="s1">&#39;data&#39;</span><span class="p">,</span><span class="n">ha</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="n">s</span><span class="o">=</span><span class="s1">&#39;PRLMAX(rp=</span><span class="si">{:1.1f}</span><span class="s1">)&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">rp</span><span class="p">),</span><span class="n">xy</span><span class="o">=</span><span class="p">(</span><span class="n">rl</span><span class="p">,</span><span class="n">Prl</span><span class="o">*</span><span class="mf">0.90</span><span class="o">/</span> <span class="nb">max</span><span class="p">(</span><span class="n">pt</span><span class="p">)),</span> <span class="n">xycoords</span><span class="o">=</span><span class="s1">&#39;data&#39;</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="mf">12.0</span><span class="p">,</span><span class="n">textcoords</span><span class="o">=</span><span class="s1">&#39;data&#39;</span><span class="p">,</span><span class="n">ha</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">)</span>
+
+
+<span class="c1"># Condición de MAXIMA TRANSFERENCIA DE POTENCIA</span>
+<span class="n">Zin</span> <span class="o">=</span> <span class="n">rg</span>
+<span class="c1"># Para el calculo de wl usamos la resistencia total</span>
+<span class="c1"># Calculo wL</span>
+<span class="n">rt</span> <span class="o">=</span> <span class="p">(</span><span class="n">rg</span> <span class="o">*</span> <span class="n">Zin</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">rg</span> <span class="o">+</span> <span class="n">Zin</span><span class="p">)</span>
+<span class="n">wL</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="n">Qc</span><span class="p">)</span> <span class="o">*</span> <span class="n">rt</span>
+
+<span class="c1"># dado que esta defindo Qo calculo la perdida:</span>
+<span class="c1"># Qo = rp/wL</span>
+<span class="n">rp</span> <span class="o">=</span> <span class="n">Qo</span> <span class="o">*</span> <span class="n">wL</span>
+<span class="c1">#1/rl = (1/Zin) - (1/rp)</span>
+<span class="n">rl</span> <span class="o">=</span> <span class="mi">1</span><span class="o">/</span><span class="p">(</span> <span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="n">Zin</span><span class="p">)</span> <span class="o">-</span> <span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="n">rp</span><span class="p">))</span>
+
+<span class="n">Prl</span> <span class="o">=</span> <span class="n">PRL</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">rl</span><span class="p">,</span> <span class="n">rg</span><span class="p">,</span> <span class="n">Qo</span><span class="p">,</span> <span class="n">Qc</span><span class="p">)</span> <span class="o">/</span> <span class="nb">max</span><span class="p">(</span><span class="n">pt</span><span class="p">)</span>
+<span class="c1"># Marco en el grafico</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">rl</span><span class="p">,</span>  <span class="nb">max</span><span class="p">(</span><span class="n">pt</span><span class="p">)</span><span class="o">/</span><span class="nb">max</span><span class="p">(</span><span class="n">pt</span><span class="p">),</span> <span class="s1">&#39;or&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="n">s</span><span class="o">=</span><span class="s1">&#39;Pdisp(Zin=</span><span class="si">{:1.1f}</span><span class="s1">)&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">Zin</span><span class="p">),</span><span class="n">xy</span><span class="o">=</span><span class="p">(</span><span class="n">rl</span><span class="p">,</span><span class="mf">1.02</span><span class="p">),</span> <span class="n">xycoords</span><span class="o">=</span><span class="s1">&#39;data&#39;</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="mf">12.0</span><span class="p">,</span><span class="n">textcoords</span><span class="o">=</span><span class="s1">&#39;data&#39;</span><span class="p">,</span><span class="n">ha</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="n">s</span><span class="o">=</span><span class="s1">&#39;Pdisp(RL=</span><span class="si">{:1.1f}</span><span class="s1">)&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">rl</span><span class="p">),</span><span class="n">xy</span><span class="o">=</span><span class="p">(</span><span class="n">rl</span><span class="p">,</span><span class="mf">0.97</span><span class="p">),</span> <span class="n">xycoords</span><span class="o">=</span><span class="s1">&#39;data&#39;</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="mf">12.0</span><span class="p">,</span><span class="n">textcoords</span><span class="o">=</span><span class="s1">&#39;data&#39;</span><span class="p">,</span><span class="n">ha</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="n">s</span><span class="o">=</span><span class="s1">&#39;Pdisp(rp=</span><span class="si">{:1.1f}</span><span class="s1">)&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">rp</span><span class="p">),</span><span class="n">xy</span><span class="o">=</span><span class="p">(</span><span class="n">rl</span><span class="p">,</span><span class="mf">0.94</span><span class="p">),</span> <span class="n">xycoords</span><span class="o">=</span><span class="s1">&#39;data&#39;</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="mf">12.0</span><span class="p">,</span><span class="n">textcoords</span><span class="o">=</span><span class="s1">&#39;data&#39;</span><span class="p">,</span><span class="n">ha</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../_images/adaptacion_adaptacion_7_0.png" src="../_images/adaptacion_adaptacion_7_0.png" />
+</div>
+</div>
+<p><img alt="11-cuatrocientos" src="../_images/ejemplo1c.png" /></p>
+<p>Se desea que el equipo transmisor, la fuente de corriente, tenga una carga de <span class="math notranslate nohighlight">\(Z_{in} = 50\Omega+j0\Omega\)</span> &#64; <span class="math notranslate nohighlight">\(2 MHz\)</span> para que esté adaptada, se recurre así al circuito de adaptación mostrado en la figura compuesto por L y C. Suponga que la resistencia de perdida de L es <span class="math notranslate nohighlight">\(r_p = 1\Omega\)</span>.</p>
+<p>Calcular L y C.</p>
+<p>Calcular la potencia en la carga.</p>
+<p>Para el cálculo del inductor primero debemos neutralizar el efecto de la capacitancia producida en la antena. Para ello, separamos el inductor en dos inductores conectados en serie, como muestra la figura.</p>
+<p><img alt="11-cuatrocientos" src="../_images/ejemplo1c.png" /></p>
+<p>Calculamos <span class="math notranslate nohighlight">\(L_b\)</span> para que neutralice o resuene con la capacidad.</p>
+<div class="math notranslate nohighlight">
+\[X_c =\frac{1}{2 \pi 2MHz 30pF}\]</div>
+<div class="math notranslate nohighlight">
+\[L_b = \frac{X_c}{2 \pi 2MHz} = 211 \mu Hy\]</div>
+<p>El circuito resultante en la rama es un RL serie en paralelo con el capacitor de adaptación. Es necesario que el circuito serie RL se presente como un circuito paralelo RL, donde R debe tomar valor el valor de <span class="math notranslate nohighlight">\(50 \Omega\)</span>. Para ello necesitamos calcular el <span class="math notranslate nohighlight">\(Q_M\)</span> que permita obtener el valor buscado.</p>
+<div class="math notranslate nohighlight">
+\[R_p = R_s (1+Q_M^2)\]</div>
+<div class="math notranslate nohighlight">
+\[Q_M = \sqrt[]{\frac{R_p}{R_s}-1} = \sqrt[]{\frac{50}{1}-1} = 7\]</div>
+<p>A partir de <span class="math notranslate nohighlight">\(Q_M\)</span> calculamos <span class="math notranslate nohighlight">\(L_a\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[Q_M = \frac{\omega L_a}{R_s}\]</div>
+<div class="math notranslate nohighlight">
+\[L_a = 557nHy\]</div>
+<p>Para finalmente obtener el valor de <span class="math notranslate nohighlight">\(L\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[L = L_a + L_b =  211.557 \mu Hy\]</div>
+<p>El capacitor que resuena con el <span class="math notranslate nohighlight">\(L'\)</span> equivalente paralelo entonces,</p>
+<div class="math notranslate nohighlight">
+\[C  = 11.14 nF\]</div>
+<div class="math notranslate nohighlight">
+\[Q_o = \frac{\omega L}{r_p} = 7\]</div>
+<div class="math notranslate nohighlight">
+\[\frac{1}{Q_c} = \frac{1}{Q_o} + \frac{\omega L_a'}{R_{ext}}\]</div>
+<div class="math notranslate nohighlight">
+\[\frac{1}{Q_c} = \frac{1}{Q_o} + \frac{2 \pi 2MHz 568.3 nHy }{25}\]</div>
+<div class="math notranslate nohighlight">
+\[Q_c= 2.33\]</div>
+<p><img alt="11-cuatrocientos" src="../_images/ejemplo1c.png" /></p>
+</div>
+<div class="section" id="Divisor-capacitivo">
+<h1>Divisor capacitivo<a class="headerlink" href="#Divisor-capacitivo" title="Enlazar permanentemente con este título">¶</a></h1>
+<p>Dado el circuito de la figura, realizaremos el analisis mediante conversiones serie-paralelo.</p>
+<p><img alt="12-cuatrocientos" src="../_images/divC1.png" /></p>
+<p>Buscamos que el circuito presente una capacidad <span class="math notranslate nohighlight">\(C'\)</span>, <span class="math notranslate nohighlight">\(R''\)</span> y <span class="math notranslate nohighlight">\(R_L\)</span>.</p>
+<p>Buscamos los valores de <span class="math notranslate nohighlight">\(C_1\)</span> y <span class="math notranslate nohighlight">\(C_2\)</span>.</p>
+<p>Empezando desde el paralelo de <span class="math notranslate nohighlight">\(R_L\)</span> y <span class="math notranslate nohighlight">\(C_2\)</span>, donde para tener el modelo serie (<span class="math notranslate nohighlight">\(R_L'\)</span> y <span class="math notranslate nohighlight">\(C_2'\)</span>) podemos escribir <span class="math notranslate nohighlight">\(Q_{m1}\)</span> como:</p>
+<div class="math notranslate nohighlight">
+\[Q_{m1} = R_L \omega C_2\]</div>
+<p>Entonces:</p>
+<div class="math notranslate nohighlight">
+\[R_L' = \frac{R_L}{(1+Q_{m1}^2)}\]</div>
+<div class="math notranslate nohighlight">
+\[X_2' = \frac{X_2}{(1+\frac{1}{Q_{m1}^2})}\]</div>
+<div class="math notranslate nohighlight">
+\[C_2' = C_2(1+\frac{1}{Q_{m1}^2})\]</div>
+<p>Al modelo serie de <span class="math notranslate nohighlight">\(R_L'\)</span> y <span class="math notranslate nohighlight">\(C_2'\)</span> hay que agregar <span class="math notranslate nohighlight">\(C_1\)</span> (<span class="math notranslate nohighlight">\(C_1\)</span> en serie con <span class="math notranslate nohighlight">\(C_2'\)</span>) :</p>
+<div class="math notranslate nohighlight">
+\[C = \frac{C_1C_2'}{C_1+C_2'}\]</div>
+<p>Despejando <span class="math notranslate nohighlight">\(C_1\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[C_1 = \frac{C_2' C}{C_2' - C}\]</div>
+<p>Ahora tenemos como resultado la serie de <span class="math notranslate nohighlight">\(C\)</span> con <span class="math notranslate nohighlight">\(R_L'\)</span>.</p>
+<p>Para tener el modelo serie del paralelo de <span class="math notranslate nohighlight">\(R''\)</span> con <span class="math notranslate nohighlight">\(C'\)</span>, calculamos <span class="math notranslate nohighlight">\(Q_{m2}\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[Q_{m2} = R'' \omega C'\]</div>
+<div class="math notranslate nohighlight">
+\[R_L'' = R_L'(1+Q_{m2}^2)\]</div>
+<div class="math notranslate nohighlight">
+\[C' = C (1+\frac{1}{Q_{m2}^2})\]</div>
+<div class="math notranslate nohighlight">
+\[C = \frac{C'}{ (1+\frac{1}{Q_{m2}^2})}\]</div>
+<p>Recordando:</p>
+<div class="math notranslate nohighlight">
+\[R_L' = \frac{R_L}{(1+Q_{m1}^2)}\]</div>
+<p>Remplanzando <span class="math notranslate nohighlight">\(R_L'\)</span></p>
+<div class="math notranslate nohighlight">
+\[R_L''  = R_L  \frac{(1+Q_{m2}^2) }{(1+Q_{m1}^2)}\]</div>
+<p>Dado que <span class="math notranslate nohighlight">\(Q_{m1}\)</span> es incognita, despejamos:</p>
+<div class="math notranslate nohighlight">
+\[(1+Q_{m1}^2) = \frac{R_L}{R_L''}(1+Q_{m2}^2)\]</div>
+<div class="math notranslate nohighlight">
+\[Q_{m1} = \sqrt[]{\frac{R_L}{R_L''}(1+Q_{m2}^2)-1}\]</div>
+<p>Conocido <span class="math notranslate nohighlight">\(Q_{m1}\)</span>, podemos calcular <span class="math notranslate nohighlight">\(C_2\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[C_2 = \frac{Q_{m1}}{R_L \omega}\]</div>
+<p>Para calcular <span class="math notranslate nohighlight">\(C_1\)</span>, calculamos <span class="math notranslate nohighlight">\(C_2'\)</span> y <span class="math notranslate nohighlight">\(C\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[C_2' = C_2(1+\frac{1}{Q_{m1}^2})\]</div>
+<div class="math notranslate nohighlight">
+\[C     = \frac{C'}{ (1+\frac{1}{Q_{m2}^2})}\]</div>
+<p>Entonces:</p>
+<div class="math notranslate nohighlight">
+\[C_1 = \frac{C_2' C}{C_2' - C}\]</div>
+<p>Los datos son <span class="math notranslate nohighlight">\(C'\)</span>, <span class="math notranslate nohighlight">\(R''\)</span> y <span class="math notranslate nohighlight">\(R_L\)</span>.</p>
+<p>Buscamos los valores de <span class="math notranslate nohighlight">\(C_1\)</span> y <span class="math notranslate nohighlight">\(C_2\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[Q_{m2} = R_L'' \omega C'\]</div>
+<div class="math notranslate nohighlight">
+\[Q_{m1} = \sqrt[]{\frac{R_L}{R_L''}(1+Q_{m2}^2)-1}\]</div>
+<div class="math notranslate nohighlight">
+\[C_2 = \frac{Q_{m1}}{R_L \omega}\]</div>
+<div class="math notranslate nohighlight">
+\[C_2' = C_2(1+\frac{1}{Q_{m1}^2})\]</div>
+<div class="math notranslate nohighlight">
+\[C  = \frac{C'}{ (1+\frac{1}{Q_{m2}^2})}\]</div>
+<div class="math notranslate nohighlight">
+\[C_1 = \frac{C_2' C}{C_2' - C}\]</div>
+<p>A partir de :</p>
+<div class="math notranslate nohighlight">
+\[Q_{m1} = \sqrt[]{\frac{R_L}{R_L''}(1+Q_{m2}^2)-1}\]</div>
+<p>Podemos llamar <span class="math notranslate nohighlight">\(N^2 =\frac{R_L''}{R_L}\)</span>, donde <span class="math notranslate nohighlight">\(N\)</span> será mayor a 1 ya que <span class="math notranslate nohighlight">\(R_L'' &gt; R_L\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[Q_{m1} = \sqrt[]{\frac{(1+Q_{m2}^2)}{N^2}-1}\]</div>
+<p>Si ahora <span class="math notranslate nohighlight">\(Q_{m2} &gt; 10\)</span>, entonces:</p>
+<div class="math notranslate nohighlight">
+\[Q_{m1} = \sqrt[]{\frac{(Q_{m2}^2)}{N^2}-1}\]</div>
+<p>Donde si <span class="math notranslate nohighlight">\(Q_{m1} &gt; 10\)</span>, podemos escribir:</p>
+<div class="math notranslate nohighlight">
+\[Q_{m1} \sim \frac{Q_{m2}}{N}\]</div>
+</div>
+<div class="section" id="Procedimiento-de-cálculo-si-Q_{m2}-&gt;-10">
+<h1>Procedimiento de cálculo si <span class="math notranslate nohighlight">\(Q_{m2} &gt; 10\)</span><a class="headerlink" href="#Procedimiento-de-cálculo-si-Q_{m2}->-10" title="Enlazar permanentemente con este título">¶</a></h1>
+<div class="math notranslate nohighlight">
+\[Q_{m2} = R_L'' \omega C'\]</div>
+<div class="math notranslate nohighlight">
+\[N =\sqrt[]{\frac{R_L''}{R_L}}\]</div>
+<div class="math notranslate nohighlight">
+\[Q_{m1} \sim \frac{Q_{m2}}{N}\]</div>
+<p>Volvemos a calcular <span class="math notranslate nohighlight">\(Q_{m1}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[Q_{m1} = \sqrt[]{\frac{(1+Q_{m2}^2)}{N^2}-1}\]</div>
+<div class="math notranslate nohighlight">
+\[C_2 = \frac{Q_{m1}}{R_L \omega}\]</div>
+<div class="math notranslate nohighlight">
+\[C_2' = C_2(1+\frac{1}{Q_{m1}^2})\]</div>
+<div class="math notranslate nohighlight">
+\[C     = \frac{C'}{ (1+\frac{1}{Q_{m2}^2})}\]</div>
+<div class="math notranslate nohighlight">
+\[C_1 = \frac{C_2' C}{C_2' - C}\]</div>
+<div class="math notranslate nohighlight">
+\[C_2 = \frac{Q_{m1}}{R_L \omega}\]</div>
+<p>Siendo <span class="math notranslate nohighlight">\(Q_{m1}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[Q_{m1} \sim \frac{Q_{m2}}{N}\]</div>
+<div class="math notranslate nohighlight">
+\[C_2 \sim \frac{Q_{m2}}{N R_L \omega}\]</div>
+<div class="math notranslate nohighlight">
+\[C_2 \sim \frac{R_L'' \omega C'}{N R_L \omega}\]</div>
+<div class="math notranslate nohighlight">
+\[C_2 \sim \frac{N^2 \omega C'}{N \omega}\]</div>
+<div class="math notranslate nohighlight">
+\[C_2 \sim N C'\]</div>
+<p>Y para calcular <span class="math notranslate nohighlight">\(C_1\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[C_1 = \frac{C_2' C'}{C_2' - C'}\]</div>
+<div class="math notranslate nohighlight">
+\[C_2' \sim C_2\]</div>
+<div class="math notranslate nohighlight">
+\[C_1 = \frac{C_2 C'}{C_2 - C'}\]</div>
+<div class="math notranslate nohighlight">
+\[C_1 = \frac{N C' }{N  - 1}\]</div>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
 </pre></div>
@@ -466,7 +987,6 @@ div.rendered_html tbody tr:hover {
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
 <span></span>
 </pre></div>
-</div>
 </div>
 </div>
 </div>

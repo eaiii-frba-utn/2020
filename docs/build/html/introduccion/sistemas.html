@@ -44,6 +44,7 @@
   <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
     <link rel="index" title="Índice" href="../genindex.html" />
     <link rel="search" title="Búsqueda" href="../search.html" />
+    <link rel="next" title="Técnicas de adaptación" href="../adaptacion/adaptacion.html" />
     <link rel="prev" title="Bienvenidos a Electronica Aplicada III 2020" href="../index.html" /> 
 </head>
 
@@ -88,7 +89,7 @@
               
             
             
-              <p class="caption"><span class="caption-text">Introduccion</span></p>
+              <p class="caption"><span class="caption-text">Introducción</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Sistemas de radio</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#Ejemplo-de-valores-tipicos-de-BLU-y-STM">Ejemplo de valores tipicos de BLU y STM</a></li>
@@ -144,6 +145,24 @@
 </li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="#Ganancia-de-potencia-y-definiciones">Ganancia de potencia y definiciones</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#Potencia-en-dBm">Potencia en dBm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Potencia-en-un-cuadripolo">Potencia en un cuadripolo</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#Ganancia-de-Potencia">Ganancia de Potencia</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Ganancia-de-trasducción">Ganancia de trasducción</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Técnicas de adaptación</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../adaptacion/adaptacion.html">Técnicas de adaptación</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../adaptacion/adaptacion.html#Circuitos-resonantes.">Circuitos resonantes.</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../adaptacion/adaptacion.html#Conversión-serie-a-paralelo">Conversión serie a paralelo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../adaptacion/adaptacion.html#Máxima-transferencia-Q-constante.">Máxima transferencia <span class="math notranslate nohighlight">\(Q\)</span> constante.</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../adaptacion/adaptacion.html#Divisor-capacitivo">Divisor capacitivo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../adaptacion/adaptacion.html#Procedimiento-de-cálculo-si-Q_{m2}-&gt;-10">Procedimiento de cálculo si <span class="math notranslate nohighlight">\(Q_{m2} &gt; 10\)</span></a></li>
 </ul>
 
             
@@ -844,15 +863,41 @@ local, este último es además el encargado de seleccionar la frecuencia que se 
 <div class="math notranslate nohighlight">
 \[f_{OL_{2}} = 10,245 MHz\]</div>
 <p><img alt="24" src="../_images/dobleConversion.png" /></p>
-<div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
-</pre></div>
-</div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span>
-</pre></div>
 </div>
 </div>
+</div>
+<div class="section" id="Ganancia-de-potencia-y-definiciones">
+<h1>Ganancia de potencia y definiciones<a class="headerlink" href="#Ganancia-de-potencia-y-definiciones" title="Enlazar permanentemente con este título">¶</a></h1>
+<div class="section" id="Potencia-en-dBm">
+<h2>Potencia en dBm<a class="headerlink" href="#Potencia-en-dBm" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>La potencia en los sistemas de comunicación a menudo se mide en la escala ‘dBm’, o la potencia de referencia medida en relación con a <span class="math notranslate nohighlight">\(1 mW\)</span>.</p>
+<p>P.ej. un nivel de potencia de 10 mW puede expresarse como 10 dBm.</p>
+</div>
+<div class="section" id="Potencia-en-un-cuadripolo">
+<h2>Potencia en un cuadripolo<a class="headerlink" href="#Potencia-en-un-cuadripolo" title="Enlazar permanentemente con este título">¶</a></h2>
+<p><img alt="25" src="../_images/power.png" /></p>
+<p>Definimos:</p>
+<p><span class="math notranslate nohighlight">\(P_{in}\)</span> : Potenicia de entrada</p>
+<p><span class="math notranslate nohighlight">\(P_{L}\)</span> : Potenicia en la carga</p>
+<p><span class="math notranslate nohighlight">\(P_{av,s}\)</span> : Potenicia máxima disponible de la fuetne (available power)</p>
+<p>En una fuente de tensión para valores pico:</p>
+<div class="math notranslate nohighlight">
+\[P_{av,s} = \frac{v_s^2}{8 r_g}\]</div>
+<p>En una fuente de corriente para valores pico:</p>
+<div class="math notranslate nohighlight">
+\[P_{av,s} = \frac{i_s^2 r_g}{8}\]</div>
+<div class="section" id="Ganancia-de-Potencia">
+<h3>Ganancia de Potencia<a class="headerlink" href="#Ganancia-de-Potencia" title="Enlazar permanentemente con este título">¶</a></h3>
+<div class="math notranslate nohighlight">
+\[G_P = \frac{P_L}{P_{in} }\]</div>
+</div>
+<div class="section" id="Ganancia-de-trasducción">
+<h3>Ganancia de trasducción<a class="headerlink" href="#Ganancia-de-trasducción" title="Enlazar permanentemente con este título">¶</a></h3>
+<div class="math notranslate nohighlight">
+\[G_T = \frac{P_L}{P_{av,s} }\]</div>
+<div class="math notranslate nohighlight">
+\[G_P = \frac{P_L}{P_{in} }\]</div>
+<p><a class="reference external" href="http://rfic.eecs.berkeley.edu/~niknejad/ee142_fa05lects/pdf/lect4.pdf">http://rfic.eecs.berkeley.edu/~niknejad/ee142_fa05lects/pdf/lect4.pdf</a></p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
 </pre></div>
@@ -873,6 +918,8 @@ local, este último es además el encargado de seleccionar la frecuencia que se 
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../adaptacion/adaptacion.html" class="btn btn-neutral float-right" title="Técnicas de adaptación" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="../index.html" class="btn btn-neutral float-left" title="Bienvenidos a Electronica Aplicada III 2020" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
