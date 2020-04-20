@@ -1,0 +1,9 @@
+* Z:\home\aalmela\scm\git\utn\eaiii\2020\2_Redes_de_adaptacion\ejemplos\spice\Draft1.asc
+C1 N001 N002 2.17e-10
+C2 N002 0 1.42e-09
+R1 N002 0 100
+L1 N001 0 5.73e-05
+I1 N001 0 AC 1
+.ac dec 10000 1e6 2e6
+.backanno
+.end
