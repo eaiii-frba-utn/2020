@@ -83,6 +83,9 @@ def Bl(f, L):
 def Bc(f, C):
     return (2*np.pi*f*C) 
 
+def printSmith(nw, c = 'r', m = 'o'):
+    nw.plot_s_smith(m=0,n=0,color=c,draw_labels=True,show_legend = False, chart_type='yz',marker=m)
+    return 
 
 # print datos
 def printZ(Z):
