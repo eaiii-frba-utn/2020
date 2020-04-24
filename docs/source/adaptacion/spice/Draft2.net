@@ -1,0 +1,14 @@
+* Z:\home\aalmela\scm\git\utn\eaiii\2020\docs\source\adaptacion\spice\Draft2.asc
+L1 N002 0 {L1}
+R1 N002 0 {Rl}
+C1 N002 N001 {C1}
+I1 N001 0 AC 1
+.param L1 =  29.3825nHy
+.param C1 =  12.2427pF
+.param L2 =  4.8971nHy
+.param C2 =  2.0404pF
+.param Rl =  1.2000e+02
+.param rg =  1.0000e+02
+.ac dec 1000 600e6 700e6
+.backanno
+.end
