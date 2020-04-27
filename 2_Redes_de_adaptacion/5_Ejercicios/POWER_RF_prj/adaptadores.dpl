@@ -1,0 +1,39 @@
+<Qucs Schematic 0.0.20>
+<Properties>
+  <View=0,170,1380,1319,1,0,0>
+  <Grid=10,10,0>
+  <DataSet=adaptadores.dat>
+  <DataDisplay=adaptadores.sch>
+  <OpenDisplay=1>
+  <Script=adaptadores.m>
+  <RunScript=0>
+  <showFrame=0>
+  <FrameText0=Título>
+  <FrameText1=Dibujado por:>
+  <FrameText2=Fecha:>
+  <FrameText3=Revisión:>
+</Properties>
+<Symbol>
+</Symbol>
+<Components>
+</Components>
+<Wires>
+</Wires>
+<Diagrams>
+  <Smith 170 740 550 550 3 #c0c0c0 1 00 1 0 1 1 1 0 4 1 1 0 1 1 315 0 225 "" "" "" "">
+	<"S[1,1]" #0000ff 0 3 0 0 0>
+	  <Mkr 1.08e+08 334 -335 3 0 0 1>
+  </Smith>
+  <Smith 815 733 518 518 3 #c0c0c0 1 00 1 0 1 1 1 0 4 1 1 0 1 1 315 0 225 "" "" "" "">
+	<"S[2,2]" #0000ff 0 3 0 0 0>
+	  <Mkr 1.08e+08 377 -255 3 0 0 1>
+  </Smith>
+  <Rect 140 1247 481 397 3 #c0c0c0 1 00 1 8e+07 5e+06 1.2e+08 1 -0.0882695 0.2 1.07565 1 -1 0.2 1 315 0 225 "" "" "" "">
+	<"S[1,1]" #0000ff 0 3 0 0 0>
+  </Rect>
+  <Rect 820 1247 481 397 3 #c0c0c0 1 00 1 8e+07 5e+06 1.2e+08 1 -0.0882695 0.2 1.07565 1 -1 0.2 1 315 0 225 "" "" "" "">
+	<"S[2,2]" #ff0000 0 3 0 0 0>
+  </Rect>
+</Diagrams>
+<Paintings>
+</Paintings>
