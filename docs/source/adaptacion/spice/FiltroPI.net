@@ -1,25 +1,19 @@
 * Z:\home\aalmela\scm\git\utn\eaiii\2020\docs\source\adaptacion\spice\FiltroPI.asc
-R1 i 0 {Rl}
-C1 i 0 {Cl}
-V1 s 0 SINE(0 6 150e6)
-V2 N001 0 28
-B2 N004 0 V=(V(s) >= 0) * V(s)
-R2 N003 N004 {rg}
-C3 NC_01 N003 {cg}
-L3 N002 i {Loa}
+R1 N004 0 {ro}
+C1 i 0 {C}
+V1 s 0 SINE(0 6 10e6)
+V2 N001 0 50
+L3 N003 i {L}
 L1 N001 N002 1m
 B1 N002 0 I=(V(s) >= 0) * V(s)
-C2 N002 0 100p
+C2 NC_01 0 {co}
+C3 N004 i 1m
+C4 N003 N002 1m
 ;ac dec 10000 1e6 1e9
-.tran 0 100100n 100000n
-.param rg  = 3.73e-01
-.param cg  = 8.16e-10
-.param rgp  = 3.31e+00
-.param cgp  = 1.55e-10
-.param Loa = 1.10e-08
-.param Rl = 8.98e+00
-.param Cl = 1.08e-10
-.param Ls = 1.00e-07
-.param Cs = 1.13e-11
+.tran 0 110000n 100000n
+.param L = 6.15058495218446e-06
+.param C = 7.378259971524352e-11
+.param co = 1e-10
+.param ro = 50
 .backanno
 .end
