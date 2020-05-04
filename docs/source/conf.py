@@ -123,6 +123,10 @@ latex_elements = {
 
         \usepackage{amsmath,amsfonts,amssymb,amsthm}
         \usepackage{graphicx}
+        
+        \usepackage{keyval}
+        \setkeys{Gin}{width=0.8\textwidth}
+
 
         %%% reduce spaces for Table of contents, figures and tables
         %%% it is used "\addtocontents{toc}{\vskip -1.2cm}" etc. in the document
