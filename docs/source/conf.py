@@ -171,7 +171,7 @@ latex_elements = {
         \fancyfoot[R]{\ifthenelse{\isodd{\value{page}}}{{\tiny Meher Krishna Patel} }{\href{http://pythondsp.readthedocs.io/en/latest/pythondsp/toc.html}{\tiny PythonDSP}}}
 
         %%% Alternating Footer for two side
-        %\fancyfoot[RO, RE]{\scriptsize Meher Krishna Patel (mekrip@gmail.com)}
+        %\fancyfoot[RO, RE]{\scriptsize Alejandro Almela (dalmela@frba.utn.edu.ar)}
 
         %%% page number
         \fancyfoot[CO, CE]{\thepage}
@@ -208,13 +208,21 @@ latex_elements = {
             \vspace*{40mm} %%% * is used to give space from top
             \textbf{\Huge {Electrónica Aplicada III}}
 
+            \vspace{0mm}
 
-            \small Created on : 2020
+
+            \vspace{0mm}
+            \Large \textbf{{  }}
+
+            \small Created on : Bs As, 2020
 
             \vspace*{0mm}
             \small  Last updated : \MonthYearFormat\today
 
 
+            %% \vfill adds at the bottom
+            \vfill
+            
         \end{titlepage}
 
         \clearpage
@@ -249,6 +257,6 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, 'main.tex', 'Electrónica Aplicada III',
-     'A. Almela', 'Teoria 2020')
+    (master_doc, 'main.tex', 'EAIII',
+     'Almela', 'report')
 ]
