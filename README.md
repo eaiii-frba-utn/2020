@@ -10,7 +10,7 @@ Escritos en lenguaje Python3.
 
 [Ver notebooks online (usando mybinder)](https://mybinder.org/v2/gh/eaiii-frba-utn/2020/master)
 
-## Accesos directos
+## Accesos directos a las Notebooks
 
 [1.Introduccion](https://mybinder.org/v2/gh/eaiii-frba-utn/2020/master?filepath=.%2F1_Introduccion)
 

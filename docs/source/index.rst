@@ -3,7 +3,7 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Bienvenidos a Electronica Aplicada III 2020
+Bienvenidos a Electrónica Aplicada III 2020
 ===========================================
 
 
@@ -20,4 +20,9 @@ Bienvenidos a Electronica Aplicada III 2020
    :caption: Técnicas de adaptación 
    
    adaptacion/adaptacion.ipynb
+
+.. toctree::
+   :maxdepth: 3
+   :caption: Amplificadores sintonizados 
    
+   sintonizados/sintonizados.ipynb
