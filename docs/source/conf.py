@@ -94,23 +94,124 @@ html_css_files = [
 
 # -- Options for LaTeX output ---------------------------------------------
 
-latex_engine = 'xelatex'
+# Options for LaTeX output
+# ------------------------
+
 latex_elements = {
-    'fontpkg': r'''
-\setmainfont{DejaVu Serif}
-\setsansfont{DejaVu Sans}
-\setmonofont{DejaVu Sans Mono}
-''',
-    'preamble': r'''
-\usepackage[titles]{tocloft}
-\cftsetpnumwidth {1.25cm}\cftsetrmarg{1.5cm}
-\setlength{\cftchapnumwidth}{0.75cm}
-\setlength{\cftsecindent}{\cftchapnumwidth}
-\setlength{\cftsecnumwidth}{1.25cm}
-\usepackage{keyval}
-\setkeys{Gin}{width=0.8\textwidth}
-''',
-    'fncychap': r'\usepackage[Bjornstrup]{fncychap}',
-    'printindex': r'\footnotesize\raggedright\printindex',
+    # The paper size ('letter' or 'a4').
+    #latex_paper_size = 'a4',
+
+    # The font size ('10pt', '11pt' or '12pt').
+    'pointsize': '11pt',
+
+    # Additional stuff for the LaTeX preamble.
+    #latex_preamble = '',
 }
-latex_show_urls = 'footnote'
+
+# Grouping the document tree into LaTeX files. List of tuples
+# (source start file, target name, title, author, document class
+# [howto/manual]).
+latex_documents = [
+  ('index', 'sphinxgithub.tex', 'Sphinx with Github Webpages',
+   'Almela', 'manual'),
+]
+# The name of an image file (relative to this directory) to place at the top of
+# the title page.
+# latex_logo = 'images/logo.png'
+# The name of an image file (relative to this directory) to place at the top of
+# the title page.
+#latex_logo = 'images/snake_theta2-trans.png'
+#latex_logo = 'images/theano_logo_allblue_200x46.png'
+
+# For "manual" documents, if this is true, then toplevel headings are parts,
+# not chapters.
+#latex_use_parts = False
+
+# Documents to append as an appendix to all manuals.
+#latex_appendices = []
+
+# If false, no module index is generated.
+#latex_use_modindex = True
+
+
+#latex_elements['preamble'] = '\usepackage{xcolor}'
+# Additional stuff for the LaTeX preamble.
+#latex_preamble 
+latex_elements['preamble'] =  '\\usepackage{amsmath}\n'+\
+                          '\\usepackage{mathtools}\n'+\
+                          '\\usepackage{amsfonts}\n'+\
+                          '\\usepackage{amssymb}\n'+\
+                          '\\usepackage{dsfont}\n'+\
+                            '\\usepackage{keyval}\n'+\
+                            '\\setkeys{Gin}{width=0.8\textwidth}\n'+\
+                          '\\def\\Z{\\mathbb{Z}}\n'+\
+                          '\\def\\R{\\mathbb{R}}\n'+\
+                          '\\def\\bX{\\mathbf{X}}\n'+\
+                          '\\def\\X{\\mathbf{X}}\n'+\
+                          '\\def\\By{\\mathbf{y}}\n'+\
+                          '\\def\\Bbeta{\\boldsymbol{\\beta}}\n'+\
+                          '\\def\\bU{\\mathbf{U}}\n'+\
+                          '\\def\\bV{\\mathbf{V}}\n'+\
+                          '\\def\\V1{\\mathds{1}}\n'+\
+                          '\\def\\hU{\\mathbf{\hat{U}}}\n'+\
+                          '\\def\\hS{\\mathbf{\hat{\Sigma}}}\n'+\
+                          '\\def\\hV{\\mathbf{\hat{V}}}\n'+\
+                          '\\def\\E{\\mathbf{E}}\n'+\
+                          '\\def\\F{\\mathbf{F}}\n'+\
+                          '\\def\\x{\\mathbf{x}}\n'+\
+                          '\\def\\h{\\mathbf{h}}\n'+\
+                          '\\def\\v{\\mathbf{v}}\n'+\
+                          '\\def\\nv{\\mathbf{v^{{\bf -}}}}\n'+\
+                          '\\def\\nh{\\mathbf{h^{{\bf -}}}}\n'+\
+                          '\\def\\s{\\mathbf{s}}\n'+\
+                          '\\def\\b{\\mathbf{b}}\n'+\
+                          '\\def\\c{\\mathbf{c}}\n'+\
+                          '\\def\\W{\\mathbf{W}}\n'+\
+                          '\\def\\C{\\mathbf{C}}\n'+\
+                          '\\def\\P{\\mathbf{P}}\n'+\
+                          '\\def\\T{{\\bf \\mathcal T}}\n'+\
+                          '\\def\\B{{\\bf \\mathcal B}}\n'+\
+                          '\\def\\euler{\ e^{i\pi} + 1 = 0}\n'
+
+# Documents to append as an appendix to all manuals.
+#latex_appendices = []
+
+# If false, no module index is generated.
+#latex_use_modindex = True
+
+default_role = 'math'
+ingmath_divpng_args = ['-gamma 1.5','-D 110']
+#pngmath_divpng_args = ['-gamma', '1.5', '-D', '110', '-bg', 'Transparent'] 
+imgmath_latex_preamble =  '\\usepackage{amsmath}\n'+\
+                          '\\usepackage{mathtools}\n'+\
+                          '\\usepackage{amsfonts}\n'+\
+                          '\\usepackage{amssymb}\n'+\
+                          '\\usepackage{dsfont}\n'+\
+                          '\\def\\Z{\\mathbb{Z}}\n'+\
+                          '\\def\\R{\\mathbb{R}}\n'+\
+                          '\\def\\bX{\\mathbf{X}}\n'+\
+                          '\\def\\X{\\mathbf{X}}\n'+\
+                          '\\def\\By{\\mathbf{y}}\n'+\
+                          '\\def\\Bbeta{\\boldsymbol{\\beta}}\n'+\
+                          '\\def\\U{\\mathbf{U}}\n'+\
+                          '\\def\\V{\\mathbf{V}}\n'+\
+                          '\\def\\V1{\\mathds{1}}\n'+\
+                          '\\def\\hU{\\mathbf{\hat{U}}}\n'+\
+                          '\\def\\hS{\\mathbf{\hat{\Sigma}}}\n'+\
+                          '\\def\\hV{\\mathbf{\hat{V}}}\n'+\
+                          '\\def\\E{\\mathbf{E}}\n'+\
+                          '\\def\\F{\\mathbf{F}}\n'+\
+                          '\\def\\x{\\mathbf{x}}\n'+\
+                          '\\def\\h{\\mathbf{h}}\n'+\
+                          '\\def\\v{\\mathbf{v}}\n'+\
+                          '\\def\\nv{\\mathbf{v^{{\bf -}}}}\n'+\
+                          '\\def\\nh{\\mathbf{h^{{\bf -}}}}\n'+\
+                          '\\def\\s{\\mathbf{s}}\n'+\
+                          '\\def\\b{\\mathbf{b}}\n'+\
+                          '\\def\\c{\\mathbf{c}}\n'+\
+                          '\\def\\W{\\mathbf{W}}\n'+\
+                          '\\def\\C{\\mathbf{C}}\n'+\
+                          '\\def\\P{\\mathbf{P}}\n'+\
+                          '\\def\\T{{\\bf \\mathcal T}}\n'+\
+                          '\\def\\B{{\\bf \\mathcal B}}\n'+\
+                          '\\def\\euler{\ e^{i\pi} + 1 = 0}\n'
