@@ -112,7 +112,7 @@ latex_elements = {
 # (source start file, target name, title, author, document class
 # [howto/manual]).
 latex_documents = [
-  ('index', 'sphinxgithub.tex', 'Sphinx with Github Webpages',
+  ('index', 'sphinxgithub.tex', 'Electrónica Aplicada III 2020',
    'Almela', 'manual'),
 ]
 # The name of an image file (relative to this directory) to place at the top of
@@ -187,6 +187,8 @@ imgmath_latex_preamble =  '\\usepackage{amsmath}\n'+\
                           '\\usepackage{amsfonts}\n'+\
                           '\\usepackage{amssymb}\n'+\
                           '\\usepackage{dsfont}\n'+\
+                            '\\usepackage{keyval}\n'+\
+                            '\\setkeys{Gin}{width=0.8\textwidth}\n'+\
                           '\\def\\Z{\\mathbb{Z}}\n'+\
                           '\\def\\R{\\mathbb{R}}\n'+\
                           '\\def\\bX{\\mathbf{X}}\n'+\
