@@ -206,26 +206,15 @@ latex_elements = {
             \centering
 
             \vspace*{40mm} %%% * is used to give space from top
-            \textbf{\Huge {Sphinx format for Latex and HTML}}
+            \textbf{\Huge {Electrónica Aplicada III}}
 
-            \vspace{0mm}
-            \begin{figure}[!h]
-                \centering
-                \includegraphics[scale=0.3]{logo.jpg}
-            \end{figure}
 
-            \vspace{0mm}
-            \Large \textbf{{Meher Krishna Patel}}
-
-            \small Created on : Octorber, 2017
+            \small Created on : 2020
 
             \vspace*{0mm}
             \small  Last updated : \MonthYearFormat\today
 
 
-            %% \vfill adds at the bottom
-            \vfill
-            \small \textit{More documents are freely available at }{\href{http://pythondsp.readthedocs.io/en/latest/pythondsp/toc.html}{PythonDSP}}
         \end{titlepage}
 
         \clearpage
@@ -260,6 +249,6 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, 'main.tex', 'Sphinx format for Latex and HTML',
-     'Meher Krishna Patel', 'report')
+    (master_doc, 'main.tex', 'Electrónica Aplicada III',
+     'A. Almela', 'Teoria 2020')
 ]
