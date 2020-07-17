@@ -31,4 +31,4 @@ Bienvenidos a Electrónica Aplicada III 2020
    :maxdepth: 3
    :caption: Ruido en receptores
    
-   sintonizados/ruido.ipynb
+   ruido/ruido.ipynb
