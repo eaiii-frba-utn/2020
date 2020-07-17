@@ -1,0 +1,16 @@
+* Z:\home\aalmela\scm\git\utn\eaiii\2019\Ruido\LTspice\Draft2.asc
+r1 o 0 {r11}
+rg1 0 N001 {rg}
+I1 N001 0 AC 1e-6
+G1 0 0 0 n 1
+re1 n 0 6.0358e-05
+rp1 i 0 {rp1}
+R2 i N001 0.000001
+R3 o i 0.000001
+.noise V(o) I1 dec 10001 10e6 1e9
+;ac dec 10001 1e 2
+.param rp1 = 1.245e+05
+.param rg = 1.000e+03
+.param r11 = 1.000e+03
+.backanno
+.end

@@ -1,0 +1,7 @@
+* Z:\home\aalmela\scm\git\utn\eaiii\2019\Ruido\LTspice\resistencia.asc
+I1 o 0 AC 1e-9
+R2 o 0 6.0358e-05
+C1 o 0 1e-9
+.noise V(o) I1 dec 1e4 10 1e9
+.backanno
+.end

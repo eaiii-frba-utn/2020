@@ -1,0 +1,40 @@
+* Z:\home\aalmela\scm\git\utn\eaiii\2019\Ruido\LTspice\QuintaRFruido.asc
+r1 ia 0 {1/g11}
+r2 oa 0 {1/g22}
+B§y2 oa 0 I=V(ia)*{g21}+ddt(V(ia))*{c21}
+V1 N002 0 AC 1
+R3 N004 0 {rl}
+R4 N003 N002 {rg}
+L1a N003 0 {L1a}
+C3 N001 0 {C1}
+L1b ia N003 {L1b}
+L1c N001 ia {L1c}
+L1 oa 0 {L1}
+C5 oa N004 {C2}
+C6 N004 0 {C3}
+R5 N001 0 {rp1}
+R6 oa 0 {rp1}
+.ac dec 100000 10e6 400e6
+k1 L1a L1b 1
+k2 L1a L1c 1
+k3 L1b L1c 1
+.param L1a = 6.300e-09
+.param L1b = 1.260e-08
+.param L1c = 2.368e-08
+.param rp1 = 9.000e+03
+.param C1 = 1.474e-11
+.param L1  = 1.194e-07
+.param Lp  = 8.399e-09
+.param Cp = 5.000e-12
+.param C2 = 5.031e-11
+.param C3 = 2.084e-11
+.param rg = 5.000e+01
+.param g11 = 2.000e-03
+.param g12 = -1.000e-04
+.param c12 = 0.000e+00
+.param g21 = 3.000e-02
+.param c21 = -2.520e-11
+.param g22 = 5.000e-04
+.param rl = 1.000e+03
+.backanno
+.end

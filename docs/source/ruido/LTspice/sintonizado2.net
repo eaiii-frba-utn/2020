@@ -1,0 +1,31 @@
+* Z:\home\aalmela\scm\git\utn\eaiii\2019\Ruido\LTspice\sintonizado2.asc
+C1 i 0 {C1}
+L1 i 0 {L1} Rser=0
+R3 i 0 {r11}
+B1 o 0 I=gm*V(i)
+R1 o 0 {r22}
+R2 0 i {rg}
+R4 i 0 {rp1}
+I1 i 0 AC 1
+C2 o 0 {C2}
+L2 o 0 {L2} Rser=0
+R5 o 0 {rl}
+R6 o 0 {rp2}
+G1 0 o 0 n {geo}
+re1 n 0 6.0358e-05
+.noise V(o) I1 dec 10001 10e6 1e9
+.param rg = 1.000e+03
+.param L1 = 1.981e-08
+.param C1 = 1.278e-10
+.param rp1 = 1.245e+05
+.param gei = 4.411e+00
+.param geo = 6.590e+01
+.param r11 = 1.000e+03
+.param gm = 3.000e-02
+.param r22 = 1.000e+04
+.param L2 = 1.981e-07
+.param C2 = 1.278e-11
+.param rp2 = 1.245e+06
+.param rl = 1.000e+04
+.backanno
+.end

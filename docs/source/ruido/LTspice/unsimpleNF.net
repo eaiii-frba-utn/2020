@@ -1,0 +1,25 @@
+* Z:\home\aalmela\scm\git\utn\eaiii\2019\Ruido\LTspice\unsimpleNF.asc
+r11 i 0 {r11}
+B1 o 0 I={gm}*V(i)
+r22 o 0 {r22}
+rg 0 i {rg}
+I1 i 0 AC 1e-6
+G1 0 0 0 n {gei}
+re1 n 0 6.0358e-05
+rl o 0 {rl}
+L1 i 0 {L1} Rser=0
+C1 i 0 {C1} Rser=0
+rp1 i 0 {rp1}
+.noise V(i) I1 dec 10001 10e6 1e9
+;ac dec 10001 1e 2
+.param L1 = 1.981e-08
+.param C1 = 1.278e-10
+.param rp1 = 1.245e+05
+.param rg = 1.000e+03
+.param r11 = 1.000e+03
+.param gm = 3.000e-02
+.param r22 = 1.000e+04
+.param rl = 1.000e+04
+.param gei = 4.411e+00
+.backanno
+.end
