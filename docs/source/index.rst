@@ -26,3 +26,9 @@ Bienvenidos a Electrónica Aplicada III 2020
    :caption: Amplificadores sintonizados 
    
    sintonizados/sintonizados.ipynb
+
+.. toctree::
+   :maxdepth: 3
+   :caption: Ruido en receptores
+   
+   sintonizados/ruido.ipynb
