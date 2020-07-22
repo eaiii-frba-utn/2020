@@ -1,0 +1,42 @@
+---
+jupyter:
+  jupytext:
+    text_representation:
+      extension: .Rmd
+      format_name: rmarkdown
+      format_version: '1.1'
+      jupytext_version: 1.1.1
+  kernelspec:
+    display_name: Python 3
+    language: python
+    name: python3
+---
+
+```{python}
+import numpy as np
+import matplotlib.pyplot as plt
+import scipy                  # http://scipy.org/
+from scipy import signal
+
+from IPython.display import Image  
+# %matplotlib inline
+params = {'legend.fontsize': 24,
+          'figure.figsize': (12, 8),
+         'axes.labelsize': 24,
+         'axes.titlesize': 24,
+         'xtick.labelsize':24,
+         'ytick.labelsize':24}
+plt.rcParams.update(params) 
+
+
+
+from IPython.display import Image
+import sys 
+sys.path.insert(0,'/home/aalmela/scm/git/utn/eaiii/2019/lib/')
+import myplot as myp
+
+```
+
+```{python}
+
+```

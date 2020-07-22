@@ -1,0 +1,10 @@
+* Z:\home\aalmela\scm\git\utn\eaiii\2020\3_Circuitos_sintonizados\5_Ejercicios\LTspice\BFP460\DC.asc
+XU1 N001 N002 0 0 BFP460
+L1 N001 N003 10µ
+VCC N003 0 2
+IBB 0 N002 500e-6
+.dc VCC 2 4 0.1 IBB 20e-6 20e-6 200e-6
+;tf VCC IBB
+.lib Z:\home\aalmela\scm\git\utn\eaiii\2020\10_Practicas_Laboratorio\modelos\SPICE\Infineon-RFTransistor-SPICE.lib-SM-v02_10-EN.lib
+.backanno
+.end

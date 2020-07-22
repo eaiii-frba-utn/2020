@@ -1,0 +1,28 @@
+<Qucs Schematic 0.0.20>
+<Properties>
+  <View=0,60,1012,761,1.5,0,202>
+  <Grid=10,10,0>
+  <DataSet=LNA_1.dat>
+  <DataDisplay=LNA_1.sch>
+  <OpenDisplay=1>
+  <Script=LNA_1.m>
+  <RunScript=0>
+  <showFrame=0>
+  <FrameText0=Título>
+  <FrameText1=Dibujado por:>
+  <FrameText2=Fecha:>
+  <FrameText3=Revisión:>
+</Properties>
+<Symbol>
+</Symbol>
+<Components>
+</Components>
+<Wires>
+</Wires>
+<Diagrams>
+  <Rect 130 677 835 407 3 #c0c0c0 1 00 1 7e+07 1e+08 1.3e+09 1 0.471574 0.1 1.04796 1 -1 0.2 1 315 0 225 "" "" "" "">
+	<"S[2,1]" #0000ff 0 3 0 0 0>
+  </Rect>
+</Diagrams>
+<Paintings>
+</Paintings>

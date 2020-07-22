@@ -1,0 +1,9 @@
+! MACRON
+! MRF173
+! VDS =  28 V,  IC =  4 A
+! Common Source S-Parameters:                            Jan 2020
+# GHz  S  MA  R  50
+!  f         S11            S21            S12            S22
+! GHz     MAG   ANG      MAG   ANG      MAG     ANG      MAG     ANG
+ 0.150  0.883   -177     2.10  56       0.0023  55       0.806   -176
+ 
