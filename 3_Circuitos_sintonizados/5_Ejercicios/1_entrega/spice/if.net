@@ -1,0 +1,45 @@
+* Z:\home\aalmela\scm\git\utn\eaiii\2020\3_Circuitos_sintonizados\5_Ejercicios\1_entrega\spice\if.asc
+C2 g B1 {C2}
+R2 g N001 10000
+r3 B1 0 {1/g11}
+c3 B1 0 {c11}
+r4 C1 0 {1/g22}
+c4 C1 0 {c22} Rser=0
+B§y1 B1 0 I=V(C1)*{g12}+ddt(V(C1))*{c12}
+B§y2 C1 0 I=V(B1)*{g21}+ddt(V(B1))*{c21}
+R5 g 0 {rpL2}
+L1 g 0 {L2}
+C1 B1 0 {C3}
+C7 C1 B2 {C2}
+r1 B2 0 {1/g11}
+c8 B2 0 {c11}
+r7 C2 0 {1/g22}
+c9 C2 0 {c22} Rser=0
+B§y3 B2 0 I=V(C2)*{g12}+ddt(V(C2))*{c12}
+B§y4 C2 0 I=V(B2)*{g21}+ddt(V(B2))*{c21}
+R8 C1 0 {rpL2}
+L3 C1 0 {L2}
+C10 B2 0 {C3}
+C11 C2 o {C4}
+R9 C2 0 {rpL2}
+L4 C2 0 {L2}
+C12 o 0 {C5}
+R6 o 0 500
+V1 N001 0 AC 1e-6
+.ac dec 10000 8e6 12e6
+.param rpL2 = 5.9733e+03 
+.param L2 = 7.4040e-07 
+.param C2 = 4.3701e-10 
+.param C3 = 9.4494e-10 
+.param C4 = 3.8488e-10 
+.param C5 = 1.3364e-09 
+.param g11 = 1.0000e-03 
+.param c11 = 2.9749e-12 *0
+.param g12 = 0.0000e+00 
+.param c12 = 0.0000e+00 
+.param g21 = 4.0000e-02 
+.param c21 = -2.9749e-11 
+.param g22 = 1.0000e-04 
+.param c22 = 5.9497e-12*0
+.backanno
+.end
