@@ -1,0 +1,61 @@
+* Schematics Netlist *
+
+
+
+R_R1GS         $N_0001 1G  2.2K  
+R_R1C         $N_0002 1C  820  
+R_R1B         0 $N_0002  1500  
+R_R1P         1P V3  100k  
+C_C1G         INPUT $N_0001  .1UF  
+C_C2G         1P 2G  .02UF  
+R_R1G         $N_0002 $N_0001  470k  
+R_R2G         $N_0003 2G  470k  
+R_R2C         $N_0003 2C  1200  
+R_R2B         0 $N_0003  100k  
+R_R2P         2P V3  102k  
+R_R5G         BIAS $N_0004  100K  
+R_R1L         0 INPUT  470k  
+R_R5C         16_OHM 5C  10  
+R_R6C         6C $N_0005  10  
+R_R5G2         $N_0006 UL5  100  
+R_R6G2         $N_0007 UL6  100  
+R_R3P         3P V2  47K  
+R_R4P         4P $N_0008  47K  
+R_R3G         0 $N_0009  1MEG  
+R_R4G         0 $N_0010  1MEG  
+R_RLD         COM 8_OHM  8  
+C_C3P         3P $N_0004  .5UF  
+C_C4P         4P $N_0011  .5UF  
+R_R6G         BIAS $N_0011  100K  
+X_TU1         1P 1G 1C 12AX7
+X_TU2         2P 2G 2C 12AX7
+X_TU5         PL5 5G 5C $N_0006 6550
+X_TU6         PL6 6G 6C $N_0007 6550
+X_TU3         3P 3G 3C 12AU7
+X_TU4         4P 4G 4C 12AU7
+V_VIN         INPUT 0 DC 0 AC 1 SIN(0 2.1 200)
+R_R4F         4C 16_OHM  4.7K  
+R_R3F         3C COM  4.7K  
+C_C3M         $N_0004 3G  180PF  
+C_C4M         4G $N_0011  180PF  
+R_R3GS         $N_0009 3G  10K  
+R_R4GS         $N_0010 4G  10K  
+V_VSPLY         VSPLY 0 DC 480 AC 0 
+R_RP1         VSPLY V2  5.6K  
+R_RP2         V2 V3  15K  
+C_CP1         0 V2  100UF  
+C_CP2         0 V3  100UF  
+C_C4G         2P $N_0010  .05UF  
+C_C3G         2C $N_0009  .05UF  
+R_R16         8_OHM 16_OHM  1G  
+X_OUT_XFRMR5         PL5 UL5 VSPLY UL6 PL6 16_OHM 8_OHM 0 COM DYNA_OUTPUT_XFRMR
+E_E4         SPKR 0 8_OHM COM 1
+R_RSP         SPKR 0  1G  
+V_VBSP         BIAS 0 DC -57 AC 0 
+R_R6S         $N_0011 6G  2.2K  
+R_R5S         $N_0004 5G  2.2K  
+C_C34         4C 3C  680PF  
+R_R3C         0 3C  10K  
+R_R4C         0 4C  10K  
+v_V11         $N_0005 COM 0
+v_V13         V2 $N_0008 0

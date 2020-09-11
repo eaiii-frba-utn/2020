@@ -1,0 +1,60 @@
+* Schematics Netlist *
+
+
+
+RT_RVOL         0 3G {(250K*(1-0.5))+.001}
+RB_RVOL        3G LINE_IN {(250K*0.5)+.001}
+R_R3C         0 3C  4.7k  
+R_R4G         0 4G  1.2MEG  
+R_R3P         3P V+310  470k  
+R_R4C         0 4C  1k  
+R_R4P         4P V+310  100k  
+R_RLFB         3C BA-  47k  
+R_RLOAD         0 LINE_OUT  50k  
+C_C3P         3P $N_0001  .1UF  
+C_COUT         BA+ LINE_OUT  1UF  
+R_R1GS         PHONO_IN 1G  10k  
+R_R1G         0 PHONO_IN  47k  
+R_R1C         0 1C  1k  
+R_R2G         0 2G  1.2MEG  
+R_R1P         1P V+280  150k  
+R_R2C         0 2C  1k  
+R_R2P         2P V+280  100k  
+C_C1P         1P 2G  .05UF  
+C_C2         $N_0002 LINE_IN  .1UF  
+R_RIA2         1C 3FB  4.7MEG  
+R_RIA1         3FB $N_0002  100k  
+C_CIA2         1C 3FB  2750PF  
+C_CIA1         3FB $N_0002  818PF  
+V_V+310         V+310 0 DC 310  
+V_V+280         V+280 0 DC 280 AC 0 
+X_TU1         1P 1G 1C 12AX7
+X_TU2         2P 2G 2C 12AX7
+X_TU3         3P 3G 3C 12AX7
+X_TU4         4P 4G 4C 12AX7
+R_RBAL         0 LINE_IN  750k  
+C_C2P         2P $N_0002  .1UF  
+R_RPFB         1C 2C  47K  
+C_C4P         4P BC  .22UF  
+R_R4GS         $N_0001 4G  18k  
+C_C4F2         SF1 4G  4000PF  
+C_CLFB         3C BA-  33PF  
+C_C4F1         SF1 $N_0001  1500PF  
+R_R4F         0 SF1  3.3MEG  
+RT_RBASS         BA+ BC {(750K*(1-(1-PAR1)))+.001}
+RB_RBASS        BC BA- {(750K*(1-PAR1))+.001}
+RT_RTREB         TR+ $N_0003 {(400K*(1-(1-PARTX)))+.001}
+RB_RTREB        $N_0003 TR- {(400K*(1-PARTX))+.001}
+C_CTR2         TR+ 0  .02UF  
+R_RTR1         3C $N_0003  1k  
+C_CTR1         TR- BA-  .002UF  
+C_CBS1         BA- BC  .0075UF  
+C_CBS2         BC LINE_OUT  .0075UF  
+V_VIN         PH_IN 0 DC 0 AC 1 SIN(0  .5  1K)
+R_RIV1         PH_IN $N_0004  300  
+R_RIV2         $N_0004 $N_0005  2.2MEG  
+R_RIV3         $N_0005 PHONO_IN  186K  
+C_CIV1         $N_0004 $N_0005  1447PF  
+C_CIV2         $N_0005 PHONO_IN  403.1PF  
+R_RIV4         0 PHONO_IN  724  
+R_RPHIN         0 PH_IN  1G  

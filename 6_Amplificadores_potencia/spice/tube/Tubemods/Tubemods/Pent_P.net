@@ -1,0 +1,9 @@
+* Schematics Netlist *
+
+
+
+V_VG1         1G 0 DC 0 AC 0 
+V_VP         1P 0 DC 0 AC 0 
+V_VG2NOM         $N_0001 0 DC 300 AC 0 
+E_E2         2G 0 VALUE { V($N_0001, 0)*1+V(1P)*0 }
+X_TU1         1P 1G 0 2G 6550

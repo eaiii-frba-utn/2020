@@ -1,0 +1,157 @@
+[EXCERPTS FROM THE 1994 ARTICLE]
+
+A Dynaco PAS Preamplifier Modification with Cathode Followers and Switchable Tone Controls
+
+by Norman L. Koren
+
+[These excerpts were edited in May 1997 to help with the construction of the new Spiced PAS preamplifiers.  The power supply and metalwork on the 1997 PAS mod is identical to the 1994 mod except for a very few details.]
+
+	The Dynaco PAS is a reliable and attractive preamplifier that is generally well regarded but has not yet achieved the status of a highly sought-after collector's item— a blessing in disguise for those of us who want top quality sound without paying top dollar.  It is still relatively easy to find on the used market, and with a little work its sound quality can be in the same class as some of the best modern high-end preamplifiers.
+	The PAS came in two styles: the PAS-3 and 3X with an attractive champagne-gold anodized aluminum finish, and the PAS-2 and 2X with the homely gold and brown styling of earlier Dynaco products, but the same circuits as the 3 and 3X.  The PAS-2 and 3 had identical circuits, as did the PAS-2X and 3X.
+	The exteriors of the PAS-3 and 3X are identical.  Both are designated "PAS" on the rear sticker.  There are just two small but important internal differences:  (1) The tone control potentiometers in the 3X were designed to be removed from the circuit when set for flat, but their appearance is the same on both versions.  (2) The 3X has 1µF electrolytic capacitors in the tone control feedback circuit to block dc from reaching the audio output.  These capacitors are connected between terminals  5 and  12 on the line amplifier circuit board and the lower terminals of the bass controls.  They are the only visible difference between the two units.
+
+Motivations for modification
+
+	After I purchased My first PAS, I made the essential modifications:  increasing the power supply capacitance and replacing the old mylar and ceramic capacitors with polypropylene and polystyrene.  Before I installed it in my system, I checked out its square wave response.  With the tone controls set at flat, the square waves didn't look very square:  there was a small bump around 1 to 1.5ms after the square wave rise that corresponded to a 1 or 2 dB response boost in the 500Hz to 1kHz region.  Since I didn't have a load on the PAS, I connected a Stereo 70, which has an input impedance of 470k .  That tamed the bump a bit, but the treble control still had to be boosted slightly to get a reasonable approximation of square waves.
+	Although this was not perfection, I was able to live with it until I purchased a pair of Vortex Screen loudspeakers, which have a crossover that decouples the woofer from the midrange/tweeter unit so they can be biamplified without an external electronic crossover.  My plan was to use a powerful solid state amplifier for the bass and my modified Stereo 70 ("Modifying the Dynaco ST- 70 with Triode Mode", Glass Audio, Vol. 4, No. 1, 1992) for the midrange/treble.  The one hitch was that my solid state amplifier had a 10k  input impedance; much too low for the PAS to drive without suffering a severe bass loss.
+
+Basic strategy
+
+	The well-known solution to this problem is to reduce the output impedance by adding a cathode follower (CF) to the output stage.  A friend gave me a schematic of a 12AU7A CF located at the PAS output— outside the main feedback loop— but since I was concerned about distortion it might introduce, I chose to place a CF inside the feedback loop.  I ultimately found five advantages to this arrangement:  (1) lower distortion, (2) lower output impedance, (3) a simpler signal path because the CF can be direct coupled to the second 12AX7 amplification stage, (4) simpler power supply wiring since direct coupled stages can be connected to the same high voltage source, and (5) increased open loop gain since the CF is unaffected by the load from the output circuit and feedback loop.
+	At the same time, I decided to make the tone controls switchable [not recommended for the SPICEd PAS].  I didn't want to eliminate them entirely because they are helpful for certain old LPs with wonderful performances but overly bright (or dull) high ends.  The old Columbias are a case in point:  the Brahms Sextet in G played by Music from Marlboro (MS 7445) is wonderful music, but sounds somewhat shrill unless the treble is turned down a bit.  I took advantage of the fact that the loudness and filter switches are rarely if ever used by audiophiles to convert them into bass and treble control off/on switches with circuits derived from the PAS-3X:  the former loudness switch removes the bass controls by shorting the end terminals of the bass potentiometers while the former filter switch removes the treble controls by disconnecting the center terminal of the treble potentiometers.  This change worked as expected:  the bump on the square waves corresponding to the 500Hz to 1kHz response rise disappeared entirely, and response remained flat (-1dB at 40kHz) with all loads and all tone control settings.  Since I ultimately discovered a small advantage in removing the tone controls entirely, I will present two options for modifying the line amplifier.  [The switch is unneded in the 1997 mode, particularly in tone control line amplifier versions 3 and 4, which employ dual-ganged bass control pots to move the bass cut function to the input circuit.  These mods can drive ANY practical load!!!]
+
+The PAS circuit layout
+
+	The PAS consists of two amplifier sections for each channel:  a phono preamplifier and a line amplifier.  Each of these amplifier sections contains two stages of triode amplification that use the two halves of a 12AX7.  We will refer to them as "stage 1" and stage 2" for clarity.  Each amplifier section also contains a feedback loop connected between the output of stage 2 and the cathode of stage 1.  In addition to reducing distortion, stabilizing gain, and reducing output impedance, feedback provides RIAA equalization in the phono preamplifier and most tone control functions in the line amplifier.
+
+The PAS tone controls
+
+	The PAS treble control (Fig. 2) decreases treble by shunting the 47k feedback resistor with a .002µF capacitor, decreasing Zfb at high frequencies.  It increases treble by shunting the stage 1 cathode resistor with a .02µF capacitor, decreasing Z1 at high frequencies.  When set for flat, the highly nonlinear PAS-3 treble control balances the ratio of  Z1 to Zfb to keep gain constant at high frequencies.  The PAS-3X switches the treble control out of the circuit by disconnecting its center terminal;  this is the approach taken by the modification.
+	The PAS bass control decreases bass with a .0075µF capacitor in series with the load, increasing Z2 at low frequencies.  It increases bass with a second .0075µF capacitor in series with the feedback loop, increasing Zfb at low frequencies.  The PAS-3 bass control is a linear 750k  potentiometer:  when set for flat, Zfb consists of a parallel .0075µF, 375k  circuit (we use the notation .0075µF//375k ) in series with 47k , and Z2 = .0075µF//375k .  The PAS-3X switches the bass control out of the circuit by short-circuiting its end terminals;  this is the approach taken in the modification.
+	The PAS was designed to drive the Dynaco Stereo 70 and Mark III, both of which have an input impedance of 470k .  The output circuit of the PAS contains parallel 510k  and 62k  resistors.  When loaded by 470k , the total load impedance is RL = 49.5k .  By no coincidence this is very close to the sum of the resistors in the feedback loop: 47k+4.7k = 51.7k .  Since Z1 is the 4.7k  cathode resistor, the (RL /Z1 ) term in the G2 equation has no effect on frequency response.  In the PAS-3 with the bass control set for flat, the frequency-dependent part of this equation is G2 = (51.7k  + 0.0075uF//375k ) / (RL + 0.0075uF//375k ):  frequency response will only be flat if RL is close to 52k , i.e., the external load impedance is around 470k .  For any other input impedance— and virtually every amplifier listed in the Audio Annual Equipment Directory has a lower input impedance— for the bass control to work properly the PAS-3 must be modified.
+	
+Customizing the PAS-3 for the output load
+
+	If the input impedance of the power amplifier, Rext , is much different from 470k  and the bass control is in the circuit (not switched out),  the internal load resistors (RintL =68k  // 510k ) must be altered so RintL // Rext = 52k.  This may be done by the following procedure:
+	If Rext is greater than 58k, remove the 62k resistor from the output circuit and replace it with a resistor close to the following value:
+
+1/R = 1/52k - 1/510k - 1/Rext
+1/R = 1/52k - 1/Rext
+	If Rext is less than 58k  but greater than 52k , remove both the 510 k and 62k  resistors from the output circuit and replace one of them with a resistor close to the following value:
+
+If Rext is close to 50k (a fairly common value), simply remove both the 510 k and 62k  resistors from the output circuit.  If it is less than 50k, you may need to add a resistor in series with the output.  That will work at the expense of gain down to about 20k.  For lower input impedances, the loss in gain will probably be too much, and you'll just have to switch out the bass control.  The good news is that the cathode follower in the modified PAS can drive a 10k  load with ease, and none of these changes are needed as long as the bass control is disconnected.
+
+A 12AX7 cathode follower?
+
+	Since the output impedance of a cathode follower is inversely proportional to its transconductance, triodes with relatively high rated transconductance such as the 12AU7 or 12AT7 have usually been chosen for this role.  The 12AX7, with a relatively low rated transconductance of 1250 to 1600 micromhos, is normally relegated to earlier amplification stages.  But a fascinating new book, The Audio Designer's Tube Register Volume 1, by Tom Mitchell (available from Old Colony Sound Labs) has almost literally turned this situation upside down.
+	Frustrated by the lack of detailed and reliable information about even the most common amplifier tubes, the author built his own test equipment and published a remarkable collection of data on well-known and obscure triodes—a real "everything you wanted to know but were afraid to ask" book.  Before I share some of the unexpected results gleaned from his data, a brief review of tube properties is in order.
+	Amplification factor (mu or µ) is the change in plate voltage Eb per change of grid voltage Ec for constant plate current ( Eb / Ec for you calculus freaks).  Plate resistance (rP) is the internal resistance of the tube's plate circuit ( Eb / ib ).  Transconductance ( m ) is the change in plate current per change of grid voltage for constant plate voltage ( ib / Ec ).  The basic law of tube operation is  m = µ/rP.  In the best of all possible worlds these parameters would be constant, but the real world isn't quite so accommodating.
+	Mu changes very little with operating conditions:  it increases slowly with plate current and decreases slowly with plate voltage, but always stays close to its specified value.  Transconductance and plate resistance change very little with plate voltage, but depend very strongly on plate current; so much so that it is fair to state that published figures for both transconductance and plate resistance only apply to a single set of specific conditions and cannot be generalized.  How can you compare the 12AX7 with a transconductance 1600µmhos at 1.2ma plate current to the 12AU7 with a transconductance of 3100µmhos at 11.8ma plate current?  Thanks to Tom Mitchell, we can now make such a comparison.
+	Fig. 9 is a log-log plot of his data for transconductance versus plate current at constant plate voltage (125V for the 6DJ8; 200V for the others) for four popular dual triodes.  Surprise:  at low plate current (under 1.5ma), the 12AX7 has the highest transconductance.  Its transconductance also changes more slowly than for the other tubes, making it the most linear of the popular dual triodes.  Since the wimpy power transformer of the PAS cannot support much extra current drain without excessive voltage drop, the 12AX7 is the clearly the best choice for the PAS cathode follower.
+
+Additional benefits of the cathode follower
+
+	The gain of a triode amplifier in a conventional plate follower circuit with an unbypassed cathode resistor RK is:
+
+G = -mu/(1+(rp+(mu+1)Rk)/RL))
+
+RL is the total ac load resistance:  the plate resistor in parallel with any external load resistance.  This equation applies to all amplifier stages in the original PAS.
+	The ac plate current drawn by a triode is its ac signal voltage divided by RL :  the lower RL , the greater the ac plate current.  Since plate resistance rP changes with current (rP is inversely proportional to transconductance), amplifier gain G, which is a function of rP , also changes with current.  Any change in G in the presence of a varying current, i.e., an ac (i.e., audio) signal, causes distortion.  It should be evident from the above equation that increasing the load resistance RL decreases the influence of rP on G:  hence distortion can be minimized by making RL as large as possible.  If it could be made infinite, G would equal µ, and the triode would be almost perfectly linear.  This is the goal of constant current amplifier designs, for example, "The Mu Stage" by Alan Kimmel in Glass Audio, Vol. 5 No. 2, 1993.  The present modification is not quite so ambitious:  by direct coupling the stage 2 plate in both the phono preamplifier and line amplifier to the cathode follower grid (which has near-infinite resistance), RL consists of only the stage 2 plate resistor:  120k  in the modified PAS.
+	The cathode follower is particularly advantageous in stage 2 of the line amplifier, where the original plate resistor was 100k  and the load consisted of the 52k  feedback circuit in parallel with 49.5k  (62k // 510k  / 470k (external)), for RL = 20k : much lower than the 12AX7's rP of 65k  (from Mitchell's data for a plate potential of 175V and current of 1.25ma).  Adding the CF increases the stage 2 gain from 11 to 47 (about 12dB).  This further reduces distortion by increasing the total negative feedback (open loop gain/gain with feedback) of the line amplifier circuit.  Since the gain of the cathode follower (GCF =  mu RK /(1 +  mu RK )) is close to unity, it changes very little with tube properties and hence introduces very little distortion of its own.
+
+The phono preamplifier
+
+	Because the RIAA equalizer network's rather low impedance at high frequencies places a heavy load on preamplifier stage 2, and because I decided to replace the 250k  volume control with a 100k  control with a much better taper, I added cathode followers to the phono preamplifier outputs.  To accommodate them, the supply voltage was increased to around 260V by reducing the resistance between power supply taps.  I also made a careful examination of the RIAA equalization to see if it needed modification.  Although the RIAA equalizer may not be optimum, I found no compelling need to change it:  its response was virtually flat throughout the audio range— down by less than 1dB at 20kHz— and its performance was somewhat improved by the cathode follower.
+
+A line amplifier option for purists
+
+	Although I would prefer to be able to use the tone controls whenever I would like, Mitchell's data pointed to one minor deficiency in the PAS line amplifier that can only be corrected by removing them entirely.  Line amplifier stage 1 draws only 0.31mA plate current (1.45V across the 4.7k  cathode resistor)— not enough for the 12AX7 to operate very well:  its transconductance is only around 800µmhos and the plate resistance is a very high 120k .  Plate current can be increased by decreasing the values of the cathode and plate resistors, but the cathode resistor is a part of the feedback/tone control circuit, which would have to be completely redesigned to operate at a lower impedance. [done in the 1997 mod!]
+
+Construction [applies to the 1997 mod]
+
+	The very large power supply capacitors can store a lot of energy for several minutes after the PAS is turned off— so be careful!  Capacitor voltage ratings are minimum and may be increased without ill effect.  The same holds for resistor power ratings.  Except for the tone controls and RIAA circuit, most capacitor values can be increased somewhat without affecting performance.  This does not, however, hold for resistors!  Use silicone seal where needed for mounting or stabilizing components.  It is an excellent insulator, withstands heat very well, and is removable if necessary.  A typical use is to support the radial electrolytic capacitors in the heater power supply.
+	I recommend checking the values of both new and old resistors and capacitors.  Old resistors are very often out of spec.  I use a Radio Shack 22-194 multimeter [I'm sure there are newer model.], which measures capacitance in 5 ranges up to 20µF:  incredibly useful.
+	Be sure to check, double check, and triple check all your solder connections.  A bad solder connection may not harm the sound immediately, but it will return to haunt you in a few months or years.  More than half the equipment I repair has bad connections— either terminals or solder joints.
+
+Power supply and chassis modifications
+
+	Mount the 12.6V transformer on the rear panel of the PAS above the switched ac outlets.  Its purpose is to reduce the load on the PAS power transformer so the two new 12AX7s don't cause it to overheat.  It succeeds very well at this, getting quite warm itself, while the power transformer inside the PAS gets no more than lukewarm.  The wires from this transformer should be routed into the interior through two holes protected by grommets:  the 120VAC (black) wires on the left and the 12.6VAC (yellow) wires on the right (viewed from the rear).
+	Completely remove the old heater power supply— the selenium diode (which is probably bad by now) and the two 2,000µF filter capacitors.  Save the mounting hardware.  Clip and carefully tape the 12.6V wires from the original power transformer.  The old heater supply was huge:  eliminating it creates a lot of chassis space.
+	Using one of the five lug tie points (six lugs would be nice if you could find it), two of the diodes, the 1  power resistor and the two 3300µF (min.) 35V radial electrolytic capacitors, wire the new heater supply as shown in Figure 7.  The new capacitors should be small enough that they can be mounted vertically on the tie points to save space.  Mount this whole assembly near the rear of the PAS, next to the power transformer.  The 1 ohm resistor in series with one of the 12.6VAC wires is required to drop the supply voltage to an acceptable level.  In the original circuit the voltage was dropped by the winding resistance of the power transformer:  the voltage would have been much too low with the extra 12AX7s.
+	Remove the 12X4 rectifier tube.  Disconnect the wire from the rectifier cathode (pin 7) to the first filter capacitor tap.  Connect two 1000PIV diodes [fast recovery diodes in the 1997 mod] from the plate pins of the rectifier socket (pins 1 and 6) to the first filter capacitor tap so that the cathode (band) side of the diodes are connected to the capacitor.  Because of the extra current drawn by the new 12AX7s, the resistors in the power supply must be decreased.  I did this by putting 4.7, 10, and 22k  resistors in parallel with existing resistors between power supply taps (Figure 7).  [Check the values in the schematic for the 1997 mod.  It's best to use completely new resistors.]  It would be more work but ultimately neater to remove the existing 10k, 10k and 47k  resistors and replace them with 3.3k, 4.7k, and 15k [yes!].
+	A decrease in the power supply resistors requires an increase in power supply capacitance in order to maintain the same RC time constants.  Since increasing power supply capacitance also improves voltage stability, I recommend using the largest values that fit in the box.  Fortunately, small high capacitance high voltage electrolytic capacitors are now available.  [Some very nice 450V and 500V capacitors are in the 1997 Sovtek/New Sensors catalog.]
+	Mount one of the 150µF (or larger) capacitors above the rectifier tube socket.  Shunt it with a 1M  resistor, and connect its positive terminal to the second power supply tap (between the two original 10k  resistors) and its negative terminal to ground, running the wires through the large hole next to the power transformer.  Mount the other two large electrolytic capacitors near the rear of the chassis, to the left of the heater power supply (behind the new 12AX7s.  The old heater supply mounting hardware came in handy for this purpose.  Run wires from these capacitors through a grommet hole directly to the phono preamplifier and line amplifier boards:  connecting the negative terminals to ground and the positive terminals to the high voltage rails (terminal  16 on both boards).  With these large capacitors, the voltage increases very slowly after the PAS is turned on;  there is little danger of a short term voltage overshoot while the 12AX7 cathodes are heating up.  A Keystone CL140 inrush current limiter would be a nice addition to the input side of the power transformer, but since both the heater and high voltage supplies have relatively slow voltage ramp- ups, it is not a necessity.
+	There are two 10 ohm resistors connected between the ground terminals of the tape input and output RCA jacks on the PAS rear panel (both left and right channels).  Solder a jumper wire across at least one of these resistors.  This will eliminate most of the crosstalk between high level inputs.  I think I understand most aspects of the original PAS design— including several cost-cutting compromises— but the function of these resistors bewilders me [still true in 1997].
+
+Control panel modifications
+
+	Remove all wiring and components from the loudness and filter switches.  This includes the 1500pF and 0.004µF capacitors on the circuit board and the 0.1µF capacitor connected to the volume control loudness tap.  I recommend replacing the volume control with the Radio Shack/Alps 100k  stereo control (271-1732) [the Mouser pot referred to in the 1997 mod is even better.], which has a nice audio taper.  It isn't much to look at, but it operates smoothly and measurably improves the frequency response.
+
+The cathode followers
+
+	Punch holes for the two CF tube sockets centered approximately 1.25 inches behind the line amplifier cutout and 1.25 and 3.25 inches to the right of the phono preamp cutout (viewed from the front), and mount the two 9 pin miniature tube sockets.  Wire the heaters in series:  connect a wire from the heater supply to pin 4 of one tube, a wire from pin5 of this tube to pin 4 of the second tube, and a wire from pin 5 of the second tube to the heater supply (Figure 7).
+	At this time select one of the two line amplifier modifications (tone control or purist) and wire the boards
+	[I think the following technique will work on the 1997 mod even though the CF cathode circuit is totally different.]  Using a small pen knife, break the connection on the PC board between the plate side of the stage 2 output capacitors and pins 6 of the 12AX7s.  Connect wires from the disconnected capacitor leads to the CF cathodes (pins 3 and 8 on the new sockets).  Connect the 12AX7 plates (pins 6 on the board)— the other sides of the broken connections— to the CF grids (pins 2 and 7 on the new sockets).  Connect the CF plates (pins 1 and 6) together to the high voltage supply on the board.
+
+Line amplifier:  circuit board modifications
+
+	On the line amplifier board, connect 10k  grid-stop resistors in series with the input of stage 1 (terminals  2 and  9).  Silicone seal may come in handy for keeping them in place.  Replace the .02µF coupling capacitors with polypropylene capacitors of the same or slightly larger value.  [For the rest, I leave you to your own devices as the 1997 modifications are quite different.]
+
+Results of the modification
+
+	This modification was a long journey for me— with many digressions and a few blind alleys— during which I learned a great deal about high quality preamplifier design.  Every design involves choices:  I have generally opted for simplicity, minimal circuit board changes, sound circuit design, and good but not extravagant components.  The bottom line is that I have never enjoyed recorded sound as much.  As compared to an unmodified PAS-3X it has is better dynamics (a real sense of ease in loud orchestral passages), better imaging, and more instrumental detail.
+	Both preamplifiers— the switchable tone control version and the purist version— have essentially flat frequency response throughout the audio range with any practical load.  The switchable tone control version, in which I haven't yet replaced the 250k  volume control, has the same bandwidth as the original PAS-3X:  -1dB at 40kHz.  The purist version with the new 100k  volume control is considerably better:  -1dB at 80kHz.  More importantly, the output impedance (both versions) is extremely low:  only 40 [note: a little higher in the 1997 mod due to reduced global feedback]:  well below the original PAS output impedance of about 4k  and low enough to drive any power amplifier on the market, most of which have input impedances above 10k .  It is also low enough so that losses from cable capacitance should be insignificant, ever for runs of several meters.  The only limitation is that it should not be used to drive loads under 5k :  the cathode follower doesn't have the current capability to supply adequate voltages at such low impedances.
+	As soon as it was ready, I summoned my chutzpa and took the modified PAS to the local audio society.  At the end of the meeting I was able to compare it to the $2400 Conrad Johnson PV-12 in the presence of half a dozen hard-core listeners.  Conditions were chaotic, anything-but-blind, and without adequate volume matching, but that didn't prevent us from forming opinions.  The jury was split.  One listener definitely preferred the PV-12, which he felt had a sharper attack on the vibraphones in the Jazz at the Pawnshop CD.  Two listeners preferred the modified PAS.  The rest simply enjoyed them both.  I thought the PV-12 may have had a shade more detail— but not enough to make me dissatisfied with the PAS in any way.  The modified PAS sounds gorgeous and conveys the full power and emotion of the music I love.  I expect to enjoy it for a long time to come.
+
+
+TABLE I.  POWER SUPPLY PARTS LIST
+[not yet updated for the 1997 mod(s)]
+
+QTY.	DESCRIPTION
+
+1	Transformer 12.6V 1.2A RS 273-1352
+1	Pkg. five lug tie points RS 274-688
+2	(2) Pkgs. 2.5A 1000PIV Diodes RS 276-1114
+1	Resistor 4.7k  1/2W
+1	Resistor 10k  1/2W
+1	Resistor 22k  1/2W
+1	Resistor 1  5W RS 271-131
+3	150µF (min) 400V electrolytic capacitors
+2	3300µF (min) 35V Radial electrolytic capacitors
+	Misc. mounting hardware for electrolytic capacitors
+1	Grommet assortment RS 64-3025
+Note:  RS denotes Radio Shack part number.
+
+TABLE II.  AMPLIFIER PARTS LIST
+	[Many parts are different in the 1997 mod.]
+QTY.	DESCRIPTION		NOTES
+
+Capacitors
+4	.22µF 200V polypropylene
+4	2µF 200V polypropylene
+2	.02 polypropylene
+2	.05 polypropylene
+2	68pF polystyrene
+2	2750pF (can use 2000//750)
+2	750pF polystyrene
+2	.004 or .005 (optional) (B)
+
+Resistors (1/2 watt unless noted)
+4	750 
+8	120k  1W
+2	10k 
+2	1M 
+2	3.3k (A)
+2	2.2k (B)
+2	22k (B)
+2	220k (B)
+2	10k  (optional) (B)
+
+Miscellaneous
+2	9 pin miniature tube sockets
+2	12AX7 tubes
+1	100k  stereo volume control RS 271-1732
+
+Notes: (A)  Switchable tone control mod only.
+       (B)  Purist mod only.
+       (C)  RS denotes Radio Shack part number.

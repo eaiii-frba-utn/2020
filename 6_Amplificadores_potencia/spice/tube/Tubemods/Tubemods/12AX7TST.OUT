@@ -1,0 +1,66 @@
+
+**** 09/02/101 12:21:08 ******** NT Evaluation PSpice (April 1996) ***********
+
+ * C:\Audio\Tubemods\12AX7TST.sch
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+* Schematics Version 6.3 - April 1996
+* Sun Aug 12 11:06:07 2001
+
+
+** Analysis setup **
+.DC LIN V_V_P 0 400 4 
+.STEP LIN V_VG 0 -3.5 -.5 
+
+
+* From [SCHEMATICS NETLIST] section of msim.ini:
+.lib C:\AUDIO\Tubemods\TUBE.LIB
+-------------------------------$
+ERROR -- Can't find library
+.lib nom.lib
+
+.INC "12AX7TST.net"
+
+**** INCLUDING 12AX7TST.net ****
+* Schematics Netlist *
+
+
+
+V_VG         1G 0 DC 0 AC 0 
+V_V_P         101 0   
+V_VP         101 1P DC 0 AC 0 
+X_TU3         1P 1G 0 12AX7
+
+**** RESUMING 12AX7TST.CIR ****
+.INC "12AX7TST.als"
+
+**** INCLUDING 12AX7TST.als ****
+* Schematics Aliases *
+
+.ALIASES
+V_VG            VG(+=1G -=0 )
+V_V_P           V_P(+=101 -=0 )
+V_VP            VP(+=101 -=1P )
+X_TU3           TU3(P=1P G=1G C=0 )
+_    _(1G=1G)
+_    _(101=101)
+_    _(1P=1P)
+.ENDALIASES
+
+
+**** RESUMING 12AX7TST.CIR ****
+
+
+.probe
+
+
+.END
+

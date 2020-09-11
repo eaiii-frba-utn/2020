@@ -1,0 +1,25 @@
+Karen Hampsey									March 03, 1998
+Audio Amateur Corporation
+
+Dear Karen,
+
+Here is my response to Dr. Chen's letter to Glass Audio.  I've also sent you a copy by E-mail, which makes a lot more sense than sending a disk.  (I forgot to put a title on the E-mail.)  Note that my job has disappeared and that I may be moving.  (Colorado looks pretty good.)  My permanent E-mail address is normkoren@yahoo.com.
+
+Thanks,  Norman Koren
+------------------------------------------------------------------------
+
+One of the delights of writing is that you can learn so much from your readers.  The Laplace transform voltage-controlled voltage source is one of many PSpice features that I have overlooked.  Although my inverse network is accurate enough for most purposes (only 0.2dB error at 100kHz), Laplace has the advantage of using five fewer parts.  This is significant because newer versions of evaluation PSpice (7.1 and above) enforce the 50 part limitation much more strictly than earlier versions.  That is why I still use version 6.3.
+
+To use the Laplace source in Windows versions of PSpice, select the ELAPLACE part.  Connect IN+ to the voltage source, OUT+ to the phono preamp input, and IN- and OUT- to ground.  Double-click on the part.  Change the value of XFORM to .001*(1+T3*s)*(1+T1*s)/(1+T2*s).  (The .001 factor improves the scaling.)  Select the PARAM part, then double click on PARAMETERS.  Set the values of NAME1, NAME2, and NAME3 to T1, T2, and T3.  Set the values of VALUE1, VALUE2, and VALUE3 to the corresponding values given by Dr. Wong.
+
+When all this is done, we find that Miller capacitor C1M in the phono preamp input should be increased to 68pF for flat response above 100kHz.  This won't change the equalization in the audio band, but the new value will have slightly better RF suppression.
+
+While I have your attention, let me pass on a modification to any of the line amplifiers in my series, "SPICE and the Art of Preamplifier Design," GA 2/97 and 4/97.  It is a very simple change: Add a 150 ohm resistor in series with the output of the line amplifier for each channel.  This can also be done at the phono preamplifier output, but it helps the most at the output of the line amplifier.
+	
+I had always objected to such a resistor because it increases the output impedance, worsening the high frequency rolloff in the presence of shunt capacitance from cables.  But because of the negative feedback, phase shift due to shunt capacitance boosts high frequency response, up to the resonant peak just over 100kHz.  In extreme cases, this can even result in oscillation.  Increasing the compensation capacitor (C3M) fixes this problem at the expense of high frequency rolloff for short cables with low capacitance.
+
+The 150 ohm resistor solves the problem by isolating the amplifier from the load capacitance.  If the correct value is chosen (easily done by trial-and-error with PSpice), the high frequency loss due to the increased output impedance will balance the boost due to feedback, making the response below the resonant peak nearly independent of the load capacitance, even for cables as long as 100 meters.  This neat little trick cannot be accomplished without negative feedback.
+
+Another detail about preamplifiers: I no longer recommend the use of current regulator diodes in plate circuits because they increase the noise level significantly.
+
+As I write, my place of employment for the past twelve years, Eastman Kodak San Diego Labs, has just shut down.  It looks like I'll have to leave fair San Diego, most likely for Colorado, but possibly for Silicon Valley: I'm still a nomad, like it or not.  It may be several months until I can devote significant time to audio.  I now have a portable E-mail address: normkoren@yahoo.com

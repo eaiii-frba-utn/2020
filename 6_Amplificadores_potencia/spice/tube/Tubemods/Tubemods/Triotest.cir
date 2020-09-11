@@ -1,0 +1,24 @@
+* C:\Audio\TubeShar\Triotest.sch
+
+* Schematics Version 6.3 - April 1996
+* Sun Sep 02 10:40:50 2001
+
+
+** Analysis setup **
+.DC LIN V_VP 0 400 4 
+.STEP LIN V_VG 0 -20 -4 
+.LIB c:\audio\tubeshar\tube97.lib
+
+
+* From [SCHEMATICS NETLIST] section of msim.ini:
+.lib C:\AUDIO\TubeShar\TUBE.LIB
+.lib nom.lib
+
+.INC "Triotest.net"
+.INC "Triotest.als"
+
+
+.probe
+
+
+.END

@@ -1,0 +1,23 @@
+* C:\Audio\TubeShar\Pent_UL.sch
+
+* Schematics Version 6.3 - April 1996
+* Sun Sep 02 13:43:11 2001
+
+
+** Analysis setup **
+.DC LIN V_VP 0 600 5 
+.STEP LIN V_VG1 0 -70 -10 
+
+
+* From [SCHEMATICS NETLIST] section of msim.ini:
+.lib C:\AUDIO\TubeShar\TUBE.LIB
+.lib nom.lib
+
+.INC "Pent_UL.net"
+.INC "Pent_UL.als"
+
+
+.probe
+
+
+.END

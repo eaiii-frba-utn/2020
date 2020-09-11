@@ -1,0 +1,25 @@
+* C:\PSPICE\Stphl\LOCHERO.sch
+
+* Schematics Version 6.3 - April 1996
+* Thu Aug 30 04:47:30 2001
+
+
+** Analysis setup **
+.ac DEC 20 1 100K
+.tran .1MS 10MS 0 .005MS
+.LIB C:\PSPICE\WORK\TUBE.LIB
+.OP
+
+
+* From [SCHEMATICS NETLIST] section of msim.ini:
+.lib C:\AUDIO\Tubemods\TUBE.LIB
+.lib nom.lib
+
+.INC "LOCHERO.net"
+.INC "LOCHERO.als"
+
+
+.probe
+
+
+.END

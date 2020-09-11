@@ -1,0 +1,8 @@
+* Schematics Netlist *
+
+
+
+V_VG         1G 0 DC 0 AC 0 
+V_V_P         101 0   
+V_VP         101 1P DC 0 AC 0 
+X_TU3         1P 1G 0 12AX7

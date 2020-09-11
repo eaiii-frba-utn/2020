@@ -1,0 +1,92 @@
+
+**** 09/02/101 12:59:15 ******** NT Evaluation PSpice (April 1996) ***********
+
+ * C:\Audio\TubeShar\Pent_P.sch
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+* Schematics Version 6.3 - April 1996
+* Sun Sep 02 12:29:32 2001
+
+
+** Analysis setup **
+.DC LIN V_VP 0 600 5 
+.STEP LIN V_VG1 0 -50 -10 
+
+
+* From [SCHEMATICS NETLIST] section of msim.ini:
+.lib C:\AUDIO\TubeShar\TUBE.LIB
+.lib nom.lib
+
+.INC "Pent_P.net"
+
+**** INCLUDING Pent_P.net ****
+* Schematics Netlist *
+
+
+
+V_VG1         1G 0 DC 0 AC 0 
+V_VP         1P 0 DC 0 AC 0 
+V_VG2NOM         $N_0001 0 DC 300 AC 0 
+E_E2         2G 0 VALUE { V($N_0001, 0)*1+V(1P)*0 }
+X_TU1         1P 1G 0 2G 6550
+
+**** RESUMING PENT_P.CIR ****
+.INC "Pent_P.als"
+
+**** INCLUDING Pent_P.als ****
+* Schematics Aliases *
+
+.ALIASES
+V_VG1           VG1(+=1G -=0 )
+V_VP            VP(+=1P -=0 )
+V_VG2NOM          VG2NOM(+=$N_0001 -=0 )
+E_E2            E2(OUT+=2G OUT-=0 IN+=$N_0001 IN-=0 )
+X_TU1           TU1(P=1P G=1G C=0 G2=2G )
+_    _(1G=1G)
+_    _(1C=0)
+_    _(1P=1P)
+_    _(2G=2G)
+.ENDALIASES
+
+
+**** RESUMING PENT_P.CIR ****
+
+
+.probe
+
+
+.END
+
+**** 09/02/101 12:59:15 ******** NT Evaluation PSpice (April 1996) ***********
+
+ * C:\Audio\TubeShar\Pent_P.sch
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_TU1.DX        
+          IS    1.000000E-09 
+          RS    1            
+          TT    1.000000E-09 
+         CJO   10.000000E-12 
+
+
+
+          JOB CONCLUDED
+
+          TOTAL JOB TIME             .16
+

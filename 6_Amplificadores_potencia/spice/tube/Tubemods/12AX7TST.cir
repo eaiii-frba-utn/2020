@@ -1,0 +1,23 @@
+* C:\Audio\Tubemods\12AX7TST.sch
+
+* Schematics Version 6.3 - April 1996
+* Sun Aug 12 11:06:07 2001
+
+
+** Analysis setup **
+.DC LIN V_V_P 0 400 4 
+.STEP LIN V_VG 0 -3.5 -.5 
+
+
+* From [SCHEMATICS NETLIST] section of msim.ini:
+.lib C:\AUDIO\Tubemods\TUBE.LIB
+.lib nom.lib
+
+.INC "12AX7TST.net"
+.INC "12AX7TST.als"
+
+
+.probe
+
+
+.END

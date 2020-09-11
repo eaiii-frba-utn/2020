@@ -1,0 +1,60 @@
+* Schematics Netlist *
+
+
+
+RT_RVOL         0 $N_0001 {(100K*(1-(1-PARVOL)))+.001}
+RB_RVOL        $N_0001 LINE_IN {(100K*(1-PARVOL))+.001}
+R_R3GS         3I 3G  27k  
+R_R3G         3BG 3I  470k  
+R_R3GJ         3B 3BG  470k  
+R_R3C         3B 3C  560  
+R_R3B         0 3B  12k  
+R_R4G         4B 4G  1MEG  
+R_R3P         3P $N_0002  220k  
+R_R4C         4B 4C  750  
+R_R4P         4P $N_0002  120k  
+R_R6C         3C 6C  120k  
+R_RLOAD         0 LINE_OUT  50k  
+C_C3G         $N_0001 3I  .1UF  
+C_C3P         3P 4G  .1UF  
+C_C3B         0 3BG  1UF  
+C_COUT         6C LINE_OUT  3.3UF  
+R_R1GS         PHONO_IN 1G  10k  
+R_R1G         0 PHONO_IN  47k  
+R_R1C         0 1C  1k  
+R_R2G         0 2G  1MEG  
+R_R1P         1P $N_0003  150k  
+R_R2C         0 $N_0004  750  
+R_R2P         $N_0005 $N_0003  120k  
+R_R5C         0 5C  120k  
+C_C1P         1P 2G  .1UF  
+C_C5C         5C PH_IN  .47UF  
+R_RIA2         1C 3FB  2.2MEG  
+R_RIA1         3FB 5C  86.6k  
+C_CIA2         1C 3FB  2850PF  
+C_CIA1         3FB 5C  876PF  
+V_V+320         V+320 0 DC 320  
+V_V+280         V+280 0 DC 280 AC 0 
+R_RIV1         PH_IN $N_0006  300  
+R_RIV2         $N_0006 $N_0007  2.2MEG  
+R_RIV3         $N_0007 PHONO_IN  186K  
+C_CIV1         $N_0006 $N_0007  1447PF  
+C_CIV2         $N_0007 PHONO_IN  403.1PF  
+R_RIV4         0 PHONO_IN  724  
+R_RPL         0 PH_IN  2.2MEG  
+R_RBAL         0 LINE_IN  750k  
+C_C1M         1G 1P  39PF  
+C_C3M         3G 3P  8PF  
+R_R4B         0 4B  22k  
+C_C3C         0 3C  15PF  
+V_VIN         LINE_IN) 0 DC 0 AC 1 SIN(0  1.136 1K)
+X_TU1         1P 1G 1C 12AX7
+X_TU2         $N_0005 2G $N_0004 12AX7
+X_TU5         $N_0003 $N_0005 5C 12AX7
+X_TU3         3P 3G 3C 12AX7
+X_TU4         4P 4G 4C 12AX7
+X_TU6         $N_0002 4P 6C 12AX7
+R_RIL         0 LINE_OUT  1MEG  
+C_CLD         0 LINE_OUT  2.5P  
+v_V8         V+320 $N_0002 0
+v_V9         V+280 $N_0003 0

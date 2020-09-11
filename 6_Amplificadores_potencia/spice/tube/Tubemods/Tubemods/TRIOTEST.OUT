@@ -1,0 +1,87 @@
+
+**** 09/02/101 12:21:51 ******** NT Evaluation PSpice (April 1996) ***********
+
+ * C:\Audio\TubeShar\Triotest.sch
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+* Schematics Version 6.3 - April 1996
+* Sun Sep 02 10:40:50 2001
+
+
+** Analysis setup **
+.DC LIN V_VP 0 400 4 
+.STEP LIN V_VG 0 -20 -4 
+.LIB c:\audio\tubeshar\tube97.lib
+
+
+* From [SCHEMATICS NETLIST] section of msim.ini:
+.lib C:\AUDIO\TubeShar\TUBE.LIB
+.lib nom.lib
+
+.INC "Triotest.net"
+
+**** INCLUDING Triotest.net ****
+* Schematics Netlist *
+
+
+
+V_VG         1G 0 DC 0 AC 0 
+V_VP         1P 0   
+X_TU1         1P 1G 0 12AU7
+
+**** RESUMING TRIOTEST.CIR ****
+.INC "Triotest.als"
+
+**** INCLUDING Triotest.als ****
+* Schematics Aliases *
+
+.ALIASES
+V_VG            VG(+=1G -=0 )
+V_VP            VP(+=1P -=0 )
+X_TU1           TU1(P=1P G=1G C=0 )
+_    _(1G=1G)
+_    _(1P=1P)
+.ENDALIASES
+
+
+**** RESUMING TRIOTEST.CIR ****
+
+
+.probe
+
+
+.END
+
+**** 09/02/101 12:21:51 ******** NT Evaluation PSpice (April 1996) ***********
+
+ * C:\Audio\TubeShar\Triotest.sch
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_TU1.XV1.DX    
+          IS    1.000000E-09 
+          RS    1            
+          TT    1.000000E-09 
+         CJO   10.000000E-12 
+
+
+
+          JOB CONCLUDED
+
+          TOTAL JOB TIME             .21
+
