@@ -1,0 +1,12 @@
+* C:\Users\ITeDA\scm\utn\2020\7_Mezcladores\ltspice\diode.asc
+R1 N001 N003 1e3
+R2 N004 0 10
+D1 N003 N004 1N4148
+C1 N003 N002 10n
+V1 N002 0 SINE(0 10e-3 1e6)
+V2 N001 0 SINE(0 1 500e3)
+.model D D
+.lib C:\Users\ITeDA\Documents\LTspiceXVII\lib\cmp\standard.dio
+.tran 10e-6
+.backanno
+.end
