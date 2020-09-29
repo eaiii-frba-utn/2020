@@ -1,0 +1,10 @@
+* Z:\home\aalmela\scm\git\utn\eaiii\2020\7_Mezcladores\ltspice\Draft3.asc
+J1 N001 N002 0 2N3819
+V1 N002 0 PWL(0 -3 1 0)
+V2 N001 0 12
+.model NJF NJF
+.model PJF PJF
+.lib C:\users\aalmela\Mis Documentos\LTspiceXVII\lib\cmp\standard.jft
+.tran 1
+.backanno
+.end
