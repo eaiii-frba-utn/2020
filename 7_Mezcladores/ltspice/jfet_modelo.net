@@ -1,0 +1,23 @@
+* Z:\home\aalmela\scm\git\utn\eaiii\2020\7_Mezcladores\ltspice\jfet_modelo.asc
+L2 s N005 289e-9
+C2 s N005 723e-12
+CA2 s N004 10n
+VOL N003 0 SINE(0 1 11e6)
+rrf P001 N002 1e3
+CA1 g P001 10n
+C1 g 0 795e-12
+L1 g 0 318.3e-9
+ci g s 3p
+B1 d s I=12e-3*pow( (1- (V(g)-V(s)) /(-3) ),2)
+L3 N001 d 398e-6
+ro d s 250k
+C3 N001 d 63e-12
+RL N001 d 250k
+VRF N002 0 SINE(0 10e-3 10e6) AC 10u
+Rs N005 0 470
+CA3 N005 0 10n
+rol N004 N003 1k
+VDD N001 0 12
+.tran 0 1100u 1000u
+.backanno
+.end
