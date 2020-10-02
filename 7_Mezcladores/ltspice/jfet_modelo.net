@@ -18,6 +18,6 @@ Rs N005 0 470
 CA3 N005 0 10n
 rol N004 N003 1k
 VDD N001 0 12
-.tran 0 1100u 1000u
+.tran 0 1010u 1000u
 .backanno
 .end

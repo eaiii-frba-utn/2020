@@ -1,0 +1,26 @@
+* Z:\home\aalmela\scm\git\utn\eaiii\2020\7_Mezcladores\ltspice\DobleBalancedMixer.asc
+L1 N004 0 10µ
+L2 N007 N002 10µ
+L3 N009 N007 10µ
+L4 N001 0 10µ
+L5 0 N008 10µ
+L6 0 N005 10µ
+rx N004 N003 50
+R2 N006 N005 50
+D1 N001 N002 1N5818
+D2 N009 N001 1N5818
+D3 N002 N008 1N5818
+D4 N008 N009 1N5818
+VOL N006 0 SINE(0 3 4e6 0 0 0)
+VRF N003 0 SINE(0 50m 3.5e6 0 0 0)
+R1 N007 0 50
+R3 N010 N007 1k
+C1 N010 0 10n
+L7 N010 0 10µ
+.model D D
+.lib C:\users\aalmela\Mis Documentos\LTspiceXVII\lib\cmp\standard.dio
+K1 L1 L2 L3 1
+K2 L4 L5 L6 1
+.tran 0 110e-6 100e-6
+.backanno
+.end
