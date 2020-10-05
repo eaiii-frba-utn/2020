@@ -1,0 +1,28 @@
+* Z:\home\aalmela\scm\git\utn\eaiii\2020\7_Mezcladores\ltspice\mezclador_bipolar.asc
+Q1 c b N006 0 2N3904
+L1 N002 b 40e-9
+L2 0 N006 40e-9
+CA1 b N005 100e-9
+C2 0 N006 7.817e-9
+V1 N001 0 0.4
+V2 N003 0 6
+V3 N005 0 SINE(0 1e-3 10e6) AC 1e-3
+R1 N002 N001 10
+CA2 N002 0 1e-6
+CA3 b N008 100e-9
+R3 N008 0 50
+V4 N007 0 SINE(0 0.3 9e6) AC 0
+C1 N002 b 6.332e-9
+CA5 N004 c 1e-6
+RL N004 0 10e3
+L3 N003 c 80e-6
+C3 N003 c 316.6e-12
+CA4 N007 N006 100e-9
+R2 0 N006 50
+.model NPN NPN
+.model PNP PNP
+.lib C:\users\aalmela\Mis Documentos\LTspiceXVII\lib\cmp\standard.bjt
+.tran 0 110e-6 100e-6
+;.step param R list  1 10 1e3 10e3
+.backanno
+.end
