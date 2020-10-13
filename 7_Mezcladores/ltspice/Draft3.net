@@ -1,10 +1,9 @@
 * Z:\home\aalmela\scm\git\utn\eaiii\2020\7_Mezcladores\ltspice\Draft3.asc
-J1 N001 N002 0 2N3819
-V1 N002 0 PWL(0 -1 1 0)
-V2 N001 0 6
-.model NJF NJF
-.model PJF PJF
-.lib C:\users\aalmela\Mis Documentos\LTspiceXVII\lib\cmp\standard.jft
+V1 i 0 PWL(0 -0.1 1 0.5)
+B1 i 0 I={Ip} * (V(i)/{Vp}) * exp( ({Vp}-V(i)) /{Vp})
 .tran 1
+.param Ip = 1e-5
+.param K=5
+.param Vp = 0.1
 .backanno
 .end

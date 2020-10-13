@@ -1,0 +1,28 @@
+* Z:\home\aalmela\scm\git\utn\eaiii\2020\7_Mezcladores\ltspice\dual_simula.asc
+B告d2a oa 0 I=(table(V(g2a), 0,1, 1,1e-3 ,4,10e-3, 10,10e-3))*V(g1)
+R1 N003 0 1k
+V2 g1 0 SINE(0 10u 11e6)
+L1 N003 0 {L}
+C3 N003 0 {C}
+R1a g2a N001 1k
+C1a g2a 0 15e-12
+R1b g2b N001 1k
+C1b g2b 0 15e-12
+B告d2b ob 0 I=(table(V(g2b), 0,1, 1,1e-3 ,4,10e-3, 10,10e-3))*(-V(g1))
+L2 N002 VDD {L} Rser=0
+L3 VDD N005 {L} Rser=0
+Vol1 N001 N004 SINE(0 2 10e6)
+Vpol1 N004 0 2.5
+Vpol2 VDD 0 20
+B告da1 oa 0 I=2e-3*V(g2a)+4e-3
+B告da2 ob 0 I=2e-3*V(g2b)+4e-3
+R4 oa N002 1e-6
+R5 ob N005 1e-6
+.tran 0 14e-6 10e-6 uic
+K12 L1 L2 1
+K13 L1 L3 1
+K23 L2 L3 1
+.param L= 1.59e-05
+.param C= 1.59e-09
+.backanno
+.end
