@@ -1,9 +1,11 @@
 * Z:\home\aalmela\scm\git\utn\eaiii\2020\7_Mezcladores\ltspice\Draft3.asc
-V1 i 0 PWL(0 -0.1 1 0.5)
-B1 i 0 I={Ip} * (V(i)/{Vp}) * exp( ({Vp}-V(i)) /{Vp})
+V1 i 0 PWL(0 -0.1 1 1)
+B1 i 0 I=a * V(i) + b * pow(V(i),2) + c * pow(V(i),3)
+XU1 i 0 MBD1057
 .tran 1
-.param Ip = 1e-5
-.param K=5
-.param Vp = 0.1
+.param a = 0.1414
+.param b = -0.4302
+.param c = 0.3343
+.lib Z:\home\aalmela\scm\git\utn\eaiii\2020\8_Osciladores\LTspice\tunel_model.net
 .backanno
 .end

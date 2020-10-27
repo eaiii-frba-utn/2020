@@ -1,0 +1,23 @@
+* Z:\home\aalmela\scm\git\utn\eaiii\2020\8_Osciladores\LTspice\Barkhausen_ejemplo1_circuito_Labierto.asc
+Q1 N002 N004 N005 0 2N3904
+R1 N005 0 470
+CA1 N005 0 10n
+R2 N001 N004 100k
+R3 N004 0 22k
+C1 N002 N001 100p
+L1 N001 N002 1.2µ
+L2 N007 0 1.2n
+C2 N007 N006 100p
+R4 N001 N002 10k
+V1 N001 0 PWL(0 0 1e-9 9)
+I1 0 N003 AC 10u
+C3 N003 N004 10n
+R5 N006 N008 100
+C4 N008 0 11.8e-12
+.model NPN NPN
+.model PNP PNP
+.lib C:\users\aalmela\Mis Documentos\LTspiceXVII\lib\cmp\standard.bjt
+K1 L1 L2 1
+.ac dec 1000 10e6 20e6
+.backanno
+.end

@@ -1,0 +1,49 @@
+* Z:\home\aalmela\scm\git\utn\eaiii\2020\8_Osciladores\LTspice\MRF9411_DC.asc
+Q1 N001 N002 N003 0 MRF9411
+V1 N001 0 5
+R1 N003 0 25k
+R2 N001 N002 18k
+.model NPN NPN
+.model PNP PNP
+.lib C:\users\aalmela\Mis Documentos\LTspiceXVII\lib\cmp\standard.bjt
+*Low Noise, High-Frequency Transistor
+*MOT Si 250mW  10V  50mA 8GHz
+.MODEL MRF9411 NPN
++ IS = 4.558E-16
++ BF = 136
++ NF = 0.9979
++ VAF = 21
++ IKF = 0.7
++ ISE = 3.087E-14
++ NE = 2
++ BR = 42
++ NR = 0.993
++ VAR = 2.9
++ IKR = 0.016
++ ISC = 3.411E-17
++ NC = 1.087
++ RB = 7
++ IRB = 8E-05
++ RBM = 8
++ RE = 0.45
++ RC = 8
++ XTB = 0
++ EG = 1.11
++ XTI = 3
++ CJE = 8.6E-13
++ VJE = 0.94
++ MJE = 0.42
++ CJC = 4.3E-13
++ VJC = 0.35
++ MJC = 0.21
++ XCJC = 0.44
++ TF = 1.3E-11
++ XTF = 400
++ VTF = 6
++ ITF = 1.5
++ PTF = 47
++ TR = 1E-09
++ FC = 0.98
+.tran 10m
+.backanno
+.end

@@ -1,7 +1,15 @@
 * Z:\home\aalmela\scm\git\utn\eaiii\2020\7_Mezcladores\ltspice\Draft2.asc
+C1 N001 0 4p
 R1 N001 0 1
-G1 N001 0 N002 0 TABLE (-1,1)(1,1)(4,5)(5,5)
-V1 N002 0 PWL(0 -5 1 5)
-.tran 1
+I1 0 N001 PULSE(0 1 10p 1p 1p 20p)
+R2 N002 N001 10
+C2 N002 0 0.5p
+C3 N003 0 4p
+R3 N003 0 1
+I2 0 N003 PULSE(0 1 10p 1p 1p 20p)
+R4 a N003 10
+C4 a 0 0.5p
+B1 0 N003 I=V(a)*1
+.tran 50p
 .backanno
 .end
