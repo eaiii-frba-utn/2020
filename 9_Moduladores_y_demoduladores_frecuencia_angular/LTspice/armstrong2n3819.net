@@ -1,0 +1,25 @@
+* Z:\home\aalmela\scm\git\utn\eaiii\2019\ModuladoresFM\LTspice\armstrong2n3819.asc
+J1 N004 N003 N007 2N3819
+RS N007 N010 200
+L1 0 N010 1m
+L2 0 N008 1m
+rm N009 N008 10
+Vm N009 0 SINE(0 0.1 10k)
+CA2 N007 0 10µ
+RG N003 0 10k
+C1 N004 N003 2.12e-12
+CA1 N003 N002 10n
+L N001 N004 8.2761e-05
+C N001 N004 8.0639e-11
+CA3 N005 N004 10µ
+RL N005 0 10k
+VCC N001 0 9
+Vc N006 0 SINE(0 0.1 1.9231e+06)
+rc N002 N006 1k
+.model NJF NJF
+.model PJF PJF
+.lib C:\users\aalmela\Mis Documentos\LTspiceXVII\lib\cmp\standard.jft
+k1 L1 L2 1
+.tran 1m
+.backanno
+.end

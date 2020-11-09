@@ -1,0 +1,24 @@
+* Z:\home\aalmela\scm\git\utn\eaiii\2019\ModuladoresFM\LTspice\armstrong.asc
+R1 N002 N004 4.7k
+R2 N003 N002 4.7K
+C1 N003 N002 100nC
+Ca1 N004 m 10µC
+V1 0 N005 2.5
+V2 m 0 SINE(0 5 1e3)
+XU1 N005 N002 N003 Vp Vn LTC2052
+V3 Vp 0 5
+V4 0 Vn 5
+L1 vg N003 100µ
+V5 c 0 SINE(0 0.1 1.9231e+06)
+Ca2 vg c 100nC
+C2 N001 vg 165.405p
+B1 N001 0 I=10e-3*( 1 - (V(vg)/(-5)) )*( 1 - (V(vg)/(-5)) )
+L2 N001 0 8.2761e-05
+C3 N001 0 8.0639e-11
+R3 o 0 10k
+Ca3 o N001 100n
+R4 N003 0 1k
+.tran 0 10m 8m
+.lib LTC2.LIB
+.backanno
+.end
