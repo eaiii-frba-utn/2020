@@ -1,0 +1,24 @@
+* Z:\home\aalmela\scm\git\utn\eaiii\2020\11_Examenes\4_Simulacros_segundo\TX_FM\LTspice\modFM.asc
+R1 N004 N006 2.4K
+R2 N005 N004 10k
+C1 N005 N004 100nC
+Ca1 N006 m 10µC
+V1 0 N007 2.5
+V2 m 0 SINE(0 0.1 1k)
+V3 Vp 0 5
+V4 0 Vn 5
+L1 g N005 1m
+V5 c 0 SINE(0 50e-3 100e3)
+Ca2 i c 3.18n
+C2 N002 i 3.18n
+R4 N005 0 10k
+L2 N001 N002 10m
+V6 N001 0 10
+B1 N002 0 I=(-2*10e-3/(-5)*(1-(V(g)/(-5))))*V(i)
+R5 N003 0 1k
+C3 N003 N002 100µ
+XU1 N007 N004 Vp Vn N005 LTC6241
+.tran 0 110m 10m
+.lib LTC4.lib
+.backanno
+.end
